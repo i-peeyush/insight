@@ -1,0 +1,100 @@
+[
+  {
+    "id": "loc-001",
+    "slug": "austin-metro",
+    "cityName": "Austin & Surrounding Metro",
+    "state": "TX",
+    "region": "Central Metro Region",
+    "phone": "[PHONE_NUMBER]",
+    "address": "[BUSINESS_ADDRESS]",
+    "zipCodes": ["78701", "78702", "78703", "78704", "78745", "78748", "78750", "78759"],
+    "description": "Providing premier, environmentally conscious residential and commercial pest control services across the Austin metropolitan area. Our certified local technicians understand the unique seasonal pest pressures of the Central region, from scorching summer ant swarms to winter rodent migrations.",
+    "commonPests": ["Carpenter Ants", "Scorpions", "German Cockroaches", "Subterranean Termites", "Roof Rats", "Mosquitoes"],
+    "servicesAvailable": [
+      "Residential Pest Control",
+      "Commercial Pest Management",
+      "Termite Inspection & Sentricon Baiting",
+      "Rodent Exclusion",
+      "Mosquito Yard Defense"
+    ],
+    "highlights": [
+      "Same-day dispatch for active infestations",
+      "100% Insight Protection Re-service Guarantee",
+      "Eco-conscious products safe for kids & pets",
+      "Over 12 dedicated certified service trucks in area"
+    ],
+    "responseRate": "Average on-site inspection within 24 hours"
+  },
+  {
+    "id": "loc-002",
+    "slug": "round-rock",
+    "cityName": "Round Rock & Williamson County",
+    "state": "TX",
+    "region": "North Metro Region",
+    "phone": "[PHONE_NUMBER]",
+    "address": "[BUSINESS_ADDRESS]",
+    "zipCodes": ["78664", "78665", "78681", "78626", "78628"],
+    "description": "Comprehensive pest management for suburban homeowners, growing commercial hubs, and historic properties throughout Round Rock, Georgetown, and Williamson County.",
+    "commonPests": ["Fire Ants", "Black Widows", "Subterranean Termites", "Field Mice", "Wasps"],
+    "servicesAvailable": [
+      "Residential Perimeter Defense",
+      "Termite Prevention & Real Estate Letters",
+      "Stinging Insect Nest Removal",
+      "Commercial Facility IPM"
+    ],
+    "highlights": [
+      "Family-friendly organic treatment options",
+      "Quarterly barrier programs tailored to soil conditions",
+      "Dedicated Williamson County route technicians"
+    ],
+    "responseRate": "Same-day or next-morning availability"
+  },
+  {
+    "id": "loc-003",
+    "slug": "san-marcos-buda",
+    "cityName": "San Marcos, Buda & Kyle",
+    "state": "TX",
+    "region": "South Corridor Region",
+    "phone": "[PHONE_NUMBER]",
+    "address": "[BUSINESS_ADDRESS]",
+    "zipCodes": ["78666", "78610", "78640", "78656"],
+    "description": "Serving residential communities, university housing, and commercial properties along the southern tech corridor with rapid-response pest elimination.",
+    "commonPests": ["Sugar Ants", "Cockroaches", "Bed Bugs", "Mosquitoes", "Rats"],
+    "servicesAvailable": [
+      "Bed Bug Single-Day Heat Remediation",
+      "Quarterly Home Protection",
+      "Apartment & Multi-Family Housing IPM",
+      "Yard Mosquito Misting"
+    ],
+    "highlights": [
+      "Fast bed bug emergency treatments",
+      "Student & multi-unit property specialists",
+      "Free detailed property inspection"
+    ],
+    "responseRate": "Inspection dispatch within 24 hours"
+  },
+  {
+    "id": "loc-004",
+    "slug": "cedar-park-leander",
+    "cityName": "Cedar Park & Leander",
+    "state": "TX",
+    "region": "Northwest Metro Region",
+    "phone": "[PHONE_NUMBER]",
+    "address": "[BUSINESS_ADDRESS]",
+    "zipCodes": ["78613", "78641", "78645"],
+    "description": "Reliable pest defense safeguarding family homes near the Hill Country perimeter from scorpions, venomous spiders, and aggressive summer wasps.",
+    "commonPests": ["Striped Bark Scorpions", "Wolf Spiders", "Yellowjackets", "Mice", "Termites"],
+    "servicesAvailable": [
+      "Hill Country Scorpion & Spider Barrier",
+      "Seasonal 4-Quarter Protection",
+      "Attic & Crawlspace Rodent Exclusion",
+      "Wasp Nest Removal"
+    ],
+    "highlights": [
+      "Specialized scorpion deterrent treatments",
+      "Exterior perimeter sealants applied",
+      "Free retreatments between visits"
+    ],
+    "responseRate": "Scheduled within 24 to 48 hours"
+  }
+]

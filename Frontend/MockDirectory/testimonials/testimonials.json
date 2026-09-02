@@ -1,0 +1,57 @@
+[
+  {
+    "id": "tst-001",
+    "customerName": "Sarah Jenkins",
+    "location": "Austin Metro",
+    "service": "Residential Pest Control",
+    "rating": 5,
+    "review": "Insight Pest Solutions is hands down the best pest management team we have ever used. After dealing with stubborn sugar ants every spring, their technician identified where they were entering through the patio weep holes and sealed it up. We haven't seen an ant in 8 months!",
+    "date": "2026-06-14",
+    "verified": true,
+    "highlight": "Thorough inspection & lasting results"
+  },
+  {
+    "id": "tst-002",
+    "customerName": "Marcus Sterling",
+    "location": "Round Rock",
+    "service": "Termite Protection",
+    "rating": 5,
+    "review": "When we noticed suspicious wood frass during a renovation, we panicked. The Insight team arrived the next morning, performed a full acoustic scan, and installed the Sentricon baiting system around the foundation. Clear explanations, zero pushy upselling, and total peace of mind.",
+    "date": "2026-07-22",
+    "verified": true,
+    "highlight": "Fast response & honest recommendations"
+  },
+  {
+    "id": "tst-003",
+    "customerName": "Elena Rostova",
+    "location": "Cedar Park",
+    "service": "Rodent Exclusion",
+    "rating": 5,
+    "review": "We heard scratching in our attic and called several companies. Insight did the most thorough exterior inspection, found two roof gap entry points, sealed everything with chew-proof mesh, and safely removed the mice. Professional, on time, and very respectful of our home.",
+    "date": "2026-08-05",
+    "verified": true,
+    "highlight": "Chew-proof exclusion that works"
+  },
+  {
+    "id": "tst-004",
+    "customerName": "David Chen (Restaurant Owner)",
+    "location": "Austin Metro",
+    "service": "Commercial Pest Management",
+    "rating": 5,
+    "review": "As a restaurant manager, health inspection scores are everything. Insight provides seamless digital audit logs after every visit. Their discreet evening visits keep our kitchen 100% compliant and pest-free. An indispensable business partner.",
+    "date": "2026-08-18",
+    "verified": true,
+    "highlight": "Flawless commercial compliance"
+  },
+  {
+    "id": "tst-005",
+    "customerName": "Patricia Martinez",
+    "location": "San Marcos",
+    "service": "Mosquito & Tick Defense",
+    "rating": 5,
+    "review": "Our backyard was unusable due to mosquitoes. After Insight started their monthly seasonal yard treatment, we can finally host evening patio dinners with the kids without anyone getting bitten. Highly recommend their seasonal plan!",
+    "date": "2026-08-25",
+    "verified": true,
+    "highlight": "Reclaimed our backyard for the family"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "quoteRequests": [
+    {
+      "id": "lead-001",
+      "firstName": "Jonathan",
+      "lastName": "Hayes",
+      "email": "j.hayes.demo@example.com",
+      "phone": "(555) 234-8901",
+      "propertyType": "Residential Single Family",
+      "address": "1204 Oak Ridge Dr",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78745",
+      "pestProblem": "Ants & Spiders",
+      "serviceRequired": "Residential Pest Control",
+      "description": "Seeing black ants in kitchen and spiders in garage corners.",
+      "preferredContactMethod": "Phone",
+      "preferredContactTime": "Morning",
+      "status": "NEW",
+      "createdAt": "2026-09-01T10:15:00Z"
+    },
+    {
+      "id": "lead-002",
+      "firstName": "Melissa",
+      "lastName": "Chang",
+      "email": "melissa.chang.demo@example.com",
+      "phone": "(555) 890-1234",
+      "propertyType": "Commercial Office",
+      "address": "500 Congress Ave, Suite 300",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78701",
+      "pestProblem": "Rodents",
+      "serviceRequired": "Commercial Pest Management",
+      "description": "Noticed rodent droppings in the 3rd-floor breakroom.",
+      "preferredContactMethod": "Email",
+      "preferredContactTime": "Afternoon",
+      "status": "CONTACTED",
+      "createdAt": "2026-09-01T11:40:00Z"
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "msg-001",
+      "name": "Emily Watson",
+      "email": "emily.watson.demo@example.com",
+      "phone": "(555) 432-1098",
+      "subject": "Billing Inquiry regarding quarterly plan",
+      "message": "Hi, I wanted to update my auto-pay credit card on file for our quarterly service.",
+      "preferredContactMethod": "Email",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T09:00:00Z"
+    }
+  ]
+}

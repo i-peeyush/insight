@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: insightpest-backend
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /
+
+# OpenAPI / Swagger config
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+# Application-specific properties
+insightpest:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+  security:
+    jwt-secret: ${JWT_SECRET:InsightPestEnterpriseSecretKey9876543210SecureTokenKey}
+    jwt-expiration-ms: 86400000 # 24 hours

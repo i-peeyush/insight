@@ -1,0 +1,105 @@
+{
+  "mainNav": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Services",
+      "path": "/services",
+      "children": [
+        { "label": "All Services", "path": "/services", "description": "Explore all residential and commercial plans" },
+        { "label": "Residential Pest Control", "path": "/services/residential-pest-control", "description": "Whole-home year-round pest defense" },
+        { "label": "Commercial Pest Control", "path": "/services/commercial-pest-control", "description": "Audit-compliant enterprise pest management" },
+        { "label": "Termite Protection", "path": "/services/termite-control", "description": "Sentricon & liquid barrier barrier solutions" },
+        { "label": "Bed Bug Heat Treatment", "path": "/services/bed-bug-control", "description": "Single-day eco-thermal elimination" },
+        { "label": "Rodent Exclusion", "path": "/services/rodent-control", "description": "Mice and rat proofing and removal" },
+        { "label": "Mosquito & Tick Defense", "path": "/services/mosquito-control", "description": "Seasonal yard barrier misting" }
+      ]
+    },
+    {
+      "label": "Pest Library",
+      "path": "/pests",
+      "children": [
+        { "label": "Pest Identification Guide", "path": "/pests", "description": "Identify common insects, rodents & wildlife" },
+        { "label": "Ants", "path": "/pests/ants", "description": "Carpenter, sugar, odorous house ants" },
+        { "label": "Cockroaches", "path": "/pests/cockroaches", "description": "German, American, Oriental roaches" },
+        { "label": "Termites", "path": "/pests/termites", "description": "Subterranean & drywood termite defense" },
+        { "label": "Bed Bugs", "path": "/pests/bed-bugs", "description": "Detection, signs, and eco-thermal eradication" },
+        { "label": "Rodents", "path": "/pests/rodents", "description": "House mice, Norway rats, roof rats" },
+        { "label": "Mosquitoes", "path": "/pests/mosquitoes", "description": "Breeding cycle control & yard treatments" }
+      ]
+    },
+    {
+      "label": "Service Areas",
+      "path": "/service-areas"
+    },
+    {
+      "label": "About Us",
+      "path": "/about"
+    },
+    {
+      "label": "Resources",
+      "path": "/faq",
+      "children": [
+        { "label": "Pest Control FAQ", "path": "/faq", "description": "Answers to common safety and treatment questions" },
+        { "label": "Blog & Pest Insights", "path": "/blog", "description": "Prevention tips, seasonal guides & expert advice" },
+        { "label": "Customer Reviews", "path": "/testimonials", "description": "Verified client reviews and case studies" }
+      ]
+    },
+    {
+      "label": "Contact",
+      "path": "/contact"
+    }
+  ],
+  "actionButtons": [
+    {
+      "label": "Get a Quote",
+      "path": "/request-quote",
+      "variant": "outline"
+    },
+    {
+      "label": "Book Inspection",
+      "path": "/book-inspection",
+      "variant": "primary"
+    }
+  ],
+  "footerNav": {
+    "services": [
+      { "label": "Residential Pest Control", "path": "/services/residential-pest-control" },
+      { "label": "Commercial Pest Control", "path": "/services/commercial-pest-control" },
+      { "label": "Termite Protection", "path": "/services/termite-control" },
+      { "label": "Bed Bug Thermal Treatment", "path": "/services/bed-bug-control" },
+      { "label": "Rodent Exclusion", "path": "/services/rodent-control" },
+      { "label": "Mosquito Reduction", "path": "/services/mosquito-control" },
+      { "label": "Wasp & Hornet Removal", "path": "/services/wasp-stinging-insect-control" },
+      { "label": "Seasonal Home Shield", "path": "/services/seasonal-pest-protection" }
+    ],
+    "pestLibrary": [
+      { "label": "Ants Identification", "path": "/pests/ants" },
+      { "label": "Cockroach Control", "path": "/pests/cockroaches" },
+      { "label": "Termite Detection", "path": "/pests/termites" },
+      { "label": "Bed Bug Guide", "path": "/pests/bed-bugs" },
+      { "label": "Rodent Control", "path": "/pests/rodents" },
+      { "label": "Spider Identification", "path": "/pests/spiders" },
+      { "label": "Fleas & Ticks", "path": "/pests/fleas-ticks" },
+      { "label": "Full Pest Library", "path": "/pests" }
+    ],
+    "company": [
+      { "label": "About Insight Pest", "path": "/about" },
+      { "label": "Our IPM Methodology", "path": "/about#methodology" },
+      { "label": "Service Areas", "path": "/service-areas" },
+      { "label": "Customer Testimonials", "path": "/testimonials" },
+      { "label": "Careers & Technicians", "path": "/careers" },
+      { "label": "Insight Pest Blog", "path": "/blog" },
+      { "label": "Frequently Asked Questions", "path": "/faq" },
+      { "label": "Contact Us", "path": "/contact" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "path": "/privacy-policy" },
+      { "label": "Terms of Service", "path": "/terms" },
+      { "label": "Cookie Policy", "path": "/cookie-policy" },
+      { "label": "Accessibility Statement", "path": "/accessibility" }
+    ]
+  }
+}

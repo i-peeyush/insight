@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Admin routes disallow
+Disallow: /admin
+Disallow: /admin/*
+
+Sitemap: http://localhost:5173/sitemap.xml

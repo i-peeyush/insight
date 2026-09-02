@@ -1,0 +1,216 @@
+[
+  {
+    "id": "srv-001",
+    "slug": "residential-pest-control",
+    "title": "Residential Pest Control",
+    "shortDescription": "Comprehensive year-round protection designed specifically to keep your family and home safe from common household pests.",
+    "fullDescription": "Our Residential Pest Control program utilizes Integrated Pest Management (IPM) protocols tailored to your unique home layout and local climate. We create a protective barrier around your perimeter, inspect entry points, treat foundation voids, and apply family-friendly, low-toxicity treatments to ensure continuous pest-free living.",
+    "category": "Residential",
+    "icon": "Home",
+    "featured": true,
+    "pricingEstimate": "Starting at $49/mo (Quarterly Plan)",
+    "targetPests": ["Ants", "Spiders", "Cockroaches", "Silverfish", "Earwigs", "Centipedes", "Crickets"],
+    "features": [
+      "Exterior 30-foot perimeter barrier application",
+      "Eave & soffit de-webbing up to 20 feet",
+      "Interior crack & crevice targeted micro-treatment",
+      "Garage & crawlspace protective dust application",
+      "Quarterly seasonal rotation of active ingredients",
+      "Free retreatments between scheduled visits"
+    ],
+    "process": [
+      { "step": 1, "title": "Comprehensive Inspection", "desc": "We inspect all potential entry points, moisture sources, and harborage areas." },
+      { "step": 2, "title": "Targeted Interior Defense", "desc": "Low-impact, odorless barrier applied to baseboards, plumbing access points, and garage thresholds." },
+      { "step": 3, "title": "Perimeter Power Barrier", "desc": "Multi-layer granular and liquid shield applied around exterior foundation walls." },
+      { "step": 4, "title": "Ongoing Maintenance", "desc": "Regular seasonal visits to adjust defense formulas as pest activity patterns change." }
+    ],
+    "warranty": "100% Insight Protection Guarantee — Free re-service within 48 hours if pests return."
+  },
+  {
+    "id": "srv-002",
+    "slug": "commercial-pest-control",
+    "title": "Commercial Pest Management",
+    "shortDescription": "Discreet, audit-ready commercial pest solutions for restaurants, hospitality, warehousing, healthcare, and office facilities.",
+    "fullDescription": "Pest activity in a commercial establishment threatens your brand reputation, customer safety, and regulatory compliance. Insight Pest Solutions delivers customized, documentation-heavy IPM solutions compliant with FDA, USDA, AIB, and OSHA health inspection standards.",
+    "category": "Commercial",
+    "icon": "Building2",
+    "featured": true,
+    "pricingEstimate": "Custom Quote Based on Square Footage",
+    "targetPests": ["Rodents", "Cockroaches", "Flies", "Stored Product Pests", "Drain Pests"],
+    "features": [
+      "Digital logbooks & barcode-scanned trap monitoring",
+      "HACCP & AIB International compliant reporting",
+      "Fly control light trap installations & maintenance",
+      "Drain foaming & microbial grease-digesting treatments",
+      "After-hours discreet treatment scheduling",
+      "Dedicated commercial account manager"
+    ],
+    "process": [
+      { "step": 1, "title": "Facility Vulnerability Audit", "desc": "Detailed mapping of loading docks, storage rooms, kitchens, and waste areas." },
+      { "step": 2, "title": "Exclusion & Sanitation Strategy", "desc": "Actionable recommendations for mechanical sealing and sanitation practices." },
+      { "step": 3, "title": "Active Monitoring Matrix", "desc": "Installation of tamper-resistant bait stations and electronic monitoring traps." },
+      { "step": 4, "title": "Audit Documentation", "desc": "Instant digital reports sent after every service with photo proof and trend analytics." }
+    ],
+    "warranty": "Zero-Tolerance Commercial Compliance Guarantee."
+  },
+  {
+    "id": "srv-003",
+    "slug": "termite-control",
+    "title": "Termite Protection & Elimination",
+    "shortDescription": "Advanced colony elimination and continuous bait station monitoring to guard your property against structural wood destruction.",
+    "fullDescription": "Subterranean and drywood termites cause billions in property damage every year. Our certified termite specialists utilize eco-conscious Sentricon® baiting technology and precision liquid termiticide barriers to eliminate termite colonies at their queen source before structural timber is compromised.",
+    "category": "Specialized",
+    "icon": "ShieldAlert",
+    "featured": true,
+    "pricingEstimate": "Free Inspection / Plan starting at $650",
+    "targetPests": ["Subterranean Termites", "Drywood Termites", "Formosan Termites"],
+    "features": [
+      "Thermal imaging and moisture detection inspection",
+      "Non-disruptive exterior bait station installation",
+      "Liquid soil trenching and foundation treatment options",
+      "Annual structural re-certification inspection",
+      "Real estate transaction (WDIR / NPMA-33) termite letters",
+      "Damage repair warranty available on qualified structures"
+    ],
+    "process": [
+      { "step": 1, "title": "Acoustic & Moisture Scan", "desc": "Detect hidden termite activity behind drywall, flooring, and sill plates." },
+      { "step": 2, "title": "Colony Elimination Protocol", "desc": "Bait stations installed around perimeter to target the queen and nest." },
+      { "step": 3, "title": "Direct Injection Barrier", "desc": "Sub-slab and trench treatments applied in high-risk contact zones." },
+      { "step": 4, "title": "Annual Recertification", "desc": "Routine station checks and annual thorough crawlspace inspection." }
+    ],
+    "warranty": "$1,000,000 Structural Damage Repair Guarantee (qualified properties)."
+  },
+  {
+    "id": "srv-004",
+    "slug": "bed-bug-control",
+    "title": "Bed Bug Eco-Thermal Treatment",
+    "shortDescription": "Fast, single-day thermal heat remediation and targeted insect growth regulators to eliminate all bed bug stages in one visit.",
+    "fullDescription": "Bed bugs are notoriously resistant to ordinary retail sprays. Our industrial-grade thermal heat remediation brings target room temperatures to a lethal 130°F, penetrating deep into mattresses, furniture, baseboards, and wall cavities to kill adult bed bugs, nymphs, and eggs without chemical odor or damaging your electronics.",
+    "category": "Specialized",
+    "icon": "Flame",
+    "featured": true,
+    "pricingEstimate": "Starting at $350 per room",
+    "targetPests": ["Cimex lectularius (Common Bed Bug)", "Bat Bugs"],
+    "features": [
+      "Single-day total elimination treatment",
+      "Penetrates mattresses, dressers, and electrical conduits",
+      "Safe for electronics and delicate furnishings",
+      "Follow-up residual growth regulator application",
+      "Mattress and box spring encasement installation",
+      "Canine scent detection partnership available"
+    ],
+    "process": [
+      { "step": 1, "title": "Detailed Mapping", "desc": "Inspection of headboards, baseboards, box springs, and adjoining rooms." },
+      { "step": 2, "title": "Precision Thermal Heating", "desc": "Controlled heating to maintain 125-135°F for sustained duration." },
+      { "step": 3, "title": "Residual Shield Layer", "desc": "Micro-dust and growth regulators applied in switch plates and voids." },
+      { "step": 4, "title": "30-Day Follow-Up Audit", "desc": "Secondary inspection to confirm complete eradication." }
+    ],
+    "warranty": "90-Day Unconditional Bed Bug Free Warranty."
+  },
+  {
+    "id": "srv-005",
+    "slug": "rodent-control",
+    "title": "Rodent Control & Exclusion",
+    "shortDescription": "Complete rodent trapping, sanitary clean-up, and structural exclusion to permanently keep mice and rats out of your property.",
+    "fullDescription": "Rodents chew electrical wiring, contaminate food stores, and carry harmful pathogens. Our comprehensive rodent management goes beyond mere trapping — we perform full exterior exclusion sealing all gaps larger than 1/4 inch with galvanized steel mesh, polyurethane foam, and heavy-gauge flashing.",
+    "category": "Residential",
+    "icon": "PawPrint",
+    "featured": true,
+    "pricingEstimate": "Starting at $199 (Inspection + Exclusion plan)",
+    "targetPests": ["House Mice", "Norway Rats", "Roof Rats", "Field Mice"],
+    "features": [
+      "Full exterior exclusion sealing (flashing, copper mesh, metal seals)",
+      "Attic and crawlspace entry point fortification",
+      "Tamper-proof exterior and interior capture systems",
+      "Attic insulation sanitization & droppings removal",
+      "Odor neutralization and pheromone trail cleanup",
+      "Continuous bait station maintenance"
+    ],
+    "process": [
+      { "step": 1, "title": "Entry Point Audit", "desc": "Identify rooflines, weep holes, plumbing penetrations, and crawlspace vents." },
+      { "step": 2, "title": "Mechanical Exclusion", "desc": "Seal entry gaps with heavy-gauge chew-proof steel materials." },
+      { "step": 3, "title": "Active Trapping & Removal", "desc": "Strategic placement of humane, snap, and live capture systems." },
+      { "step": 4, "title": "Sanitization & Monitoring", "desc": "Bio-enzyme sanitization of contaminated attic or basement zones." }
+    ],
+    "warranty": "1-Year Rodent-Free Exclusion Warranty."
+  },
+  {
+    "id": "srv-006",
+    "slug": "mosquito-control",
+    "title": "Mosquito & Tick Yard Defense",
+    "shortDescription": "Seasonal micro-misting and standing water larvicide treatment so your family can enjoy the outdoor yard in comfort.",
+    "fullDescription": "Enjoy your backyard barbecue without swatting away bites. Our mosquito and tick reduction program targets resting zones on shrubs, foliage underside, and shaded mulched beds while utilizing microbial larvicides (Bti) in natural water pockets to stop breeding before adult mosquitoes take flight.",
+    "category": "Outdoor",
+    "icon": "Bug",
+    "featured": false,
+    "pricingEstimate": "Starting at $69/visit (Monthly Seasonal)",
+    "targetPests": ["Culex Mosquitoes", "Aedes Mosquitoes", "Deer Ticks", "Dog Ticks", "Fleas"],
+    "features": [
+      "Backpack mist blower foliage canopy treatment",
+      "Natural organic essential oil options available",
+      "Water source Bti briquette larvicide application",
+      "Special event one-time pre-party sprays",
+      "Tick perimeter yard perimeter barrier",
+      "Pollinator-conscious application protocols"
+    ],
+    "process": [
+      { "step": 1, "title": "Yard Assessment", "desc": "Identify bird baths, gutters, dense ivy, and shaded breeding zones." },
+      { "step": 2, "title": "Larvicide Application", "desc": "Treat standing water with organic larvicide safe for birds and fish." },
+      { "step": 3, "title": "Foliage Barrier Spray", "desc": "Micro-mist the underside of leaves and tall grass perimeters." },
+      { "step": 4, "title": "21-Day Cycle Re-application", "desc": "Scheduled maintenance throughout the warm active season." }
+    ],
+    "warranty": "Noticeable 90%+ mosquito reduction or re-spray free within 14 days."
+  },
+  {
+    "id": "srv-007",
+    "slug": "wasp-stinging-insect-control",
+    "title": "Wasp & Stinging Insect Removal",
+    "shortDescription": "Safe, professional removal of dangerous wasp nests, hornet hives, and yellowjacket colonies from eaves and yards.",
+    "fullDescription": "Stinging insects pose a severe threat to children, pets, and anyone with insect venom allergies. Our certified technicians carry specialized protective suits, aerosol knock-down agents, and extension dusting equipment to safely neutralize and remove nests from eaves, attics, trees, and in-ground burrows.",
+    "category": "Specialized",
+    "icon": "AlertTriangle",
+    "featured": false,
+    "pricingEstimate": "Starting at $149",
+    "targetPests": ["Paper Wasps", "Yellowjackets", "Bald-Faced Hornets", "Mud Daubers", "Carpenter Bees"],
+    "features": [
+      "Same-day rapid emergency dispatch available",
+      "Safe nest removal up to 30 feet in height",
+      "Protective residual dusting in soffits and wall voids",
+      "Carpenter bee hole patching and wood preservation",
+      "Humane honeybee relocation partner referral"
+    ],
+    "process": [
+      { "step": 1, "title": "Species Identification", "desc": "Determine stinging behavior, hive location, and flight patterns." },
+      { "step": 2, "title": "Direct Knockdown & Treatment", "desc": "Fast-acting neutralizing agent applied directly to hive openings." },
+      { "step": 3, "title": "Physical Nest Removal", "desc": "Scrape and eliminate the physical structure to prevent pheromone re-attraction." },
+      { "step": 4, "title": "Preventative Eave Treatment", "desc": "Residual spray applied to deter new nest building during current season." }
+    ],
+    "warranty": "Season-long protection guarantee on treated nesting spots."
+  },
+  {
+    "id": "srv-008",
+    "slug": "seasonal-pest-protection",
+    "title": "Seasonal Pest Protection Plan",
+    "shortDescription": "Proactive 4-season pest management addressing seasonal pest migrations before they breach your home.",
+    "fullDescription": "Pest pressures change dramatically from the spring thaw to the winter freeze. Our Seasonal Protection Shield provides tailored quarterly visits: Spring ant barrier & egg prevention, Summer mosquito & stinging insect management, Fall rodent exclusion & spider knockdowns, and Winter interior void insulation inspection.",
+    "category": "Residential",
+    "icon": "Calendar",
+    "featured": false,
+    "pricingEstimate": "Starting at $39/mo",
+    "targetPests": ["All Common Household Pests", "Ants", "Spiders", "Rodents", "Overwintering Beetles"],
+    "features": [
+      "4 proactive seasonal visits automatically scheduled",
+      "Seasonal formula rotation preventing insect immunity",
+      "Complete exterior de-webbing and wasp nest knockdown",
+      "Full coverage for 30+ common pests",
+      "Unlimited free re-treatments whenever needed"
+    ],
+    "process": [
+      { "step": 1, "title": "Spring Awakening", "desc": "Barrier treatment targeting awakening ant colonies and emerging larvae." },
+      { "step": 2, "title": "Summer Surge", "desc": "Exterior power spray and perimeter granules for peak insect activity." },
+      { "step": 3, "title": "Fall Invader Shield", "desc": "Rodent baiting and sealing crawlspaces against seeking warmth." },
+      { "step": 4, "title": "Winter Fortress", "desc": "Attic, garage, and basement void inspections and micro-treatments." }
+    ],
+    "warranty": "Year-round pest-free guarantee with free callouts."
+  }
+]

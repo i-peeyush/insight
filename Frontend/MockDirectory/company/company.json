@@ -1,0 +1,40 @@
+{
+  "companyName": "Insight Pest Solutions",
+  "tagline": "Smarter, Safer, Reliable Pest Protection for Home & Business",
+  "phone": "[PHONE_NUMBER]",
+  "phoneDisplay": "(800) 555-PEST",
+  "phoneRaw": "+18005557378",
+  "email": "[EMAIL_ADDRESS]",
+  "emailDisplay": "support@insightpestsolutions.demo",
+  "address": "[BUSINESS_ADDRESS]",
+  "addressDisplay": "100 Innovation Parkway, Suite 400, Metro Area",
+  "emergencyContact": "24/7 Rapid Response Dispatch Available",
+  "businessHours": {
+    "monday_friday": "7:00 AM - 8:00 PM EST",
+    "saturday": "8:00 AM - 6:00 PM EST",
+    "sunday": "Emergency & Scheduled Inspections Only"
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com/insightpestsolutions",
+    "twitter": "https://twitter.com/insightpest",
+    "linkedin": "https://linkedin.com/company/insight-pest-solutions",
+    "instagram": "https://instagram.com/insightpestsolutions"
+  },
+  "metrics": {
+    "yearsExperience": "15+",
+    "homesProtected": "50,000+",
+    "satisfactionRate": "99.4%",
+    "technicianCount": "120+"
+  },
+  "guarantee": {
+    "title": "100% Insight Protection Guarantee",
+    "description": "If covered pests return between scheduled maintenance treatments, your certified technician will re-treat your property at zero additional cost."
+  },
+  "badges": [
+    "EPA Safer Choice Compliant Methods",
+    "Licensed & Insured Master Technicians",
+    "Family & Pet-Friendly Formulations",
+    "Same-Day Emergency Dispatch",
+    "Smart Integrated Pest Management (IPM)"
+  ]
+}

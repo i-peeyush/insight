@@ -1,0 +1,44 @@
+[
+  {
+    "id": "faq-001",
+    "category": "General",
+    "question": "What is Integrated Pest Management (IPM)?",
+    "answer": "Integrated Pest Management (IPM) is an eco-conscious, science-based approach that combines inspection, habitat modification, physical exclusion (sealing entry points), and targeted low-toxicity biological treatments. Rather than indiscriminately spraying chemicals, IPM targets the root cause of the infestation for permanent protection."
+  },
+  {
+    "id": "faq-002",
+    "category": "Safety",
+    "question": "Are your pest control treatments safe for my children and pets?",
+    "answer": "Yes, family and pet safety is our top priority. We utilize EPA-registered, low-volatility, and targeted micro-encapsulated formulations. Once the treated areas have dried (typically 30–60 minutes), the surfaces are completely safe for your children and household pets to walk and play on normally."
+  },
+  {
+    "id": "faq-003",
+    "category": "Residential",
+    "question": "Do I need to leave my home during a routine residential service?",
+    "answer": "For routine perimeter and interior crack-and-crevice treatments, you do not need to leave the house. For specialized treatments such as whole-home thermal bed bug remediation or extensive flea treatments, we will provide a brief preparation checklist and ask you to vacate for a specified few hours."
+  },
+  {
+    "id": "faq-004",
+    "category": "Pricing",
+    "question": "How much does professional pest control cost?",
+    "answer": "Pricing depends on property size, severity of the pest issue, and the specific service required. Our recurring residential maintenance plans start around $49/month, while targeted one-time treatments (such as wasp nest removal) start at $149. We provide transparent upfront quotes with zero hidden fees."
+  },
+  {
+    "id": "faq-005",
+    "category": "Scheduling",
+    "question": "What happens if pests return between scheduled quarterly visits?",
+    "answer": "All our recurring protection plans come with the 100% Insight Protection Guarantee. If you notice covered pest activity between your regular scheduled maintenance visits, simply contact us and your certified technician will return and re-treat your home at zero additional charge."
+  },
+  {
+    "id": "faq-006",
+    "category": "Commercial",
+    "question": "Do you provide audit-ready documentation for commercial health inspections?",
+    "answer": "Yes. Our commercial accounts receive digital inspection reports, barcode-scanned station logs, SDS sheets, and trend analysis immediately after every service, fully compliant with FDA, USDA, AIB, and local health department standards."
+  },
+  {
+    "id": "faq-007",
+    "category": "Prevention",
+    "question": "Why do I see an increase in insect activity immediately after treatment?",
+    "answer": "This is completely normal and actually indicates the treatment is working. Our non-repellent active formulations agitate pests in their hidden nesting galleries and harborage voids, forcing them out into the open where they encounter the lethal dose and perish within 24 to 72 hours."
+  }
+]

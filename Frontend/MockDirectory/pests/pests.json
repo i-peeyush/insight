@@ -1,0 +1,207 @@
+[
+  {
+    "id": "pest-001",
+    "slug": "ants",
+    "name": "Ants",
+    "commonName": "Carpenter Ants, Odorous House Ants, Sugar Ants",
+    "scientificName": "Formicidae (Camponotus spp., Tapinoma sessile)",
+    "category": "Crawling Insects",
+    "riskLevel": "Medium to High",
+    "description": "Ants are social insects that live in large underground or wood-nesting colonies. While some seek sweet or greasy foods in kitchens, carpenter ants can cause severe structural damage by excavating galleries inside damp wooden framing.",
+    "signsOfInfestation": [
+      "Visible trails of ants marching toward countertops, pantries, or sinks",
+      "Fine sawdust-like wood shavings (frass) beneath wooden beams or window sills",
+      "Faint rustling noises inside hollow walls or door frames at night",
+      "Swarming winged reproductive ants (alates) emerging in spring"
+    ],
+    "commonLocations": ["Kitchens & Pantries", "Behind Baseboards", "Under Sinks & Dishwashers", "Damp Attic or Crawlspace Timbers"],
+    "healthRisks": "Contamination of open foods with bacteria; painful bites or stings from fire ant species; structural timber degradation from carpenter ants.",
+    "preventionTips": [
+      "Store dry goods, cereals, and sugars in airtight plastic or glass canisters",
+      "Wipe down kitchen surfaces immediately after meal preparation",
+      "Fix dripping outdoor spigots and under-sink plumbing leaks",
+      "Trim tree branches and shrubs at least 2 feet away from exterior siding"
+    ],
+    "treatmentApproach": "We utilize non-repellent transfer-effect liquid barriers combined with slow-acting protein and sugar bait matrices. Worker ants carry the active ingredient back to the queen, eliminating the entire nest.",
+    "relatedServices": ["residential-pest-control", "seasonal-pest-protection"]
+  },
+  {
+    "id": "pest-002",
+    "slug": "cockroaches",
+    "name": "Cockroaches",
+    "commonName": "German Cockroach, American Cockroach, Oriental Cockroach",
+    "scientificName": "Blattodea (Blattella germanica, Periplaneta americana)",
+    "category": "Crawling Insects",
+    "riskLevel": "High",
+    "description": "Cockroaches are resilient nocturnal pests capable of reproducing rapidly in warm, humid spaces. They shed skin and leave droppings that are significant asthma and allergy triggers in children and sensitive individuals.",
+    "signsOfInfestation": [
+      "Small black droppings resembling ground pepper or coffee grounds in drawers",
+      "Musty, oily, unpleasant odor lingering in dark closets or under sinks",
+      "Brown, oval-shaped egg capsules (oothecae) hidden in cabinetry cracks",
+      "Nocturnal sightings when switching on kitchen or bathroom lights"
+    ],
+    "commonLocations": ["Behind Refrigerators & Stoves", "Inside Cabinet Hinges & Kickplates", "Drains and Basements", "Bathroom Vanity Cabinets"],
+    "healthRisks": "Spread Salmonella, E. coli, and dysentery pathogens across kitchen surfaces; cast skins trigger asthma attacks.",
+    "preventionTips": [
+      "Eliminate standing water and fix pipe condensation under cabinets",
+      "Take out kitchen trash daily in tightly tied garbage bags",
+      "Never leave pet food bowls out overnight",
+      "Seal gaps around plumbing pipe penetrations through drywall"
+    ],
+    "treatmentApproach": "Multi-tier eradication: precision gel bait placements, insect growth regulators (IGRs) to halt egg hatching, and micro-encapsulated crack-and-crevice residual treatments.",
+    "relatedServices": ["residential-pest-control", "commercial-pest-control"]
+  },
+  {
+    "id": "pest-003",
+    "slug": "termites",
+    "name": "Termites",
+    "commonName": "Subterranean Termites, Drywood Termites",
+    "scientificName": "Isoptera (Reticulitermes flavipes)",
+    "category": "Wood-Destroying Insects",
+    "riskLevel": "Severe",
+    "description": "Termites are known as 'silent destroyers' because they eat cellulose materials from the inside out, often remaining undetected for years while compromising the structural integrity of houses and commercial buildings.",
+    "signsOfInfestation": [
+      "Mud tubes extending up foundation walls, stem walls, or floor joists",
+      "Hollow or papery-sounding wood when tapped with a screwdriver handle",
+      "Discarded silvery wings of swarmer termites near windowsills and doors",
+      "Blistering or bubbling paint resembling water damage on baseboards"
+    ],
+    "commonLocations": ["Foundation Sills & Joists", "Crawlspaces & Basements", "Sub-Flooring", "Door Frames & Window Sills"],
+    "healthRisks": "Non-toxic to humans directly, but massive financial risk: causes over $5 billion in uninsurable property damage annually.",
+    "preventionTips": [
+      "Maintain a 6-inch gap between soil/mulch and wooden exterior siding",
+      "Direct downspouts and air-conditioner condensation lines well away from foundation",
+      "Store firewood and scrap lumber at least 20 feet away from the home",
+      "Ensure proper ventilation in crawlspaces to avoid humidity build-up"
+    ],
+    "treatmentApproach": "Exterior Sentricon® colony elimination baiting system or deep perimeter liquid termiticide trenching with continuous warranty coverage.",
+    "relatedServices": ["termite-control"]
+  },
+  {
+    "id": "pest-004",
+    "slug": "bed-bugs",
+    "name": "Bed Bugs",
+    "commonName": "Common Bed Bug",
+    "scientificName": "Cimex lectularius",
+    "category": "Biting Parasites",
+    "riskLevel": "High",
+    "description": "Bed bugs are small, wingless insects that feed exclusively on the blood of warm-blooded animals while they sleep. They can hitchhike on luggage, used furniture, and clothing into any clean household or hotel room.",
+    "signsOfInfestation": [
+      "Clusters of itchy, red bite marks in a linear or zigzag pattern on exposed skin",
+      "Rusty or reddish blood smears on bed sheets, pillowcases, or mattress seams",
+      "Dark fecal spots (about the size of a ballpoint pen dot) along mattress piping",
+      "Tiny pale yellow nymph skins shed in mattress corners or headboard crevices"
+    ],
+    "commonLocations": ["Mattress Seams & Box Springs", "Headboards & Bed Frames", "Behind Wallpaper & Baseboards", "Upholstered Chairs & Sofas"],
+    "healthRisks": "Severe allergic reactions to saliva, secondary skin infections from scratching, insomnia, anxiety, and psychological distress.",
+    "preventionTips": [
+      "Inspect hotel bed seams and headboards when traveling before unpacking",
+      "Keep suitcases elevated on luggage racks rather than on beds or carpet",
+      "Wash travel clothing on high heat and tumble dry on high for 30 minutes",
+      "Carefully examine secondhand furniture and vintage items before bringing indoors"
+    ],
+    "treatmentApproach": "Whole-home high-temperature thermal remediation (130°F) coupled with insect growth regulators and certified mattress encasements.",
+    "relatedServices": ["bed-bug-control"]
+  },
+  {
+    "id": "pest-005",
+    "slug": "rodents",
+    "name": "Rodents (Mice & Rats)",
+    "commonName": "House Mouse, Norway Rat, Roof Rat",
+    "scientificName": "Mus musculus, Rattus norvegicus, Rattus rattus",
+    "category": "Mammals & Wildlife",
+    "riskLevel": "Severe",
+    "description": "Rodents are highly adaptable warm-blooded mammals with continuously growing incisor teeth that force them to constantly gnaw on wood, pipes, and electrical wiring. A single pair of mice can produce dozens of offspring in a season.",
+    "signsOfInfestation": [
+      "Small dark spindle-shaped droppings (1/4 inch for mice, 1/2 to 3/4 inch for rats)",
+      "Scratching, scurrying, or squeaking noises inside ceilings, attics, or wall voids",
+      "Chewed electrical cords, gnawed plastic pipes, or damaged food packaging",
+      "Dark grease rub marks along baseboards and entry holes"
+    ],
+    "commonLocations": ["Attics & Crawlspaces", "Behind Kitchen Appliances", "Basements & Garages", "Inside HVAC Ductwork"],
+    "healthRisks": "Transmit dangerous diseases including Hantavirus, Leptospirosis, and Salmonellosis; gnawed wiring is a leading cause of unexplained house fires.",
+    "preventionTips": [
+      "Seal all exterior cracks and gaps larger than 1/4 inch with copper mesh and sealants",
+      "Install door sweeps on exterior doors and garage weatherstripping",
+      "Keep trash cans tightly closed with secure animal-resistant lids",
+      "Prune overhanging tree branches that offer roof rats easy roofline access"
+    ],
+    "treatmentApproach": "Complete mechanical exclusion, exterior tamper-resistant baiting stations, snap capture systems, and attic sanitization.",
+    "relatedServices": ["rodent-control", "residential-pest-control"]
+  },
+  {
+    "id": "pest-006",
+    "slug": "mosquitoes",
+    "name": "Mosquitoes",
+    "commonName": "Culicine Mosquitoes, Asian Tiger Mosquito",
+    "scientificName": "Culicidae (Aedes albopictus, Culex pipiens)",
+    "category": "Flying & Biting Insects",
+    "riskLevel": "High",
+    "description": "Mosquitoes thrive in warm seasons and require standing water to complete their life cycle. Female mosquitoes bite humans and pets to obtain protein required to produce eggs.",
+    "signsOfInfestation": [
+      "Frequent bites when standing on patios, decks, or in lawn areas at dawn/dusk",
+      "Audible high-pitched whining noise near ears when outdoors",
+      "Visible mosquito larvae (wrigglers) swimming in birdbaths or gutters"
+    ],
+    "commonLocations": ["Under Shaded Shrub Leaves", "Dense Tall Grass", "Bird Baths & Clogged Gutters", "Potted Plant Saucers"],
+    "healthRisks": "Vectors for West Nile Virus, Eastern Equine Encephalitis, Dengue, and canine heartworm parasites.",
+    "preventionTips": [
+      "Empty standing water from flower pots, bird baths, tarps, and tires every 5 days",
+      "Clean clogged roof gutters regularly to prevent pooling moisture",
+      "Keep lawns trimmed and thin out dense overgrown perimeter brush",
+      "Ensure window and patio door screens are free from tears and gaps"
+    ],
+    "treatmentApproach": "Integrated outdoor misting of resting foliage canopy and targeted biological larvicides (Bti) in drainage catch basins.",
+    "relatedServices": ["mosquito-control"]
+  },
+  {
+    "id": "pest-007",
+    "slug": "spiders",
+    "name": "Spiders",
+    "commonName": "Black Widow, Brown Recluse, Wolf Spider, House Spider",
+    "scientificName": "Araneae (Latrodectus, Loxosceles reclusa, Lycosidae)",
+    "category": "Arachnids",
+    "riskLevel": "Medium to High",
+    "description": "Spiders are predatory arachnids that enter homes searching for prey insects, warmth, and shelter. While most house spiders are harmless pest-eaters, venomous species like Black Widows and Brown Recluses present medical risks.",
+    "signsOfInfestation": [
+      "Abundant webs in garage corners, window frames, eaves, and basements",
+      "Silken egg sacs attached in secluded corners or under furniture",
+      "Live sightings of large fast-moving spiders along baseboards at night"
+    ],
+    "commonLocations": ["Basements & Cellars", "Attics & Storage Boxes", "Window Sills & Eaves", "Under Outdoor Patio Furniture"],
+    "healthRisks": "Black widow bites cause neurotoxic pain, muscle spasms, and nausea; Brown recluse bites can cause necrotic tissue lesions.",
+    "preventionTips": [
+      "Regularly vacuum corners, behind sofas, and along basement ceilings",
+      "Store seasonal items in sealed plastic containers instead of cardboard boxes",
+      "Keep outdoor porch lights off or switch to yellow insect-repelling LED bulbs",
+      "Clear away woodpiles and leaf debris touching the exterior walls"
+    ],
+    "treatmentApproach": "Power de-webbing with extension poles, repellent perimeter barrier application, and elimination of underlying insect prey populations.",
+    "relatedServices": ["residential-pest-control", "seasonal-pest-protection"]
+  },
+  {
+    "id": "pest-008",
+    "slug": "wasps",
+    "name": "Wasps & Hornets",
+    "commonName": "Yellowjacket, Paper Wasp, Bald-Faced Hornet",
+    "scientificName": "Hymenoptera (Vespidae, Vespula, Dolichovespula)",
+    "category": "Stinging Insects",
+    "riskLevel": "High",
+    "description": "Wasps and hornets build papery cellulose nests under roof overhangs, in attics, shrubs, or underground burrows. Unlike bees, they can sting multiple times aggressively when defending their nest territory.",
+    "signsOfInfestation": [
+      "Visible umbrella-shaped or football-sized grey papery nests on eaves or trees",
+      "Continuous stream of flying wasps entering an opening in exterior siding",
+      "Aggressive buzzing behavior around outdoor dining tables and trash bins"
+    ],
+    "commonLocations": ["Roof Eaves & Soffits", "Attic Spaces", "Deck Railings & Porches", "In-Ground Rodent Holes"],
+    "healthRisks": "Severe life-threatening anaphylactic shock in allergic individuals; intense localized pain and swelling.",
+    "preventionTips": [
+      "Keep outdoor trash bins sealed tightly and wash them out periodically",
+      "Cover sweet drinks, sodas, and meats when dining outdoors on patios",
+      "Inspect rooflines in early spring to spot and knock down small nascent nests",
+      "Seal cracks in siding and ensure attic vent screens are intact"
+    ],
+    "treatmentApproach": "Protective-suit direct aerosol knockdown, physical nest extraction, and residual deterrent dusting in wall openings.",
+    "relatedServices": ["wasp-stinging-insect-control"]
+  }
+]

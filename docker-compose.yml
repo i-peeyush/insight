@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: insightpest-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-insightpest_db}
+      POSTGRES_USER: ${POSTGRES_USER:-insightpest_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-insightpest_secure_pass}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U insightpest_user -d insightpest_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: insightpest-backend
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${POSTGRES_DB:-insightpest_db}
+      DB_USERNAME: ${POSTGRES_USER:-insightpest_user}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-insightpest_secure_pass}
+      SERVER_PORT: 8080
+      CORS_ALLOWED_ORIGINS: http://localhost:3000,http://localhost:5173
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: insightpest-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8080/api/v1
+      - VITE_USE_MOCK_DATA=false
+
+volumes:
+  postgres_data:

@@ -1,0 +1,46 @@
+{
+  "availableSlots": [
+    { "id": "slot-1", "date": "2026-09-05", "time": "08:00 AM - 10:00 AM", "available": true, "type": "Morning" },
+    { "id": "slot-2", "date": "2026-09-05", "time": "10:00 AM - 12:00 PM", "available": true, "type": "Morning" },
+    { "id": "slot-3", "date": "2026-09-05", "time": "01:00 PM - 03:00 PM", "available": true, "type": "Afternoon" },
+    { "id": "slot-4", "date": "2026-09-05", "time": "03:00 PM - 05:00 PM", "available": false, "type": "Afternoon" },
+    { "id": "slot-5", "date": "2026-09-06", "time": "08:00 AM - 10:00 AM", "available": true, "type": "Morning" },
+    { "id": "slot-6", "date": "2026-09-06", "time": "10:00 AM - 12:00 PM", "available": true, "type": "Morning" },
+    { "id": "slot-7", "date": "2026-09-06", "time": "01:00 PM - 03:00 PM", "available": true, "type": "Afternoon" },
+    { "id": "slot-8", "date": "2026-09-06", "time": "03:00 PM - 05:00 PM", "available": true, "type": "Afternoon" },
+    { "id": "slot-9", "date": "2026-09-07", "time": "09:00 AM - 11:00 AM", "available": true, "type": "Morning" },
+    { "id": "slot-10", "date": "2026-09-07", "time": "01:00 PM - 03:00 PM", "available": true, "type": "Afternoon" }
+  ],
+  "sampleBookings": [
+    {
+      "bookingId": "BK-90421",
+      "serviceSlug": "residential-pest-control",
+      "serviceTitle": "Residential Pest Control",
+      "propertyType": "Single Family Home",
+      "scheduledDate": "2026-09-05",
+      "scheduledTime": "08:00 AM - 10:00 AM",
+      "customerName": "Robert Davis",
+      "email": "robert.davis.demo@example.com",
+      "phone": "(555) 349-2918",
+      "address": "421 Elm Creek Rd, Austin, TX 78704",
+      "status": "CONFIRMED",
+      "notes": "Gate code is 4491. Please pay special attention to back porch.",
+      "createdAt": "2026-09-01T14:20:00Z"
+    },
+    {
+      "bookingId": "BK-90422",
+      "serviceSlug": "termite-control",
+      "serviceTitle": "Termite Protection & Elimination",
+      "propertyType": "Commercial Facility",
+      "scheduledDate": "2026-09-06",
+      "scheduledTime": "01:00 PM - 03:00 PM",
+      "customerName": "Jennifer Miller",
+      "email": "jennifer.miller.demo@example.com",
+      "phone": "(555) 782-9014",
+      "address": "880 Industrial Pkwy, Round Rock, TX 78664",
+      "status": "REQUESTED",
+      "notes": "Requesting NPMA-33 real estate termite certification letter.",
+      "createdAt": "2026-09-01T16:45:00Z"
+    }
+  ]
+}
