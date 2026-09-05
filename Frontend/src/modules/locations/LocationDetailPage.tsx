@@ -86,9 +86,9 @@ export const LocationDetailPage: React.FC = () => {
             <div className="flex items-center gap-4 pt-2">
               <a
                 href={`tel:${companyConfig.phoneRaw}`}
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#144A38] bg-[#E8F5F1] px-4 py-2.5 rounded-xl border border-[#10B981]/30 hover:bg-[#144A38] hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#DC2626] bg-[#FEF2F2] px-4 py-2.5 rounded-xl border border-[#EF4444]/30 hover:bg-[#DC2626] hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4 text-emerald-600" />
+                <Phone className="w-4 h-4 text-red-600" />
                 <span>Local Dispatch: {companyConfig.phoneDisplay}</span>
               </a>
             </div>
@@ -101,7 +101,7 @@ export const LocationDetailPage: React.FC = () => {
             {/* Common Regional Pests */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Bug className="w-5 h-5 text-emerald-600" />
+                <Bug className="w-5 h-5 text-red-600" />
                 <span>Common Pest Threats in {location.cityName}</span>
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -116,13 +116,13 @@ export const LocationDetailPage: React.FC = () => {
             {/* Services Available */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                <ShieldCheck className="w-5 h-5 text-red-600" />
                 <span>Available Services in this Area</span>
               </h2>
               <div className="space-y-2.5">
                 {location.servicesAvailable.map((srv, idx) => (
                   <div key={idx} className="flex items-center gap-3 text-xs md:text-sm text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0" />
                     <span>{srv}</span>
                   </div>
                 ))}
@@ -137,7 +137,7 @@ export const LocationDetailPage: React.FC = () => {
               <div className="space-y-3">
                 {location.highlights.map((highlight, idx) => (
                   <div key={idx} className="flex items-start gap-3 text-xs md:text-sm text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </div>
                 ))}

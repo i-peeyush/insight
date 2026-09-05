@@ -25,7 +25,7 @@ export const AboutPage: React.FC = () => {
         {/* Hero Section */}
         <div className="bg-white rounded-3xl p-8 md:p-14 border border-slate-200 shadow-sm mb-12">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest">
+            <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
               Our Story & Commitment
             </span>
             <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -40,7 +40,7 @@ export const AboutPage: React.FC = () => {
         {/* 3 Core Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Card className="p-8 border-slate-200/90">
-            <div className="w-12 h-12 rounded-2xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <Leaf className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Integrated Pest Management</h3>
@@ -50,7 +50,7 @@ export const AboutPage: React.FC = () => {
           </Card>
 
           <Card className="p-8 border-slate-200/90">
-            <div className="w-12 h-12 rounded-2xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <HeartHandshake className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Unconditional Guarantee</h3>
@@ -60,7 +60,7 @@ export const AboutPage: React.FC = () => {
           </Card>
 
           <Card className="p-8 border-slate-200/90">
-            <div className="w-12 h-12 rounded-2xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <Award className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Certified Master Specialists</h3>

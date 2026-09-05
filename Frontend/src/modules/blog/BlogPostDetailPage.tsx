@@ -83,7 +83,7 @@ export const BlogPostDetailPage: React.FC = () => {
           </h1>
 
           <div className="flex items-center gap-3 pb-8 mb-8 border-b border-slate-100">
-            <div className="w-10 h-10 rounded-full bg-[#E8F5F1] text-[#144A38] font-bold text-sm flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-[#FEF2F2] text-[#DC2626] font-bold text-sm flex items-center justify-center">
               {post.author.charAt(0)}
             </div>
             <div>

@@ -59,7 +59,7 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <Card key={index} hoverEffect className="border-slate-200/80 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">

@@ -18,6 +18,7 @@ import { useTestimonials } from '../../hooks/useTestimonials';
 import { useFaqs } from '../../hooks/useFaqs';
 import { useBlog } from '../../hooks/useBlog';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const HomePage: React.FC = () => {
   const { data: services } = useServices();
@@ -27,8 +28,8 @@ export const HomePage: React.FC = () => {
 
   useEffect(() => {
     updateSeo({
-      title: 'Insight Pest Solutions | Professional Pest Control & Extermination',
-      description: 'Insight Pest Solutions offers premier residential & commercial pest control, termite protection, bed bug thermal remediation, and rodent exclusion.',
+      title: t.home.seo.title,
+      description: t.home.seo.description,
       ogType: 'website'
     });
   }, []);
@@ -57,14 +58,14 @@ export const HomePage: React.FC = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest">
-                Comprehensive Protection
+              <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
+                {t.home.servicesSection.eyebrow}
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">
-                Targeted Pest Solutions for Every Need
+                {t.home.servicesSection.title}
               </h2>
               <p className="text-sm md:text-base text-slate-600 mt-2 max-w-2xl">
-                Whether you need routine seasonal home maintenance, emergency nest removal, or audit-ready commercial pest defense.
+                {t.home.servicesSection.subtitle}
               </p>
             </div>
             <Button
@@ -73,7 +74,7 @@ export const HomePage: React.FC = () => {
               size="md"
               rightIcon={<ArrowRight className="w-4 h-4" />}
             >
-              View All Services
+              {t.home.servicesSection.viewAllButton}
             </Button>
           </div>
 
@@ -95,9 +96,9 @@ export const HomePage: React.FC = () => {
       <section className="py-20 bg-slate-50 border-t border-slate-200/80">
         <div className="container-custom">
           <SectionHeading
-            badge="Verified Customer Reviews"
-            title="What Our Clients Say About Insight Pest"
-            subtitle="Real feedback from families and business owners across our service regions."
+            badge={t.home.testimonialsSection.eyebrow}
+            title={t.home.testimonialsSection.title}
+            subtitle={t.home.testimonialsSection.subtitle}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -108,7 +109,7 @@ export const HomePage: React.FC = () => {
 
           <div className="text-center">
             <Button to="/testimonials" variant="outline" size="md">
-              Read All Customer Reviews
+              {t.home.testimonialsSection.viewAllButton}
             </Button>
           </div>
         </div>
@@ -118,9 +119,9 @@ export const HomePage: React.FC = () => {
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container-custom max-w-4xl">
           <SectionHeading
-            badge="Common Inquiries"
-            title="Frequently Asked Questions"
-            subtitle="Have questions about our treatments, safety for pets, or scheduling? Here are quick answers."
+            badge={t.home.faqSection.eyebrow}
+            title={t.home.faqSection.title}
+            subtitle={t.home.faqSection.subtitle}
           />
 
           {faqs && <FaqAccordion faqs={faqs.slice(0, 5)} />}
@@ -128,9 +129,9 @@ export const HomePage: React.FC = () => {
           <div className="mt-8 text-center">
             <Link
               to="/faq"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#144A38] hover:text-emerald-700"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#DC2626] hover:text-red-600"
             >
-              <span>Explore our full FAQ knowledge base</span>
+              <span>{t.home.faqSection.exploreAllLink}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -142,18 +143,18 @@ export const HomePage: React.FC = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest">
-                Knowledge & Prevention
+              <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
+                {t.home.blogSection.eyebrow}
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">
-                Latest Pest Control Guides & Insights
+                {t.home.blogSection.title}
               </h2>
               <p className="text-sm text-slate-600 mt-2 max-w-xl">
-                Expert tips written by our entomologists and pest technicians to help you protect your home.
+                {t.home.blogSection.subtitle}
               </p>
             </div>
             <Button to="/blog" variant="outline" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
-              Read Knowledge Base
+              {t.home.blogSection.viewAllButton}
             </Button>
           </div>
 

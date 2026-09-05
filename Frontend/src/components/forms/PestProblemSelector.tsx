@@ -83,7 +83,7 @@ export const PestProblemSelector: React.FC = () => {
   return (
     <div className="bg-white rounded-3xl border border-slate-200 shadow-xl p-6 md:p-10">
       <div className="text-center max-w-xl mx-auto mb-8">
-        <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">
+        <span className="text-xs font-bold text-red-600 uppercase tracking-wider">
           Instant Diagnostic Selector
         </span>
         <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">
@@ -103,7 +103,7 @@ export const PestProblemSelector: React.FC = () => {
             onClick={() => setSelectedPest(opt)}
             className={`p-3 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-200 border ${
               selectedPest.id === opt.id
-                ? 'bg-[#144A38] text-white border-[#144A38] shadow-md scale-105'
+                ? 'bg-[#DC2626] text-white border-[#DC2626] shadow-md scale-105'
                 : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
             }`}
           >
@@ -114,13 +114,13 @@ export const PestProblemSelector: React.FC = () => {
       </div>
 
       {/* Detail Showcase Panel */}
-      <div className="bg-gradient-to-r from-emerald-50 to-[#E8F5F1] rounded-2xl p-6 md:p-8 border border-emerald-200/80 flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
+      <div className="bg-gradient-to-r from-red-500 to-[#FEF2F2] rounded-2xl p-6 md:p-8 border border-red-200/80 flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
         <div className="space-y-2 max-w-lg">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+            <span className="text-xs font-bold text-red-600 uppercase tracking-wider">
               Recommended Solution:
             </span>
-            <span className="text-xs bg-emerald-200/60 text-emerald-900 font-bold px-2.5 py-0.5 rounded-full">
+            <span className="text-xs bg-red-50/60 text-red-600 font-bold px-2.5 py-0.5 rounded-full">
               {selectedPest.recommendedService}
             </span>
           </div>
@@ -131,7 +131,7 @@ export const PestProblemSelector: React.FC = () => {
             {selectedPest.summary}
           </p>
           <div className="flex items-center gap-2 text-xs text-amber-900 bg-amber-100/70 p-2 rounded-lg border border-amber-200">
-            <ShieldCheck className="w-4 h-4 text-emerald-700 flex-shrink-0" />
+            <ShieldCheck className="w-4 h-4 text-red-600 flex-shrink-0" />
             <span>Risk Level: <strong>{selectedPest.threatLevel}</strong></span>
           </div>
         </div>
@@ -148,7 +148,7 @@ export const PestProblemSelector: React.FC = () => {
 
           <Link
             to={`/pests/${selectedPest.pestSlug}`}
-            className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-[#144A38] hover:text-emerald-800 transition-colors py-2"
+            className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-red-600 transition-colors py-2"
           >
             <span>View Complete {selectedPest.name} Guide</span>
             <ArrowRight className="w-3.5 h-3.5" />

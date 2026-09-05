@@ -50,7 +50,7 @@ export const ProcessSection: React.FC = () => {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center">
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <span className="text-2xl font-black text-slate-200">

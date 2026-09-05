@@ -95,18 +95,18 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
 
   if (submittedData) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 md:p-10 text-center animate-fade-in">
-        <div className="w-16 h-16 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
+      <div className="bg-red-50 border border-red-200 rounded-3xl p-8 md:p-10 text-center animate-fade-in">
+        <div className="w-16 h-16 rounded-full bg-red-50 text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
           <CheckCircle2 className="w-10 h-10" />
         </div>
-        <h3 className="text-2xl font-extrabold text-[#144A38] mb-2">
+        <h3 className="text-2xl font-extrabold text-[#DC2626] mb-2">
           Quote Request Received!
         </h3>
         <p className="text-sm text-slate-700 max-w-md mx-auto mb-6">
           Thank you, <span className="font-bold">{submittedData.firstName}</span>. An Insight pest specialist is reviewing your inquiry and will contact you via {submittedData.preferredContactMethod} shortly.
         </p>
 
-        <div className="bg-white rounded-2xl p-5 border border-emerald-100 max-w-md mx-auto text-left text-xs space-y-2 mb-8 shadow-xs">
+        <div className="bg-white rounded-2xl p-5 border border-red-200 max-w-md mx-auto text-left text-xs space-y-2 mb-8 shadow-xs">
           <div className="flex justify-between border-b pb-1 text-slate-600">
             <span className="font-semibold">Service:</span>
             <span>{submittedData.serviceRequired}</span>
@@ -309,7 +309,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
         <input
           type="checkbox"
           id="quote-consent"
-          className="mt-1 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300"
+          className="mt-1 w-4 h-4 rounded text-red-600 focus:ring-red-500 border-slate-300"
           {...register('consent')}
         />
         <label htmlFor="quote-consent" className="text-xs text-slate-600 leading-tight select-none">
@@ -322,7 +322,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
 
       {/* Trust & Guarantee Callout */}
       <div className="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200">
-        <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+        <ShieldCheck className="w-4 h-4 text-red-600 flex-shrink-0" />
         <span>Your information is 100% private and protected. We never sell your personal data.</span>
       </div>
 

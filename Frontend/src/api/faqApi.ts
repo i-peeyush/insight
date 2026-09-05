@@ -2,15 +2,15 @@ import { apiClient, delay } from './apiClient';
 import { env } from '../config/env';
 import { FaqItem } from '../types/faq';
 import { ApiResponse } from '../types/api';
-import mockFaqs from '../../MockDirectory/faq/faqs.json';
+import { getStoredFaqs } from '../utils/dataStore';
 
 export const faqApi = {
   async getAll(): Promise<ApiResponse<FaqItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
       return {
         success: true,
-        data: mockFaqs as FaqItem[],
+        data: getStoredFaqs(),
         timestamp: new Date().toISOString()
       };
     }
@@ -20,10 +20,11 @@ export const faqApi = {
 
   async getByCategory(category: string): Promise<ApiResponse<FaqItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
+      const allFaqs = getStoredFaqs();
       const filtered = category === 'All' 
-        ? (mockFaqs as FaqItem[])
-        : (mockFaqs as FaqItem[]).filter((f) => f.category.toLowerCase() === category.toLowerCase());
+        ? allFaqs
+        : allFaqs.filter((f) => f.category.toLowerCase() === category.toLowerCase());
       return {
         success: true,
         data: filtered,

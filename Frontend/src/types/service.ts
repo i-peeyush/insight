@@ -18,4 +18,10 @@ export interface ServiceItem {
   features: string[];
   process: ServiceProcessStep[];
   warranty: string;
+  treatmentFrequency?: string;
+  heroImage?: string;
+  faqs?: any[];
 }
+
+export type Service = ServiceItem;
+

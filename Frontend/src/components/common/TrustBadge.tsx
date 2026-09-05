@@ -13,13 +13,13 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({ type, title, subtitle })
       icon: ShieldCheck,
       defaultTitle: '100% Protection Guarantee',
       defaultSub: 'Free re-service if pests return',
-      color: 'text-emerald-700 bg-emerald-50 border-emerald-200'
+      color: 'text-red-600 bg-red-50 border-red-200'
     },
     certified: {
       icon: Award,
       defaultTitle: 'Master Certified Technicians',
       defaultSub: 'Licensed, background-checked & insured',
-      color: 'text-[#144A38] bg-[#E8F5F1] border-[#10B981]/30'
+      color: 'text-[#DC2626] bg-[#FEF2F2] border-[#EF4444]/30'
     },
     eco: {
       icon: HeartHandshake,

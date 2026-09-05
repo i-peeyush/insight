@@ -11,9 +11,12 @@ export interface TestimonialItem {
   avatar?: string;
 }
 
+export type Testimonial = TestimonialItem;
+
 export interface FaqItem {
   id: string;
   category: string;
   question: string;
   answer: string;
 }
+

@@ -2,21 +2,21 @@ import { apiClient, delay } from './apiClient';
 import { env } from '../config/env';
 import { QuoteRequestData, QuoteLeadItem } from '../types/lead';
 import { ApiResponse } from '../types/api';
-import mockLeadsData from '../../MockDirectory/leads/leads.json';
-
-let localLeads = [...(mockLeadsData.quoteRequests as QuoteLeadItem[])];
+import { getStoredLeads, saveStoredLeads } from '../utils/dataStore';
 
 export const leadApi = {
   async submitQuote(request: QuoteRequestData): Promise<ApiResponse<QuoteLeadItem>> {
     if (env.useMockData) {
-      await delay(600);
+      await delay(300);
       const newLead: QuoteLeadItem = {
         ...request,
         id: `lead-${Date.now()}`,
         status: 'NEW',
         createdAt: new Date().toISOString()
       };
-      localLeads.unshift(newLead);
+      const leads = getStoredLeads();
+      leads.unshift(newLead);
+      saveStoredLeads(leads);
       return {
         success: true,
         message: 'Your quote request has been received! An Insight specialist will contact you within 15 minutes.',
@@ -30,10 +30,10 @@ export const leadApi = {
 
   async getAll(): Promise<ApiResponse<QuoteLeadItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
       return {
         success: true,
-        data: localLeads,
+        data: getStoredLeads(),
         timestamp: new Date().toISOString()
       };
     }

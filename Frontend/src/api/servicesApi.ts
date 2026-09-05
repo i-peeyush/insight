@@ -2,15 +2,15 @@ import { apiClient, delay } from './apiClient';
 import { env } from '../config/env';
 import { ServiceItem } from '../types/service';
 import { ApiResponse } from '../types/api';
-import mockServices from '../../MockDirectory/services/services.json';
+import { getStoredServices, saveStoredServices } from '../utils/dataStore';
 
 export const servicesApi = {
   async getAll(): Promise<ApiResponse<ServiceItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
       return {
         success: true,
-        data: mockServices as ServiceItem[],
+        data: getStoredServices(),
         timestamp: new Date().toISOString()
       };
     }
@@ -20,8 +20,9 @@ export const servicesApi = {
 
   async getBySlug(slug: string): Promise<ApiResponse<ServiceItem | null>> {
     if (env.useMockData) {
-      await delay();
-      const item = (mockServices as ServiceItem[]).find((s) => s.slug === slug) || null;
+      await delay(100);
+      const services = getStoredServices();
+      const item = services.find((s) => s.slug === slug) || null;
       return {
         success: !!item,
         data: item,

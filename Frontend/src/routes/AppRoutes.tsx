@@ -28,7 +28,12 @@ import { NotFoundPage } from '../modules/notfound/NotFoundPage';
 // Admin Pages
 import { AdminDashboardPage } from '../modules/admin/AdminDashboardPage';
 import { AdminLeadsPage } from '../modules/admin/AdminLeadsPage';
-import { AdminBookingsPage, AdminServicesPage } from '../modules/admin/AdminBookingsPage';
+import { AdminBookingsPage } from '../modules/admin/AdminBookingsPage';
+import { AdminServicesPage } from '../modules/admin/AdminServicesPage';
+import { AdminTestimonialsPage } from '../modules/admin/AdminTestimonialsPage';
+import { AdminFaqPage } from '../modules/admin/AdminFaqPage';
+import { AdminBlogPage } from '../modules/admin/AdminBlogPage';
+import { AdminSettingsPage } from '../modules/admin/AdminSettingsPage';
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -64,9 +69,10 @@ export const AppRoutes: React.FC = () => {
         <Route path="leads" element={<AdminLeadsPage />} />
         <Route path="bookings" element={<AdminBookingsPage />} />
         <Route path="services" element={<AdminServicesPage />} />
-        <Route path="testimonials" element={<AdminDashboardPage />} />
-        <Route path="faq" element={<AdminDashboardPage />} />
-        <Route path="blog" element={<AdminDashboardPage />} />
+        <Route path="testimonials" element={<AdminTestimonialsPage />} />
+        <Route path="faq" element={<AdminFaqPage />} />
+        <Route path="blog" element={<AdminBlogPage />} />
+        <Route path="settings" element={<AdminSettingsPage />} />
       </Route>
     </Routes>
   );

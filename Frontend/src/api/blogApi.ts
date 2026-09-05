@@ -2,15 +2,15 @@ import { apiClient, delay } from './apiClient';
 import { env } from '../config/env';
 import { BlogPostItem } from '../types/blog';
 import { ApiResponse } from '../types/api';
-import mockBlogPosts from '../../MockDirectory/blog/blogPosts.json';
+import { getStoredBlog } from '../utils/dataStore';
 
 export const blogApi = {
   async getAll(): Promise<ApiResponse<BlogPostItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
       return {
         success: true,
-        data: mockBlogPosts as BlogPostItem[],
+        data: getStoredBlog(),
         timestamp: new Date().toISOString()
       };
     }
@@ -20,8 +20,9 @@ export const blogApi = {
 
   async getBySlug(slug: string): Promise<ApiResponse<BlogPostItem | null>> {
     if (env.useMockData) {
-      await delay();
-      const item = (mockBlogPosts as BlogPostItem[]).find((b) => b.slug === slug) || null;
+      await delay(100);
+      const posts = getStoredBlog();
+      const item = posts.find((b) => b.slug === slug) || null;
       return {
         success: !!item,
         data: item,

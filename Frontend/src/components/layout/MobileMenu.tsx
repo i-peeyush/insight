@@ -49,12 +49,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   <div>
                     <button
                       onClick={() => toggleSubmenu(item.label)}
-                      className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800 hover:text-[#144A38]"
+                      className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800 hover:text-[#DC2626]"
                     >
                       <span>{item.label}</span>
                       <ChevronDown
                         className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                          isSubOpen ? 'rotate-180 text-emerald-600' : ''
+                          isSubOpen ? 'rotate-180 text-red-600' : ''
                         }`}
                       />
                     </button>
@@ -65,7 +65,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                             key={child.path}
                             to={child.path}
                             onClick={onClose}
-                            className="block text-sm font-medium text-slate-600 hover:text-[#144A38] py-1"
+                            className="block text-sm font-medium text-slate-600 hover:text-[#DC2626] py-1"
                           >
                             {child.label}
                           </Link>
@@ -78,7 +78,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     to={item.path}
                     onClick={onClose}
                     className={`block py-2 text-base font-semibold transition-colors ${
-                      isActive ? 'text-[#144A38]' : 'text-slate-800 hover:text-[#144A38]'
+                      isActive ? 'text-[#DC2626]' : 'text-slate-800 hover:text-[#DC2626]'
                     }`}
                   >
                     {item.label}
@@ -115,9 +115,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
           <a
             href={`tel:${companyConfig.phoneRaw}`}
-            className="flex items-center justify-center gap-2 text-sm font-bold text-[#144A38] py-2 hover:underline"
+            className="flex items-center justify-center gap-2 text-sm font-bold text-[#DC2626] py-2 hover:underline"
           >
-            <Phone className="w-4 h-4 text-emerald-600" />
+            <Phone className="w-4 h-4 text-red-600" />
             <span>Call: {companyConfig.phoneDisplay}</span>
           </a>
         </div>

@@ -105,24 +105,24 @@ export const BookingWizard: React.FC = () => {
 
   if (confirmedBooking) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 md:p-12 text-center animate-fade-in max-w-2xl mx-auto shadow-sm">
-        <div className="w-16 h-16 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
+      <div className="bg-red-50 border border-red-200 rounded-3xl p-8 md:p-12 text-center animate-fade-in max-w-2xl mx-auto shadow-sm">
+        <div className="w-16 h-16 rounded-full bg-red-50 text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <Badge variant="accent" className="mb-2">
           Confirmation Code: {confirmedBooking.bookingId}
         </Badge>
-        <h3 className="text-2xl md:text-3xl font-extrabold text-[#144A38] mb-2">
+        <h3 className="text-2xl md:text-3xl font-extrabold text-[#DC2626] mb-2">
           Inspection Appointment Scheduled!
         </h3>
         <p className="text-sm text-slate-700 max-w-lg mx-auto mb-8">
           We have reserved your appointment on <strong className="text-slate-900">{formatDate(confirmedBooking.scheduledDate)}</strong> at <strong className="text-slate-900">{confirmedBooking.scheduledTime}</strong>. A confirmation email and SMS reminder have been dispatched.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 border border-emerald-100 text-left text-xs space-y-3 mb-8 shadow-xs">
+        <div className="bg-white rounded-2xl p-6 border border-red-200 text-left text-xs space-y-3 mb-8 shadow-xs">
           <div className="flex justify-between border-b pb-2 text-slate-700">
             <span className="font-bold">Service:</span>
-            <span className="font-semibold text-emerald-800">{confirmedBooking.serviceTitle}</span>
+            <span className="font-semibold text-red-600">{confirmedBooking.serviceTitle}</span>
           </div>
           <div className="flex justify-between border-b pb-2 text-slate-700">
             <span className="font-bold">Customer:</span>
@@ -172,15 +172,15 @@ export const BookingWizard: React.FC = () => {
                 <div
                   className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                     isCompleted
-                      ? 'bg-emerald-500 text-white'
+                      ? 'bg-red-50 text-white'
                       : isCurrent
-                      ? 'bg-emerald-400 text-slate-950 ring-4 ring-emerald-500/30 font-black'
+                      ? 'bg-red-50 text-slate-950 ring-4 ring-red-500/30 font-black'
                       : 'bg-slate-800 text-slate-400 border border-slate-700'
                   }`}
                 >
                   {isCompleted ? <Check className="w-4 h-4" /> : step.id}
                 </div>
-                <span className={`text-[10px] mt-1.5 hidden sm:block font-medium ${isCurrent ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}>
+                <span className={`text-[10px] mt-1.5 hidden sm:block font-medium ${isCurrent ? 'text-red-600 font-bold' : 'text-slate-400'}`}>
                   {step.title}
                 </span>
               </div>
@@ -208,20 +208,20 @@ export const BookingWizard: React.FC = () => {
                   onClick={() => handleServiceSelect(srv.slug, srv.title)}
                   className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
                     formData.serviceSlug === srv.slug
-                      ? 'border-[#10B981] bg-[#E8F5F1]/60 shadow-sm'
+                      ? 'border-[#EF4444] bg-[#FEF2F2]/60 shadow-sm'
                       : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                   }`}
                 >
                   <div className="flex items-start justify-between">
                     <h4 className="text-sm font-bold text-slate-900">{srv.title}</h4>
                     {formData.serviceSlug === srv.slug && (
-                      <div className="w-4 h-4 rounded-full bg-[#10B981] text-white flex items-center justify-center text-[10px]">
+                      <div className="w-4 h-4 rounded-full bg-[#EF4444] text-white flex items-center justify-center text-[10px]">
                         ✓
                       </div>
                     )}
                   </div>
                   <p className="text-xs text-slate-600 mt-1 line-clamp-2">{srv.shortDescription}</p>
-                  <span className="text-[11px] font-semibold text-emerald-800 mt-2 block">
+                  <span className="text-[11px] font-semibold text-red-600 mt-2 block">
                     {srv.pricingEstimate}
                   </span>
                 </div>
@@ -326,7 +326,7 @@ export const BookingWizard: React.FC = () => {
                           !slot.available
                             ? 'opacity-40 bg-slate-100 border-slate-200 cursor-not-allowed'
                             : formData.scheduledTime === slot.time
-                            ? 'border-[#10B981] bg-[#E8F5F1] text-[#144A38]'
+                            ? 'border-[#EF4444] bg-[#FEF2F2] text-[#DC2626]'
                             : 'border-slate-200 hover:border-slate-300'
                         }`}
                       >
@@ -405,7 +405,7 @@ export const BookingWizard: React.FC = () => {
             <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 text-xs space-y-3">
               <div className="flex justify-between border-b pb-2">
                 <span className="font-bold text-slate-500">Service:</span>
-                <span className="font-bold text-[#144A38]">{formData.serviceTitle}</span>
+                <span className="font-bold text-[#DC2626]">{formData.serviceTitle}</span>
               </div>
               <div className="flex justify-between border-b pb-2">
                 <span className="font-bold text-slate-500">Date & Window:</span>
@@ -433,7 +433,7 @@ export const BookingWizard: React.FC = () => {
               )}
             </div>
 
-            <div className="flex items-center gap-2 p-3 bg-emerald-50 text-emerald-800 rounded-xl text-xs border border-emerald-200">
+            <div className="flex items-center gap-2 p-3 bg-red-50 text-red-600 rounded-xl text-xs border border-red-200">
               <ShieldCheck className="w-5 h-5 flex-shrink-0" />
               <span>Zero-obligation booking. Reschedule or cancel anytime up to 2 hours prior without penalty.</span>
             </div>

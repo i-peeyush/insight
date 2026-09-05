@@ -1,4 +1,4 @@
-export type BookingStatus = 'REQUESTED' | 'CONFIRMED' | 'RESCHEDULED' | 'CANCELLED' | 'COMPLETED' | 'NO_SHOW';
+export type BookingStatus = 'REQUESTED' | 'CONFIRMED' | 'RESCHEDULED' | 'CANCELLED' | 'COMPLETED' | 'NO_SHOW' | 'IN_PROGRESS';
 
 export interface BookingSlot {
   id: string;
@@ -9,9 +9,10 @@ export interface BookingSlot {
 }
 
 export interface BookingRequestData {
-  serviceSlug: string;
+  serviceSlug?: string;
   serviceTitle?: string;
-  propertyType: string;
+  serviceId?: string;
+  propertyType?: string;
   scheduledDate: string;
   scheduledTime: string;
   customerName: string;
@@ -29,3 +30,6 @@ export interface BookingItem extends BookingRequestData {
   status: BookingStatus;
   createdAt: string;
 }
+
+export type Booking = BookingItem;
+

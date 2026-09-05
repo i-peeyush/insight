@@ -1,22 +1,24 @@
-export type LeadStatus = 'NEW' | 'CONTACTED' | 'SCHEDULED' | 'CLOSED_WON' | 'CLOSED_LOST';
+export type LeadStatus = 'NEW' | 'CONTACTED' | 'QUOTED' | 'WON' | 'LOST' | 'SCHEDULED' | 'CLOSED_WON' | 'CLOSED_LOST';
 
 export interface QuoteRequestData {
   firstName: string;
-  lastName: string;
+  lastName?: string;
   email: string;
   phone: string;
-  propertyType: string;
-  address: string;
-  city: string;
-  state: string;
-  zipCode: string;
+  propertyType?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  zipCode?: string;
   pestProblem: string;
-  serviceRequired: string;
-  description: string;
-  preferredContactMethod: 'Phone' | 'Email' | 'SMS';
-  preferredContactTime: 'Morning' | 'Afternoon' | 'Evening' | 'Anytime';
+  serviceRequired?: string;
+  description?: string;
+  preferredContactMethod?: string;
+  preferredContactTime?: string;
+  urgencyLevel?: string;
+  notes?: string;
   additionalNotes?: string;
-  consent: boolean;
+  consent?: boolean;
 }
 
 export interface QuoteLeadItem extends QuoteRequestData {
@@ -24,3 +26,6 @@ export interface QuoteLeadItem extends QuoteRequestData {
   status: LeadStatus;
   createdAt: string;
 }
+
+export type Lead = QuoteLeadItem;
+

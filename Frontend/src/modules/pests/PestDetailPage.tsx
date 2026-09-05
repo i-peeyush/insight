@@ -137,13 +137,13 @@ export const PestDetailPage: React.FC = () => {
             {/* Prevention Tips */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Lightbulb className="w-5 h-5 text-emerald-600" />
+                <Lightbulb className="w-5 h-5 text-red-600" />
                 <span>Proactive Prevention Tips for Homeowners</span>
               </h2>
               <div className="space-y-2.5">
                 {pest.preventionTips.map((tip, idx) => (
                   <div key={idx} className="flex items-start gap-3 text-xs md:text-sm text-slate-700">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">
+                    <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </span>
                     <span>{tip}</span>
@@ -155,7 +155,7 @@ export const PestDetailPage: React.FC = () => {
             {/* Professional IPM Treatment Approach */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <Bug className="w-5 h-5 text-[#144A38]" />
+                <Bug className="w-5 h-5 text-[#DC2626]" />
                 <span>Our Professional Treatment Approach</span>
               </h2>
               <p className="text-sm text-slate-700 leading-relaxed">
@@ -169,7 +169,7 @@ export const PestDetailPage: React.FC = () => {
             {/* Common Locations */}
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
               <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-emerald-600" />
+                <MapPin className="w-4 h-4 text-red-600" />
                 <span>Common Locations Found</span>
               </h3>
               <div className="space-y-2">
@@ -182,11 +182,11 @@ export const PestDetailPage: React.FC = () => {
             </div>
 
             {/* Related Services */}
-            <div className="bg-[#144A38] text-white rounded-3xl p-6 shadow-md space-y-4">
+            <div className="bg-[#DC2626] text-white rounded-3xl p-6 shadow-md space-y-4">
               <h3 className="text-base font-bold text-white">
                 Recommended Services
               </h3>
-              <p className="text-xs text-emerald-100">
+              <p className="text-xs text-red-600">
                 These specialized programs include comprehensive treatment for {pest.name}:
               </p>
               <div className="space-y-2">

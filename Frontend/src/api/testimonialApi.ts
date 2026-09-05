@@ -2,15 +2,15 @@ import { apiClient, delay } from './apiClient';
 import { env } from '../config/env';
 import { TestimonialItem } from '../types/testimonial';
 import { ApiResponse } from '../types/api';
-import mockTestimonials from '../../MockDirectory/testimonials/testimonials.json';
+import { getStoredTestimonials } from '../utils/dataStore';
 
 export const testimonialApi = {
   async getAll(): Promise<ApiResponse<TestimonialItem[]>> {
     if (env.useMockData) {
-      await delay();
+      await delay(100);
       return {
         success: true,
-        data: mockTestimonials as TestimonialItem[],
+        data: getStoredTestimonials(),
         timestamp: new Date().toISOString()
       };
     }

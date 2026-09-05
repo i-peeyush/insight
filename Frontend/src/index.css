@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --color-primary: #144A38;
-    --color-primary-hover: #0E3628;
-    --color-primary-light: #E8F5F1;
+    --color-primary: #DC2626;
+    --color-primary-hover: #B91C1C;
+    --color-primary-light: #FEF2F2;
     
-    --color-accent: #10B981;
-    --color-accent-hover: #059669;
-    --color-accent-light: #D1FAE5;
+    --color-accent: #EF4444;
+    --color-accent-hover: #DC2626;
+    --color-accent-light: #FEE2E2;
 
     --color-gold: #F59E0B;
     --color-gold-light: #FEF3C7;

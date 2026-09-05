@@ -58,7 +58,7 @@ export const FaqPage: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                 selectedCategory === cat
-                  ? 'bg-[#144A38] text-white'
+                  ? 'bg-[#DC2626] text-white'
                   : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
               }`}
             >

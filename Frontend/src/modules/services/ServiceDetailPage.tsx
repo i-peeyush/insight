@@ -70,7 +70,7 @@ export const ServiceDetailPage: React.FC = () => {
           <div className="max-w-3xl space-y-4">
             <div className="flex flex-wrap items-center gap-3">
               <Badge variant="accent">{service.category}</Badge>
-              <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-xs font-bold text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-200">
                 {service.pricingEstimate}
               </span>
             </div>
@@ -84,10 +84,10 @@ export const ServiceDetailPage: React.FC = () => {
             </p>
 
             {/* Guarantee Callout */}
-            <div className="flex items-start gap-3 p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-xs md:text-sm text-emerald-950 font-medium">
-              <ShieldCheck className="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 p-4 bg-red-50 rounded-2xl border border-red-200 text-xs md:text-sm text-red-600 font-medium">
+              <ShieldCheck className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
-                <strong className="block text-[#144A38]">{service.warranty}</strong>
+                <strong className="block text-[#DC2626]">{service.warranty}</strong>
                 <span>All treatments include full documentation and prompt retreatment if covered pests return.</span>
               </div>
             </div>
@@ -101,14 +101,14 @@ export const ServiceDetailPage: React.FC = () => {
             {/* Features & Inclusions */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <Award className="w-6 h-6 text-emerald-600" />
+                <Award className="w-6 h-6 text-red-600" />
                 <span>Program Inclusions & Features</span>
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {service.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3 text-xs md:text-sm text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -118,14 +118,14 @@ export const ServiceDetailPage: React.FC = () => {
             {/* 4-Step Treatment Process */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <Layers className="w-6 h-6 text-emerald-600" />
+                <Layers className="w-6 h-6 text-red-600" />
                 <span>How We Treat Your Property</span>
               </h2>
 
               <div className="space-y-4">
                 {service.process.map((step) => (
                   <div key={step.step} className="flex items-start gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/60">
-                    <div className="w-8 h-8 rounded-xl bg-[#144A38] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-[#DC2626] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
                       {step.step}
                     </div>
                     <div>
@@ -140,7 +140,7 @@ export const ServiceDetailPage: React.FC = () => {
             {/* Target Pests */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Bug className="w-5 h-5 text-emerald-600" />
+                <Bug className="w-5 h-5 text-red-600" />
                 <span>Covered Pests Under This Program</span>
               </h2>
 
@@ -148,7 +148,7 @@ export const ServiceDetailPage: React.FC = () => {
                 {service.targetPests.map((pest, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200/60"
+                    className="px-3 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-semibold border border-red-200/60"
                   >
                     {pest}
                   </span>
@@ -172,7 +172,7 @@ export const ServiceDetailPage: React.FC = () => {
               <div className="mt-6 pt-6 border-t border-slate-100 text-center">
                 <Link
                   to="/book-inspection"
-                  className="text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1"
+                  className="text-xs font-bold text-red-600 hover:text-red-600 inline-flex items-center gap-1"
                 >
                   <Calendar className="w-3.5 h-3.5" />
                   <span>Prefer to pick an arrival date? Book Inspection directly</span>

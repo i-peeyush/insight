@@ -7,8 +7,8 @@ export const LoadingState: React.FC<{ message?: string; className?: string }> = 
   className = 'py-16'
 }) => (
   <div className={`flex flex-col items-center justify-center text-center ${className}`}>
-    <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center mb-3">
-      <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+    <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center mb-3">
+      <Loader2 className="w-6 h-6 text-red-600 animate-spin" />
     </div>
     <p className="text-sm font-medium text-slate-600 animate-pulse">{message}</p>
   </div>

@@ -53,7 +53,7 @@ export const BlogListPage: React.FC = () => {
                 onClick={() => setSelectedTag(tag)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   selectedTag === tag
-                    ? 'bg-[#144A38] text-white'
+                    ? 'bg-[#DC2626] text-white'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >

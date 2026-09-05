@@ -64,9 +64,9 @@ export const ContactForm: React.FC = () => {
 
   if (isSuccess) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center animate-fade-in">
-        <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto mb-3" />
-        <h3 className="text-xl font-bold text-[#144A38] mb-1">Message Sent Successfully</h3>
+      <div className="bg-red-50 border border-red-200 rounded-3xl p-8 text-center animate-fade-in">
+        <CheckCircle2 className="w-12 h-12 text-red-600 mx-auto mb-3" />
+        <h3 className="text-xl font-bold text-[#DC2626] mb-1">Message Sent Successfully</h3>
         <p className="text-xs text-slate-600 mb-6">
           Thank you for getting in touch. An Insight support coordinator will respond within 1 business hour.
         </p>

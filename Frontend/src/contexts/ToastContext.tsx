@@ -11,6 +11,7 @@ export interface Toast {
 
 interface ToastContextType {
   showToast: (message: string, type?: ToastType) => void;
+  addToast: (message: string, type?: ToastType) => void;
   removeToast: (id: string) => void;
 }
 
@@ -31,8 +32,10 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }, 5000);
   }, [removeToast]);
 
+  const addToast = showToast;
+
   return (
-    <ToastContext.Provider value={{ showToast, removeToast }}>
+    <ToastContext.Provider value={{ showToast, addToast, removeToast }}>
       {children}
       {/* Toast Notification Container */}
       <div 
@@ -44,13 +47,13 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             key={t.id}
             className={`pointer-events-auto flex items-start gap-3 p-4 rounded-xl shadow-xl text-sm font-medium transition-all transform duration-300 animate-fade-in ${
               t.type === 'success'
-                ? 'bg-emerald-900 text-emerald-50 border border-emerald-700'
+                ? 'bg-red-50 text-red-600 border border-red-200'
                 : t.type === 'error'
                 ? 'bg-red-900 text-red-50 border border-red-700'
                 : 'bg-slate-900 text-slate-50 border border-slate-700'
             }`}
           >
-            {t.type === 'success' && <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />}
+            {t.type === 'success' && <CheckCircle2 className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />}
             {t.type === 'error' && <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />}
             {t.type === 'info' && <Info className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />}
             <span className="flex-1">{t.message}</span>

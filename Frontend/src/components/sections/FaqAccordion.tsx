@@ -18,7 +18,7 @@ export const FaqAccordion: React.FC<{ faqs: FaqItem[] }> = ({ faqs }) => {
             key={faq.id}
             className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
               isOpen
-                ? 'border-emerald-500 bg-white shadow-md ring-1 ring-emerald-500/20'
+                ? 'border-red-200 bg-white shadow-md ring-1 ring-red-500/20'
                 : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
@@ -29,12 +29,12 @@ export const FaqAccordion: React.FC<{ faqs: FaqItem[] }> = ({ faqs }) => {
               aria-expanded={isOpen}
             >
               <span className="flex items-center gap-3">
-                <HelpCircle className={`w-4 h-4 flex-shrink-0 ${isOpen ? 'text-emerald-600' : 'text-slate-400'}`} />
+                <HelpCircle className={`w-4 h-4 flex-shrink-0 ${isOpen ? 'text-red-600' : 'text-slate-400'}`} />
                 {faq.question}
               </span>
               <ChevronDown
                 className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-200 ${
-                  isOpen ? 'rotate-180 text-emerald-600' : ''
+                  isOpen ? 'rotate-180 text-red-600' : ''
                 }`}
               />
             </button>

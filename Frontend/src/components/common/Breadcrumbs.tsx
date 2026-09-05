@@ -10,7 +10,7 @@ export interface BreadcrumbItem {
 export const Breadcrumbs: React.FC<{ items: BreadcrumbItem[] }> = ({ items }) => {
   return (
     <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs font-medium text-slate-500 mb-6 py-2 overflow-x-auto">
-      <Link to="/" className="flex items-center gap-1 hover:text-emerald-700 transition-colors">
+      <Link to="/" className="flex items-center gap-1 hover:text-red-600 transition-colors">
         <Home className="w-3.5 h-3.5" />
         <span>Home</span>
       </Link>
@@ -24,7 +24,7 @@ export const Breadcrumbs: React.FC<{ items: BreadcrumbItem[] }> = ({ items }) =>
                 {item.label}
               </span>
             ) : (
-              <Link to={item.path} className="hover:text-emerald-700 transition-colors truncate">
+              <Link to={item.path} className="hover:text-red-600 transition-colors truncate">
                 {item.label}
               </Link>
             )}

@@ -40,28 +40,28 @@ export const QuoteRequestPage: React.FC = () => {
 
             {/* Right Side Trust Bar */}
             <div className="lg:col-span-4 space-y-6">
-              <div className="bg-[#144A38] text-white rounded-3xl p-6 shadow-md space-y-4">
-                <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+              <div className="bg-[#DC2626] text-white rounded-3xl p-6 shadow-md space-y-4">
+                <div className="flex items-center gap-2 text-red-600 font-bold text-xs uppercase tracking-wider">
                   <ShieldCheck className="w-5 h-5" />
                   <span>The Insight Guarantee</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white">
                   100% Satisfaction & Protection
                 </h3>
-                <p className="text-xs text-emerald-100 leading-relaxed">
+                <p className="text-xs text-red-600 leading-relaxed">
                   If pests return between scheduled visits, your technician returns to re-treat your home free of charge.
                 </p>
-                <div className="pt-2 border-t border-emerald-800/80 space-y-2 text-xs text-emerald-200">
+                <div className="pt-2 border-t border-red-200/80 space-y-2 text-xs text-red-600">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0" />
                     <span>No surprise upcharges</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0" />
                     <span>EPA safer-choice approved</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 flex-shrink-0" />
                     <span>Licensed master technicians</span>
                   </div>
                 </div>
@@ -71,9 +71,9 @@ export const QuoteRequestPage: React.FC = () => {
                 <p className="text-xs font-semibold text-slate-500 mb-1">Prefer to talk with an expert right now?</p>
                 <a
                   href={`tel:${companyConfig.phoneRaw}`}
-                  className="text-lg font-black text-[#144A38] hover:text-emerald-700 flex items-center justify-center gap-2 mt-2"
+                  className="text-lg font-black text-[#DC2626] hover:text-red-600 flex items-center justify-center gap-2 mt-2"
                 >
-                  <Phone className="w-5 h-5 text-emerald-600" />
+                  <Phone className="w-5 h-5 text-red-600" />
                   <span>{companyConfig.phoneDisplay}</span>
                 </a>
                 <p className="text-[11px] text-slate-400 mt-2">

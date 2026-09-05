@@ -8,7 +8,7 @@ export const TopBar: React.FC = () => {
       <div className="container-custom flex flex-wrap items-center justify-between gap-3">
         {/* Left indicators */}
         <div className="flex items-center gap-4 flex-wrap">
-          <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
+          <div className="flex items-center gap-1.5 text-red-600 font-medium">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>{companyConfig.guarantee.title}</span>
           </div>
@@ -21,14 +21,14 @@ export const TopBar: React.FC = () => {
         {/* Right action & phone */}
         <div className="flex items-center gap-5 ml-auto">
           <div className="hidden sm:flex items-center gap-1 text-slate-400">
-            <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+            <MapPin className="w-3.5 h-3.5 text-red-600" />
             <span>Serving Greater Metro Area</span>
           </div>
           <a
             href={`tel:${companyConfig.phoneRaw}`}
-            className="flex items-center gap-1.5 text-white font-bold hover:text-emerald-400 transition-colors"
+            className="flex items-center gap-1.5 text-white font-bold hover:text-red-600 transition-colors"
           >
-            <Phone className="w-3.5 h-3.5 text-emerald-400" />
+            <Phone className="w-3.5 h-3.5 text-red-600" />
             <span>Call Now: {companyConfig.phoneDisplay}</span>
           </a>
         </div>

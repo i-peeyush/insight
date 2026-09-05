@@ -37,28 +37,28 @@ export const ContactPage: React.FC = () => {
               <div className="space-y-4 text-sm text-slate-700">
                 <a
                   href={`tel:${companyConfig.phoneRaw}`}
-                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 hover:bg-[#E8F5F1] transition-colors group"
+                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 hover:bg-[#FEF2F2] transition-colors group"
                 >
-                  <Phone className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-semibold text-slate-500 block">Phone Support</span>
-                    <strong className="text-slate-900 group-hover:text-[#144A38]">{companyConfig.phoneDisplay}</strong>
+                    <strong className="text-slate-900 group-hover:text-[#DC2626]">{companyConfig.phoneDisplay}</strong>
                   </div>
                 </a>
 
                 <a
                   href={`mailto:${companyConfig.emailDisplay}`}
-                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 hover:bg-[#E8F5F1] transition-colors group"
+                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 hover:bg-[#FEF2F2] transition-colors group"
                 >
-                  <Mail className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-semibold text-slate-500 block">Email Inquiries</span>
-                    <strong className="text-slate-900 group-hover:text-[#144A38]">{companyConfig.emailDisplay}</strong>
+                    <strong className="text-slate-900 group-hover:text-[#DC2626]">{companyConfig.emailDisplay}</strong>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50">
-                  <MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-semibold text-slate-500 block">Headquarters</span>
                     <span className="text-slate-900 font-medium">{companyConfig.addressDisplay}</span>
@@ -66,7 +66,7 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50">
-                  <Clock className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-semibold text-slate-500 block">Operating Hours</span>
                     <p className="text-xs text-slate-800">

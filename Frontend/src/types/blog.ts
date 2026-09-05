@@ -11,4 +11,8 @@ export interface BlogPostItem {
   featured: boolean;
   tags: string[];
   coverImage?: string;
+  authorRole?: string;
 }
+
+export type BlogPost = BlogPostItem;
+

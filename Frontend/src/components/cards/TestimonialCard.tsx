@@ -11,11 +11,11 @@ export const TestimonialCard: React.FC<{ testimonial: TestimonialItem }> = ({ te
       <div>
         <div className="flex items-center justify-between mb-3">
           <RatingStars rating={testimonial.rating} size={15} />
-          <Quote className="w-6 h-6 text-emerald-100" />
+          <Quote className="w-6 h-6 text-red-600" />
         </div>
 
         {testimonial.highlight && (
-          <p className="text-sm font-bold text-[#144A38] mb-2">
+          <p className="text-sm font-bold text-[#DC2626] mb-2">
             "{testimonial.highlight}"
           </p>
         )}
@@ -27,7 +27,7 @@ export const TestimonialCard: React.FC<{ testimonial: TestimonialItem }> = ({ te
 
       <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-[#E8F5F1] text-[#144A38] font-bold text-xs flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 rounded-full bg-[#FEF2F2] text-[#DC2626] font-bold text-xs flex items-center justify-center flex-shrink-0">
             {testimonial.customerName.charAt(0)}
           </div>
           <div>
@@ -35,7 +35,7 @@ export const TestimonialCard: React.FC<{ testimonial: TestimonialItem }> = ({ te
               {testimonial.customerName}
               {testimonial.verified && (
                 <span title="Verified Customer" className="inline-flex items-center">
-                  <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                  <CheckCircle className="w-3.5 h-3.5 text-red-600" />
                 </span>
               )}
             </h4>

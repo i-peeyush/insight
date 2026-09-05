@@ -54,17 +54,17 @@ export const CareersPage: React.FC = () => {
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Card className="p-6">
-            <Award className="w-8 h-8 text-emerald-600 mb-3" />
+            <Award className="w-8 h-8 text-red-600 mb-3" />
             <h3 className="text-base font-bold text-slate-900 mb-1">Paid Licensing & Certifications</h3>
             <p className="text-xs text-slate-600">We sponsor full state applicator licenses and ongoing entomology education.</p>
           </Card>
           <Card className="p-6">
-            <Heart className="w-8 h-8 text-emerald-600 mb-3" />
+            <Heart className="w-8 h-8 text-red-600 mb-3" />
             <h3 className="text-base font-bold text-slate-900 mb-1">Top-Tier Benefits Package</h3>
             <p className="text-xs text-slate-600">Comprehensive health, dental, 401(k) matching, and generous paid time off.</p>
           </Card>
           <Card className="p-6">
-            <Shield className="w-8 h-8 text-emerald-600 mb-3" />
+            <Shield className="w-8 h-8 text-red-600 mb-3" />
             <h3 className="text-base font-bold text-slate-900 mb-1">Modern Equipment & Fleet</h3>
             <p className="text-xs text-slate-600">Late-model company service trucks, digital mobile routing apps, and ergonomic gear.</p>
           </Card>
@@ -77,7 +77,7 @@ export const CareersPage: React.FC = () => {
             <Card key={idx} hoverEffect className="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  <span className="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-0.5 rounded-full border border-red-200">
                     {pos.type}
                   </span>
                   <span className="text-xs text-slate-500">• {pos.department}</span>

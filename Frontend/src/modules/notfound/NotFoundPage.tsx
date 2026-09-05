@@ -14,11 +14,11 @@ export const NotFoundPage: React.FC = () => {
   return (
     <div className="py-24 bg-slate-50 min-h-[70vh] flex items-center justify-center">
       <div className="container-custom max-w-lg text-center">
-        <div className="w-20 h-20 rounded-3xl bg-[#E8F5F1] text-[#144A38] flex items-center justify-center mx-auto mb-6 shadow-md">
+        <div className="w-20 h-20 rounded-3xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mx-auto mb-6 shadow-md">
           <Bug className="w-10 h-10" />
         </div>
 
-        <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest">
+        <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
           Error 404
         </span>
 

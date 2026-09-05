@@ -16,7 +16,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
     <Card hoverEffect className="flex flex-col h-full justify-between group">
       <div>
         <div className="flex items-start justify-between mb-3">
-          <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-[#E8F5F1] group-hover:text-[#144A38] transition-colors">
+          <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-[#FEF2F2] group-hover:text-[#DC2626] transition-colors">
             <Bug className="w-5 h-5" />
           </div>
           <Badge variant={getRiskVariant(pest.riskLevel)}>
@@ -24,7 +24,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
           </Badge>
         </div>
 
-        <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#144A38] transition-colors">
+        <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#DC2626] transition-colors">
           {pest.name}
         </h3>
         <p className="text-xs italic text-slate-500 mb-3">
@@ -53,7 +53,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
         </span>
         <Link
           to={`/pests/${pest.slug}`}
-          className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition-colors group-hover:translate-x-1 duration-200"
+          className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
           <span>Pest Guide</span>
           <ArrowRight className="w-3.5 h-3.5" />

@@ -18,7 +18,7 @@ export const BlogCard: React.FC<{ post: BlogPostItem }> = ({ post }) => {
           </div>
         </div>
 
-        <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#144A38] transition-colors mb-2 leading-snug">
+        <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#DC2626] transition-colors mb-2 leading-snug">
           {post.title}
         </h3>
 
@@ -36,7 +36,7 @@ export const BlogCard: React.FC<{ post: BlogPostItem }> = ({ post }) => {
         </div>
         <Link
           to={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition-colors group-hover:translate-x-1 duration-200"
+          className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
           <span>Read Article</span>
           <ArrowRight className="w-3.5 h-3.5" />

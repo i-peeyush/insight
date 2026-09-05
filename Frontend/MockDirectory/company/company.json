@@ -12,13 +12,27 @@
   "businessHours": {
     "monday_friday": "7:00 AM - 8:00 PM EST",
     "saturday": "8:00 AM - 6:00 PM EST",
-    "sunday": "Emergency & Scheduled Inspections Only"
+    "sunday": "Emergency & Scheduled Inspections Only",
+    "holidayNote": "24/7 Emergency Dispatch On Call"
   },
   "socialLinks": {
     "facebook": "https://facebook.com/insightpestsolutions",
     "twitter": "https://twitter.com/insightpest",
     "linkedin": "https://linkedin.com/company/insight-pest-solutions",
-    "instagram": "https://instagram.com/insightpestsolutions"
+    "instagram": "https://instagram.com/insightpestsolutions",
+    "youtube": "https://youtube.com/@insightpestsolutions",
+    "tiktok": "https://tiktok.com/@insightpest",
+    "pinterest": "https://pinterest.com/insightpest",
+    "yelp": "https://yelp.com/biz/insight-pest-solutions",
+    "googleBusiness": "https://maps.google.com/?q=Insight+Pest+Solutions",
+    "whatsapp": "+18005557378"
+  },
+  "announcement": {
+    "enabled": true,
+    "badge": "Limited Time Special",
+    "message": "Seasonal Protection Special: Save $50 on comprehensive initial perimeter defense!",
+    "buttonText": "Claim Offer",
+    "buttonLink": "/request-quote"
   },
   "metrics": {
     "yearsExperience": "15+",

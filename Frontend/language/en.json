@@ -1,0 +1,623 @@
+{
+  "common": {
+    "companyName": "Insight Pest Solutions",
+    "tagline": "Family-Safe, High-Precision Integrated Pest Management",
+    "callNow": "Call Now",
+    "getQuote": "Get Free Quote",
+    "bookInspection": "Book Inspection",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "loading": "Loading...",
+    "search": "Search",
+    "clear": "Clear",
+    "filter": "Filter",
+    "all": "All",
+    "featured": "Featured",
+    "required": "Required",
+    "optional": "Optional",
+    "seeDetails": "See Details",
+    "guaranteed": "100% Guaranteed",
+    "emergencyBadge": "24/7 Emergency Dispatch",
+    "ecoFriendly": "Eco-Friendly Botanical Solutions",
+    "satisfactionGuarantee": "100% Insight Protection Guarantee",
+    "licensedInsured": "Licensed, Bonded & Master Certified",
+    "petSafe": "Safe for Children & Household Pets",
+    "noObligation": "Free Inspection & No Obligation",
+    "responseTime": "Typical response time: Under 15 minutes",
+    "pricingDisclaimer": "*Pricing is an estimate and may vary based on property size, severity of infestation, and treatment protocol."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "pests": "Pest Library",
+    "serviceAreas": "Service Areas",
+    "about": "About Us",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "blog": "Knowledge Base",
+    "careers": "Careers",
+    "contact": "Contact Us",
+    "requestQuote": "Get Free Quote",
+    "bookInspection": "Book Inspection",
+    "admin": "Admin Portal",
+    "topBar": {
+      "emergencyCall": "24/7 Rapid Emergency Dispatch:",
+      "hours": "Mon - Sat: 7:00 AM - 8:00 PM | Sun: Emergency Only",
+      "freeConsult": "Free Diagnostic Consultation"
+    },
+    "mobileMenu": {
+      "title": "Navigation Menu",
+      "callUsNow": "Call Us Directly",
+      "quickQuote": "Instant Pest Quote"
+    },
+    "footer": {
+      "description": "Insight Pest Solutions provides state-of-the-art, eco-conscious Integrated Pest Management for homeowners and businesses. Eliminating pests safely at their source since 2011.",
+      "servicesTitle": "Targeted Services",
+      "pestsTitle": "Pest Library",
+      "locationsTitle": "Service Areas",
+      "companyTitle": "Company",
+      "legalTitle": "Legal & Compliance",
+      "newsletterTitle": "Stay Pest-Free",
+      "newsletterSubtitle": "Subscribe to our seasonal pest alert bulletin and exclusive seasonal treatment discounts.",
+      "newsletterPlaceholder": "Enter your email address",
+      "newsletterButton": "Subscribe",
+      "newsletterSuccess": "Thank you! You have subscribed to seasonal pest alerts.",
+      "rightsReserved": "All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "accessibility": "Accessibility"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Insight Pest Solutions | Professional Pest Control & Extermination",
+      "description": "Insight Pest Solutions offers premier residential & commercial pest control, termite protection, bed bug thermal remediation, and rodent exclusion."
+    },
+    "hero": {
+      "badge": "#1 Rated Local Integrated Pest Management",
+      "titlePart1": "Protect Your Home From ",
+      "titleHighlight": "Unwanted Pests",
+      "subtitle": "Fast, reliable pest protection with family-safe, eco-conscious Integrated Pest Management. Certified technicians delivering permanent pest-free peace of mind for residential homes and commercial businesses.",
+      "ctaQuote": "Get a Free Pest Quote",
+      "ctaBook": "Book Inspection Slot",
+      "urgentPrompt": "Have an urgent infestation?",
+      "shieldTitle": "Insight Smart Shield",
+      "shieldSubtitle": "4-Season Active Defense",
+      "guaranteedBadge": "Guaranteed",
+      "pillar1Title": "Perimeter Sealing & Exclusion",
+      "pillar1Desc": "Chew-proof metal flashing, weep hole mesh & weatherstripping.",
+      "pillar2Title": "Targeted Botanical & Micro-Dust",
+      "pillar2Desc": "Low-toxicity EPA registered micro-treatments in hidden wall voids.",
+      "pillar3Title": "Colony Elimination at Root",
+      "pillar3Desc": "Non-repellent transfer formulas eliminate queens & satellite nests.",
+      "stat1Label": "Homes Protected",
+      "stat2Label": "Satisfaction",
+      "stat3Label": "Years Active",
+      "checkpoints": [
+        "100% Insight Protection Guarantee",
+        "Safe for Children & Household Pets",
+        "Same-Day Rapid Emergency Dispatch",
+        "Licensed & Master Certified Specialists"
+      ]
+    },
+    "problemSelector": {
+      "badge": "Interactive Diagnostic Tool",
+      "title": "What Pest is Invading Your Property?",
+      "subtitle": "Select your pest symptom below to immediately identify the species, review risks, and calculate a customized treatment plan.",
+      "findTreatment": "View Treatment & Pricing",
+      "needImmediateHelp": "Not sure what you are seeing? Request a complimentary on-site inspection from our entomologist."
+    },
+    "servicesSection": {
+      "eyebrow": "Comprehensive Protection",
+      "title": "Targeted Pest Solutions for Every Need",
+      "subtitle": "Whether you need routine seasonal home maintenance, emergency nest removal, or audit-ready commercial pest defense.",
+      "viewAllButton": "View All Services"
+    },
+    "whyChooseUs": {
+      "eyebrow": "The Insight Difference",
+      "title": "Why Over 15,000 Property Owners Trust Insight Pest",
+      "subtitle": "We do not just spray chemicals and hope for the best. We apply rigorous Integrated Pest Management (IPM) to eliminate infestations permanently.",
+      "feature1Title": "Eco-Conscious Botanical Formulations",
+      "feature1Desc": "EPA Reduced-Risk formulations designed to be tough on invasive pests while remaining completely safe for children, dogs, and cats.",
+      "feature2Title": "Master Certified Entomologists",
+      "feature2Desc": "Every field technician undergoes 120+ hours of annual biological training and holds state pest control operator certifications.",
+      "feature3Title": "Chew-Proof Structural Exclusion",
+      "feature3Desc": "We seal the entry gaps, weep holes, and foundation cracks so rodents and crawling insects cannot re-invade your home.",
+      "feature4Title": "100% Re-treatment Guarantee",
+      "feature4Desc": "If pests return between scheduled quarterly visits, your dedicated technician returns and re-treats free of charge within 24 hours."
+    },
+    "process": {
+      "eyebrow": "How It Works",
+      "title": "Our 4-Step Integrated Pest Elimination Process",
+      "subtitle": "A scientific, comprehensive methodology engineered to protect your perimeter, interior, and foundation year-round.",
+      "step1Number": "01",
+      "step1Title": "Inspect & Diagnose",
+      "step1Desc": "Comprehensive 360° property diagnostic identifying nesting harborages, entry vulnerabilities, and pest species.",
+      "step2Number": "02",
+      "step2Title": "Targeted Treatment",
+      "step2Desc": "Precision application of micro-dust, botanical repellents, and non-repellent transfer baits where pests live.",
+      "step3Number": "03",
+      "step3Title": "Physical Exclusion",
+      "step3Desc": "Sealing exterior weep holes, attic vents, and plumbing penetrations with heavy-duty chew-proof materials.",
+      "step4Number": "04",
+      "step4Title": "Ongoing Monitoring",
+      "step4Desc": "Continuous seasonal perimeter barrier protection to prevent future generations from approaching your boundary."
+    },
+    "testimonialsSection": {
+      "eyebrow": "Verified Customer Reviews",
+      "title": "What Our Clients Say About Insight Pest",
+      "subtitle": "Real feedback from families and business owners across our service regions.",
+      "viewAllButton": "Read All Customer Reviews"
+    },
+    "faqSection": {
+      "eyebrow": "Common Inquiries",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Have questions about our treatments, safety for pets, or scheduling? Here are quick answers.",
+      "exploreAllLink": "Explore our full FAQ knowledge base"
+    },
+    "blogSection": {
+      "eyebrow": "Knowledge & Prevention",
+      "title": "Latest Pest Control Guides & Insights",
+      "subtitle": "Expert tips written by our entomologists and pest technicians to help you protect your home.",
+      "viewAllButton": "Read Knowledge Base"
+    },
+    "ctaSection": {
+      "badge": "Guaranteed Pest Elimination",
+      "title": "Ready to Reclaim Your Pest-Free Home?",
+      "subtitle": "Schedule your comprehensive property inspection today. Fast same-day dispatch available with our 100% money-back satisfaction guarantee.",
+      "getQuoteButton": "Get Instant Quote",
+      "bookInspectionButton": "Schedule Online Inspection",
+      "orCallDirect": "Or call our dispatch desk directly:"
+    }
+  },
+  "services": {
+    "seo": {
+      "title": "Pest Control Services & Treatment Plans | Insight Pest Solutions",
+      "description": "Explore targeted pest control programs: Residential Shield, Commercial IPM, Termite Baiting, Bed Bug Thermal Extermination, and Rodent Exclusion."
+    },
+    "header": {
+      "badge": "Targeted Programs",
+      "title": "Professional Pest Control & Extermination Services",
+      "subtitle": "Explore our scientific treatment programs designed to eliminate current infestations and prevent future seasonal invasions."
+    },
+    "tabs": {
+      "all": "All Services",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "specialized": "Specialized"
+    },
+    "card": {
+      "startingAt": "Starting at",
+      "perTreatment": "per treatment",
+      "viewDetails": "View Service Details",
+      "includedFeatures": "What's Included:"
+    },
+    "detail": {
+      "backToServices": "Back to all services",
+      "pricingPlansTitle": "Available Protection Plans",
+      "choosePlan": "Select Plan & Book",
+      "treatmentProtocolTitle": "Step-by-Step Treatment Procedure",
+      "keyBenefitsTitle": "Key Service Benefits",
+      "faqsTitle": "Frequently Asked Questions About This Service",
+      "guaranteeTitle": "The Insight Guarantee on",
+      "guaranteeText": "If pests return at any point between your scheduled service treatments, we will send an expert technician to re-inspect and re-treat your home at zero additional cost."
+    }
+  },
+  "pests": {
+    "seo": {
+      "title": "Pest Library & Identification Encyclopedia | Insight Pest Solutions",
+      "description": "Identify common household and commercial pests, understand biological habits, health risks, and discover proven extermination methods."
+    },
+    "header": {
+      "badge": "Biological Knowledge Base",
+      "title": "Pest Identification Library & Guide",
+      "subtitle": "Learn how to spot signs of infestation, understand health and structural risks, and select the right treatment for your property."
+    },
+    "searchPlaceholder": "Search by pest name, symptom, or habit...",
+    "categories": {
+      "all": "All Pests",
+      "insects": "Insects & Crawlers",
+      "rodents": "Rodents & Mammals",
+      "wildlife": "Wildlife & Birds",
+      "woodDestroying": "Wood Destroying Organisms"
+    },
+    "severity": {
+      "high": "High Threat",
+      "moderate": "Moderate Threat",
+      "low": "Nuisance Threat"
+    },
+    "card": {
+      "threatLevel": "Threat Level:",
+      "viewProfile": "Identify & Treat",
+      "scientificName": "Scientific:"
+    },
+    "detail": {
+      "backToLibrary": "Back to Pest Library",
+      "overviewTitle": "Biology & Species Profile",
+      "threatAssessmentTitle": "Health & Structural Threat Assessment",
+      "infestationSignsTitle": "Signs You Have an Infestation",
+      "preventionTipsTitle": "DIY Prevention & Exclusion Tips",
+      "treatmentPlanTitle": "Insight's Professional Elimination Protocol",
+      "scheduleElimination": "Schedule Elimination For This Pest",
+      "urgentBanner": "Suspect an active infestation of this species? Contact our emergency dispatch team immediately."
+    }
+  },
+  "locations": {
+    "seo": {
+      "title": "Service Areas & Branch Locations | Insight Pest Solutions",
+      "description": "Find your local Insight Pest Solutions branch office. Serving residential and commercial properties across all regional counties."
+    },
+    "header": {
+      "badge": "Local Branch Coverage",
+      "title": "Service Areas & Regional Branches",
+      "subtitle": "Locally staffed branch offices with certified entomologists ready for same-day dispatch to your neighborhood."
+    },
+    "searchPlaceholder": "Enter your City, State, or Zip Code...",
+    "card": {
+      "branchManager": "Branch Manager:",
+      "phone": "Direct Branch Phone:",
+      "hours": "Operating Hours:",
+      "coverage": "Key Covered Zip Codes:",
+      "viewBranch": "View Local Branch Details"
+    },
+    "detail": {
+      "backToLocations": "Back to All Service Areas",
+      "branchOverview": "Branch Overview & Service Radius",
+      "localSpecialists": "Local Pest Specialists in This Area",
+      "coveredZipCodes": "Full Zip Code Service Coverage",
+      "commonLocalPests": "Top Seasonal Pests in This Region",
+      "bookLocalBranch": "Book Service with This Branch"
+    }
+  },
+  "quote": {
+    "seo": {
+      "title": "Instant Pest Control Quote & Cost Estimator | Insight Pest Solutions",
+      "description": "Calculate an instant pest extermination price estimate for your home or business with our transparent, no-obligation quote engine."
+    },
+    "header": {
+      "badge": "Transparent Pricing",
+      "title": "Instant Pest Control Quote Estimator",
+      "subtitle": "Get a customized price range in less than 60 seconds with no phone sales pressure and zero obligation."
+    },
+    "steps": {
+      "step1": "Property & Size",
+      "step2": "Pest Concern",
+      "step3": "Contact Details"
+    },
+    "form": {
+      "propertyType": "Property Type",
+      "residential": "Single Family Home",
+      "townhouse": "Townhouse / Condo",
+      "commercial": "Commercial Facility",
+      "squareFootage": "Approximate Square Footage",
+      "under1500": "Under 1,500 sq ft",
+      "1500to2500": "1,500 - 2,500 sq ft",
+      "2500to4000": "2,500 - 4,000 sq ft",
+      "over4000": "Over 4,000 sq ft",
+      "pestConcern": "Primary Pest Issue",
+      "zipCode": "5-Digit Property Zip Code",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "notes": "Specific Details or Signs of Infestation (Optional)",
+      "calculateBtn": "Calculate My Instant Quote",
+      "requestCallbackBtn": "Request Priority Callback"
+    },
+    "estimate": {
+      "title": "Estimated Treatment Cost Range",
+      "includes": "Includes comprehensive initial inspection, targeted interior flush-out, perimeter barrier application, and 90-day warranty.",
+      "bookNowPrompt": "Lock in this online promotional rate by scheduling your inspection today."
+    },
+    "success": {
+      "title": "Quote Request Successfully Submitted!",
+      "message": "We have received your details. A certified pest consultant has been assigned to your territory and will contact you shortly with your finalized customized plan.",
+      "referenceNumber": "Quote Reference #:"
+    }
+  },
+  "bookings": {
+    "seo": {
+      "title": "Book Pest Control Inspection Online | Insight Pest Solutions",
+      "description": "Reserve a confirmed arrival window for your home or commercial pest inspection with certified technicians."
+    },
+    "header": {
+      "badge": "Online Scheduling",
+      "title": "Schedule a Professional Pest Inspection",
+      "subtitle": "Choose your preferred date, select an open arrival window, and confirm your technician dispatch in minutes."
+    },
+    "wizard": {
+      "step1Title": "Service & Pest",
+      "step1Subtitle": "Tell us what you are dealing with",
+      "step2Title": "Property Details",
+      "step2Subtitle": "Address and building specifications",
+      "step3Title": "Date & Time",
+      "step3Subtitle": "Select your preferred arrival slot",
+      "step4Title": "Review & Confirm",
+      "step4Subtitle": "Verify details and complete booking",
+      "serviceLabel": "Select Service Program",
+      "pestLabel": "Select Specific Pest Concern",
+      "propertyTypeLabel": "Property Type",
+      "sqftLabel": "Square Footage",
+      "addressLabel": "Street Address",
+      "cityLabel": "City",
+      "stateLabel": "State",
+      "zipLabel": "Zip Code",
+      "dateLabel": "Choose Preferred Date",
+      "slotLabel": "Available Arrival Windows",
+      "noSlots": "No slots available for this date. Please pick an alternative date.",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "phoneLabel": "Phone Number",
+      "notesLabel": "Access instructions, gate codes, or special notes",
+      "confirmButton": "Confirm & Schedule Appointment",
+      "submitting": "Reserving your time slot...",
+      "successTitle": "Inspection Appointment Confirmed!",
+      "successSubtitle": "Your inspection has been scheduled. A confirmation email and SMS dispatch link have been sent to your contact info.",
+      "bookingId": "Confirmation Booking ID:",
+      "printConfirmation": "Print Confirmation",
+      "returnHome": "Return to Homepage"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact Us & Emergency Dispatch | Insight Pest Solutions",
+      "description": "Get in touch with Insight Pest Solutions for customer support, service scheduling, emergency dispatch, and billing questions."
+    },
+    "header": {
+      "badge": "Get In Touch",
+      "title": "We Are Here to Help Keep You Pest-Free",
+      "subtitle": "Reach out to our customer care team, dispatch coordinators, or billing specialists."
+    },
+    "cards": {
+      "phoneTitle": "Customer Care & Dispatch",
+      "phoneDesc": "Speak directly with a live dispatch specialist.",
+      "emailTitle": "Email Support",
+      "emailDesc": "Send us your questions or service photos.",
+      "hqTitle": "Corporate Headquarters",
+      "hqDesc": "Visit our regional administrative facility.",
+      "hoursTitle": "Operating Hours",
+      "hoursDesc": "Customer desk hours and emergency schedules."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and our team will get back to you within 15 minutes during regular hours.",
+      "name": "Your Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Inquiry Subject",
+      "subjectOptions": {
+        "general": "General Inquiry",
+        "service": "Service & Treatment Question",
+        "billing": "Billing & Invoices",
+        "commercial": "Commercial Pest Defense",
+        "emergency": "Urgent Emergency Dispatch"
+      },
+      "message": "How can we help you?",
+      "submitBtn": "Send Message",
+      "successTitle": "Message Received!",
+      "successMessage": "Thank you for reaching out. A customer support representative will review your message and reply promptly."
+    }
+  },
+  "testimonials": {
+    "seo": {
+      "title": "Customer Reviews & Testimonials | Insight Pest Solutions",
+      "description": "Read verified 5-star customer reviews from homeowners and business managers across our service territories."
+    },
+    "header": {
+      "badge": "Proven Results",
+      "title": "What Our Customers Say",
+      "subtitle": "Read verified feedback from thousands of homeowners and facility managers who rely on Insight Pest Solutions."
+    },
+    "stats": {
+      "averageRating": "4.95",
+      "outOfFive": "out of 5.0 Rating",
+      "totalReviews": "1,420+ Verified Reviews",
+      "recommendationRate": "99.2% Would Recommend"
+    },
+    "filters": {
+      "all": "All Reviews",
+      "residential": "Residential Protection",
+      "commercial": "Commercial IPM",
+      "termites": "Termite Elimination",
+      "bedbugs": "Bed Bug Remediation"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "Frequently Asked Questions & Help Center | Insight Pest Solutions",
+      "description": "Browse answers to common questions regarding pest control treatments, pet safety, preparation steps, and service warranties."
+    },
+    "header": {
+      "badge": "Knowledge Center",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers regarding treatment preparations, safety precautions for pets and children, warranties, and scheduling."
+    },
+    "searchPlaceholder": "Search FAQs by keyword (e.g. 'pets', 'termite warranty', 'prep')...",
+    "stillHaveQuestions": "Still have questions? Our certified entomologists are just a phone call away."
+  },
+  "blog": {
+    "seo": {
+      "title": "Pest Prevention Blog & Educational Guides | Insight Pest Solutions",
+      "description": "Read seasonal pest prevention guides, IPM tips, biological facts, and home maintenance checklists written by certified entomologists."
+    },
+    "header": {
+      "badge": "Knowledge & Prevention",
+      "title": "Educational Pest Control Guides & Articles",
+      "subtitle": "Actionable pest prevention strategies, seasonal warnings, and entomologist insights to protect your family and investment."
+    },
+    "categories": {
+      "all": "All Articles",
+      "prevention": "DIY Prevention",
+      "seasonal": "Seasonal Alerts",
+      "commercial": "Commercial IPM",
+      "eco": "Eco-Friendly Pest Control"
+    },
+    "card": {
+      "minRead": "min read",
+      "published": "Published on",
+      "readArticle": "Read Full Article"
+    },
+    "detail": {
+      "backToBlog": "Back to all articles",
+      "writtenBy": "Written by:",
+      "reviewedBy": "Medically / Entomologically Reviewed",
+      "shareArticle": "Share this article:",
+      "relatedArticles": "Related Educational Articles"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "About Insight Pest Solutions | Our Mission, Team & Heritage",
+      "description": "Learn about our founding, our commitment to eco-friendly Integrated Pest Management, certified entomologists, and 100% guarantee."
+    },
+    "header": {
+      "badge": "Our Story & Values",
+      "title": "Setting the Standard for Modern Pest Management",
+      "subtitle": "Founded in 2011, Insight Pest Solutions was built on a simple promise: Eliminate pests thoroughly without compromising the safety of families, pets, or the local ecosystem."
+    },
+    "mission": {
+      "title": "Our Mission & Guiding Principles",
+      "text": "We believe modern pest control should be scientific, transparent, and eco-conscious. Rather than blanket-spraying harsh chemicals, we diagnose root vulnerabilities and use advanced botanical and physical exclusion methods."
+    },
+    "values": {
+      "title": "Core Values That Drive Us",
+      "val1Title": "Safety Above All",
+      "val1Desc": "Every formula we deploy is EPA registered and thoroughly vetted for pet and child safety.",
+      "val2Title": "Total Transparency",
+      "val2Desc": "No hidden fees, no bait-and-switch pricing, and clear digital reports following every visit.",
+      "val3Title": "Unconditional Guarantee",
+      "val3Desc": "We take full accountability for our work. If pests return, so do we—free of charge."
+    },
+    "certifications": {
+      "title": "Accreditations & Industry Standards",
+      "cert1": "National Pest Management Association (NPMA) QualityPro",
+      "cert2": "GreenPro Certified Eco-Friendly Practitioner",
+      "cert3": "State Licensed Master Commercial Pesticide Applicators",
+      "cert4": "Better Business Bureau A+ Accredited"
+    }
+  },
+  "careers": {
+    "seo": {
+      "title": "Careers & Job Opportunities | Insight Pest Solutions",
+      "description": "Join our growing team of pest control technicians, entomologists, and customer care specialists. Great pay, benefits, and paid training."
+    },
+    "header": {
+      "badge": "Join Our Team",
+      "title": "Build a Rewarding Career With Insight Pest",
+      "subtitle": "We are looking for dedicated, passionate individuals to join our field operations, technical entomology, and customer care teams."
+    },
+    "perks": {
+      "title": "Why Work With Us?",
+      "perk1Title": "Competitive Pay & Bonuses",
+      "perk1Desc": "Top-tier base salary plus performance-based incentives.",
+      "perk2Title": "Comprehensive Health Benefits",
+      "perk2Desc": "Full medical, dental, vision coverage, and 401(k) matching.",
+      "perk3Title": "Paid Training & Certification",
+      "perk3Desc": "We pay for 100% of your state licensing and ongoing education.",
+      "perk4Title": "Company Vehicle & Equipment",
+      "perk4Desc": "Technicians receive modern, fully equipped company trucks."
+    },
+    "openings": {
+      "title": "Current Job Openings",
+      "applyBtn": "Apply for this Position",
+      "fullTime": "Full-Time",
+      "location": "Regional Branches"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: September 2026",
+      "p1": "Insight Pest Solutions respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website, schedule services, or interact with our customer care representatives."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last Updated: September 2026",
+      "p1": "By accessing or using Insight Pest Solutions' website and scheduling services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+    },
+    "cookie": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last Updated: September 2026",
+      "p1": "This Cookie Policy explains how Insight Pest Solutions uses cookies and similar tracking technologies to recognize you when you visit our website."
+    },
+    "accessibility": {
+      "title": "Accessibility Statement",
+      "p1": "Insight Pest Solutions is committed to ensuring digital accessibility for all users, including individuals with disabilities. We continuously improve user experience for everyone and apply relevant accessibility standards."
+    }
+  },
+  "admin": {
+    "nav": {
+      "portalTitle": "Insight Admin Console",
+      "dashboard": "Dashboard",
+      "leads": "Inbound Leads",
+      "bookings": "Scheduled Bookings",
+      "services": "Services Catalog",
+      "testimonials": "Reviews",
+      "faq": "FAQ Management",
+      "blog": "Blog Articles",
+      "logout": "Sign Out"
+    },
+    "dashboard": {
+      "title": "Platform Operations Overview",
+      "subtitle": "Real-time metrics for customer inquiries, bookings, and active territory dispatches.",
+      "totalLeads": "Total Inbound Leads",
+      "activeBookings": "Scheduled Bookings",
+      "conversionRate": "Quote Conversion Rate",
+      "avgRating": "Average Client Rating",
+      "recentLeadsTitle": "Recent Inbound Quote Requests",
+      "upcomingBookingsTitle": "Upcoming Technician Dispatches",
+      "viewAllLeads": "View All Leads Pipeline",
+      "viewAllBookings": "View All Scheduled Bookings"
+    },
+    "leads": {
+      "title": "Inbound Leads & Quote Pipeline",
+      "subtitle": "Triage quote requests, update sales pipeline status, and assign technician callbacks.",
+      "searchPlaceholder": "Search leads by customer name, phone, zip, or service...",
+      "filterStatus": "Filter by Pipeline Status",
+      "statusAll": "All Statuses",
+      "statusNew": "New Inbound",
+      "statusContacted": "Contacted",
+      "statusQuoted": "Quote Sent",
+      "statusWon": "Won / Scheduled",
+      "statusLost": "Lost / Inactive",
+      "table": {
+        "customer": "Customer Name",
+        "contact": "Contact Info",
+        "serviceConcern": "Service & Pest Concern",
+        "property": "Property & Zip",
+        "date": "Received Date",
+        "status": "Pipeline Status",
+        "actions": "Actions"
+      }
+    },
+    "bookings": {
+      "title": "Inspection Scheduling & Dispatch",
+      "subtitle": "Monitor booked inspection appointments, arrival windows, and technician assignments.",
+      "filterStatus": "Filter by Booking Status",
+      "statusConfirmed": "Confirmed",
+      "statusPending": "Pending Dispatch",
+      "statusCompleted": "Service Completed",
+      "statusCancelled": "Cancelled",
+      "table": {
+        "customer": "Client & Address",
+        "service": "Service Type",
+        "slot": "Appointment Window",
+        "status": "Status",
+        "actions": "Dispatch Actions"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "subtitle": "The page you are looking for might have been moved, renamed, or is temporarily unavailable.",
+    "returnHome": "Return to Homepage",
+    "popularPages": "Here are some helpful links instead:"
+  }
+}
