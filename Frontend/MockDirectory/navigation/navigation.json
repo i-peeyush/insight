@@ -31,10 +31,6 @@
       ]
     },
     {
-      "label": "Service Areas",
-      "path": "/service-areas"
-    },
-    {
       "label": "About Us",
       "path": "/about"
     },
@@ -88,7 +84,6 @@
     "company": [
       { "label": "About Insight Pest", "path": "/about" },
       { "label": "Our IPM Methodology", "path": "/about#methodology" },
-      { "label": "Service Areas", "path": "/service-areas" },
       { "label": "Customer Testimonials", "path": "/testimonials" },
       { "label": "Careers & Technicians", "path": "/careers" },
       { "label": "Insight Pest Blog", "path": "/blog" },

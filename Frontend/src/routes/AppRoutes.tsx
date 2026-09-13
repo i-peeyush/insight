@@ -9,8 +9,6 @@ import { ServicesPage } from '../modules/services/ServicesPage';
 import { ServiceDetailPage } from '../modules/services/ServiceDetailPage';
 import { PestLibraryPage } from '../modules/pests/PestLibraryPage';
 import { PestDetailPage } from '../modules/pests/PestDetailPage';
-import { LocationsPage } from '../modules/locations/LocationsPage';
-import { LocationDetailPage } from '../modules/locations/LocationDetailPage';
 import { QuoteRequestPage } from '../modules/leads/QuoteRequestPage';
 import { BookInspectionPage } from '../modules/bookings/BookInspectionPage';
 import { ContactPage } from '../modules/contact/ContactPage';
@@ -46,8 +44,6 @@ export const AppRoutes: React.FC = () => {
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
         <Route path="/pests" element={<PestLibraryPage />} />
         <Route path="/pests/:slug" element={<PestDetailPage />} />
-        <Route path="/service-areas" element={<LocationsPage />} />
-        <Route path="/service-areas/:slug" element={<LocationDetailPage />} />
         <Route path="/request-quote" element={<QuoteRequestPage />} />
         <Route path="/book-inspection" element={<BookInspectionPage />} />
         <Route path="/contact" element={<ContactPage />} />

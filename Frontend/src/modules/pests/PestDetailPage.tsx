@@ -171,7 +171,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
               <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-red-600" />
-                <span>{t.locations.header.title}</span>
+                <span>{t.pests.detail.commonLocationsTitle}</span>
               </h3>
               <div className="space-y-2">
                 {pest.commonLocations.map((loc, idx) => (
