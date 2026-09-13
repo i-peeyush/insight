@@ -9,48 +9,49 @@ import {
 } from 'lucide-react';
 import { SectionHeading } from '../common/SectionHeading';
 import { Card } from '../common/Card';
-
-const PILLARS = [
-  {
-    icon: ShieldCheck,
-    title: '100% Insight Protection Guarantee',
-    desc: 'If pests return between scheduled quarterly visits, your certified technician returns and retreats your property at zero additional cost.'
-  },
-  {
-    icon: Leaf,
-    title: 'Family & Pet-Conscious IPM',
-    desc: 'We prioritize mechanical exclusion and low-toxicity botanical micro-treatments, eliminating pests without harming curious pets or children.'
-  },
-  {
-    icon: Clock,
-    title: 'Same-Day Rapid Dispatch',
-    desc: 'Active infestations do not wait. We offer prompt, scheduled arrival windows with live SMS technician tracking.'
-  },
-  {
-    icon: Award,
-    title: 'Board-Certified Entomologist Protocols',
-    desc: 'Our service procedures are formulated and reviewed by certified entomologists to address specific regional insect genetics and behavior.'
-  },
-  {
-    icon: FileCheck2,
-    title: 'Digital Reports & Inspection Photos',
-    desc: 'Receive comprehensive digital documentation after every visit, showing treated areas, trap scan data, and prevention recommendations.'
-  },
-  {
-    icon: Users,
-    title: 'Dedicated Local Route Technicians',
-    desc: 'You get an experienced local specialist who knows your neighborhood, soil conditions, and recurring seasonal pest patterns.'
-  }
-];
+import { t } from '../../language';
 
 export const WhyChooseUs: React.FC = () => {
+  const PILLARS = [
+    {
+      icon: ShieldCheck,
+      title: t.home.whyChooseUs.feature1Title,
+      desc: t.home.whyChooseUs.feature1Desc
+    },
+    {
+      icon: Leaf,
+      title: t.home.whyChooseUs.feature2Title,
+      desc: t.home.whyChooseUs.feature2Desc
+    },
+    {
+      icon: Clock,
+      title: t.home.whyChooseUs.feature3Title,
+      desc: t.home.whyChooseUs.feature3Desc
+    },
+    {
+      icon: Award,
+      title: t.home.whyChooseUs.feature4Title,
+      desc: t.home.whyChooseUs.feature4Desc
+    },
+    {
+      icon: FileCheck2,
+      title: t.home.whyChooseUs.feature5Title,
+      desc: t.home.whyChooseUs.feature5Desc
+    },
+    {
+      icon: Users,
+      title: t.home.whyChooseUs.feature6Title,
+      desc: t.home.whyChooseUs.feature6Desc
+    }
+  ];
+
   return (
     <section className="py-20 bg-white border-y border-slate-100">
       <div className="container-custom">
         <SectionHeading
-          badge="The Insight Difference"
-          title="Why Homeowners & Businesses Choose Insight Pest"
-          subtitle="We combine scientific Integrated Pest Management (IPM), modern customer communication, and an unconditional satisfaction guarantee."
+          badge={t.home.whyChooseUs.eyebrow}
+          title={t.home.whyChooseUs.title}
+          subtitle={t.home.whyChooseUs.subtitle}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

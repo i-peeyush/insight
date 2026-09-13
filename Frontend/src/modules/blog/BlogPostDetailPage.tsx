@@ -9,6 +9,7 @@ import { CTASection } from '../../components/sections/CTASection';
 import { useBlogPost } from '../../hooks/useBlog';
 import { formatDate } from '../../utils/formatters';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const BlogPostDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -38,7 +39,7 @@ export const BlogPostDetailPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="py-20 container-custom">
-        <LoadingState message="Loading article..." />
+        <LoadingState message={t.blog.detail.loading} />
       </div>
     );
   }
@@ -47,8 +48,8 @@ export const BlogPostDetailPage: React.FC = () => {
     return (
       <div className="py-20 container-custom">
         <ErrorState
-          title="Article Not Found"
-          message="The requested pest guide or article could not be located."
+          title={t.blog.detail.errorTitle}
+          message={t.blog.detail.errorMessage}
         />
       </div>
     );
@@ -59,7 +60,7 @@ export const BlogPostDetailPage: React.FC = () => {
       <div className="container-custom max-w-4xl">
         <Breadcrumbs
           items={[
-            { label: 'Blog', path: '/blog' },
+            { label: t.nav.blog, path: '/blog' },
             { label: post.title }
           ]}
         />
@@ -88,7 +89,7 @@ export const BlogPostDetailPage: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-bold text-slate-900">{post.author}</h4>
-              <p className="text-xs text-slate-500">Insight Entomology & Technical Operations</p>
+              <p className="text-xs text-slate-500">{t.blog.detail.deptCredit}</p>
             </div>
           </div>
 
@@ -110,7 +111,7 @@ export const BlogPostDetailPage: React.FC = () => {
 
         <div className="mb-12 text-center">
           <Button to="/blog" variant="outline" size="md" leftIcon={<ArrowLeft className="w-4 h-4" />}>
-            Back to All Articles
+            {t.common.back}
           </Button>
         </div>
       </div>

@@ -2,42 +2,43 @@ import React from 'react';
 import { Search, ShieldAlert, Layers, RefreshCw } from 'lucide-react';
 import { SectionHeading } from '../common/SectionHeading';
 import { Button } from '../common/Button';
-
-const STEPS = [
-  {
-    step: '01',
-    icon: Search,
-    title: 'Detailed Property Audit',
-    desc: 'Our master technician inspects eaves, crawlspaces, weep holes, plumbing voids, and outdoor landscaping to map out pest nesting locations.'
-  },
-  {
-    step: '02',
-    icon: ShieldAlert,
-    title: 'Targeted Elimination & Sealing',
-    desc: 'We apply botanical and micro-encapsulated treatments directly to harborage zones while sealing entry cracks with chew-proof materials.'
-  },
-  {
-    step: '03',
-    icon: Layers,
-    title: 'Exterior Power Shield',
-    desc: 'A 30-foot multi-layered perimeter granular barrier is laid around your foundation to block future pest crawling paths before they reach doors.'
-  },
-  {
-    step: '04',
-    icon: RefreshCw,
-    title: 'Seasonal Re-Service & Guarantee',
-    desc: 'We rotate active formulas each season to counter changing pest cycles. If covered pests return anytime in between, retreatments are free.'
-  }
-];
+import { t } from '../../language';
 
 export const ProcessSection: React.FC = () => {
+  const STEPS = [
+    {
+      step: t.home.process.step1Number,
+      icon: Search,
+      title: t.home.process.step1Title,
+      desc: t.home.process.step1Desc
+    },
+    {
+      step: t.home.process.step2Number,
+      icon: ShieldAlert,
+      title: t.home.process.step2Title,
+      desc: t.home.process.step2Desc
+    },
+    {
+      step: t.home.process.step3Number,
+      icon: Layers,
+      title: t.home.process.step3Title,
+      desc: t.home.process.step3Desc
+    },
+    {
+      step: t.home.process.step4Number,
+      icon: RefreshCw,
+      title: t.home.process.step4Title,
+      desc: t.home.process.step4Desc
+    }
+  ];
+
   return (
     <section className="py-20 bg-slate-50 relative overflow-hidden">
       <div className="container-custom">
         <SectionHeading
-          badge="Our Proven 4-Step IPM Process"
-          title="How Insight Pest Solutions Works"
-          subtitle="A systematic, scientific methodology designed to eliminate active infestations and establish long-term structural barriers."
+          badge={t.home.process.eyebrow}
+          title={t.home.process.title}
+          subtitle={t.home.process.subtitle}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
@@ -72,7 +73,7 @@ export const ProcessSection: React.FC = () => {
 
         <div className="mt-12 text-center">
           <Button to="/book-inspection" variant="primary" size="lg">
-            Schedule Your Step 1 Inspection
+            {t.home.process.ctaButton}
           </Button>
         </div>
       </div>

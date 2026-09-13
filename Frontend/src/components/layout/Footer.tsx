@@ -24,6 +24,7 @@ import { useCompanyConfig } from '../../config/company';
 import { newsletterApi } from '../../api/contactApi';
 import { useToast } from '../../contexts/ToastContext';
 import { analytics } from '../../utils/analytics';
+import { t } from '../../language';
 
 export const Footer: React.FC = () => {
   const company = useCompanyConfig();
@@ -34,17 +35,17 @@ export const Footer: React.FC = () => {
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
-      showToast('Please enter a valid email address.', 'error');
+      showToast(t.nav.footer.invalidEmail, 'error');
       return;
     }
     setIsSubmitting(true);
     try {
       await newsletterApi.subscribe({ email });
       analytics.track('newsletter_subscribed', { email });
-      showToast('Thank you for subscribing to seasonal pest protection alerts!', 'success');
+      showToast(t.nav.footer.subscribeSuccess, 'success');
       setEmail('');
     } catch (err) {
-      showToast('Subscription failed. Please try again.', 'error');
+      showToast(t.nav.footer.subscribeError, 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -59,13 +60,13 @@ export const Footer: React.FC = () => {
         <div className="bg-gradient-to-r from-[#DC2626] to-[#1E293B] rounded-3xl p-8 md:p-12 mb-16 border border-red-200/40 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
           <div className="max-w-xl">
             <span className="text-xs font-bold text-red-200 uppercase tracking-widest">
-              Seasonal Pest Defense Bulletin
+              {t.nav.footer.bulletinEyebrow}
             </span>
             <h3 className="text-2xl md:text-3xl font-extrabold text-white mt-1">
-              Stay ahead of seasonal pest migrations
+              {t.nav.footer.bulletinTitle}
             </h3>
             <p className="text-sm text-slate-200 mt-2 leading-relaxed">
-              Get timely prevention tips, weather-driven pest swarm advisories, and exclusive subscriber treatment discounts.
+              {t.nav.footer.bulletinDesc}
             </p>
           </div>
           <form onSubmit={handleNewsletterSubmit} className="w-full lg:w-auto flex-1 max-w-md flex flex-col sm:flex-row gap-2">
@@ -73,7 +74,7 @@ export const Footer: React.FC = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
+              placeholder={t.nav.footer.emailPlaceholder}
               className="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder:text-slate-400 border border-white/20 focus:outline-none focus:border-red-200 text-sm"
               required
             />
@@ -84,7 +85,7 @@ export const Footer: React.FC = () => {
               isLoading={isSubmitting}
               rightIcon={<Send className="w-4 h-4" />}
             >
-              Subscribe
+              {t.nav.footer.subscribeButton}
             </Button>
           </form>
         </div>
@@ -95,13 +96,13 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-5">
             <Logo variant="footer" lightMode />
             <p className="text-xs md:text-sm text-slate-400 leading-relaxed max-w-sm">
-              {company.tagline || 'Insight Pest Solutions provides state-of-the-art Integrated Pest Management (IPM), termite defense, bed bug heat remediation, and rodent exclusion for residential and commercial properties.'}
+              {company.tagline || t.nav.footer.taglineDefault}
             </p>
             
             <div className="space-y-2.5 text-xs text-slate-300">
               <a href={`tel:${company.phoneRaw}`} className="flex items-center gap-2.5 hover:text-[#DC2626] transition-colors">
                 <Phone className="w-4 h-4 text-[#DC2626] flex-shrink-0" />
-                <span className="font-bold">{company.phoneDisplay} (Toll-Free)</span>
+                <span className="font-bold">{company.phoneDisplay}</span>
               </a>
               <a href={`mailto:${company.emailDisplay}`} className="flex items-center gap-2.5 hover:text-[#DC2626] transition-colors">
                 <Mail className="w-4 h-4 text-[#DC2626] flex-shrink-0" />
@@ -120,7 +121,7 @@ export const Footer: React.FC = () => {
             {/* Extended Social Media Profiles */}
             <div className="pt-2">
               <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">
-                Connect With Us
+                {t.nav.footer.connectWithUs}
               </div>
               <div className="flex items-center gap-2 flex-wrap">
                 {Object.entries(social).map(([key, url]) => {
@@ -208,7 +209,7 @@ export const Footer: React.FC = () => {
           {/* Col 2: Services */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-500 pl-2">
-              Pest Services
+              {t.nav.footer.servicesTitle}
             </h4>
             <ul className="space-y-2 text-xs">
               {navigationConfig.footerNav.services.map((item) => (
@@ -224,7 +225,7 @@ export const Footer: React.FC = () => {
           {/* Col 3: Pest Library */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-500 pl-2">
-              Pest Library
+              {t.nav.footer.pestsTitle}
             </h4>
             <ul className="space-y-2 text-xs">
               {navigationConfig.footerNav.pestLibrary.map((item) => (
@@ -240,7 +241,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: Company & Legal */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-500 pl-2">
-              Insight Pest
+              {t.nav.footer.companyTitle}
             </h4>
             <ul className="space-y-2 text-xs">
               {navigationConfig.footerNav.company.map((item) => (
@@ -252,7 +253,7 @@ export const Footer: React.FC = () => {
               ))}
               <li className="pt-2">
                 <Link to="/admin" className="text-slate-500 hover:text-red-400 transition-colors text-[11px] block font-semibold">
-                  Staff / Admin Portal
+                  {t.nav.footer.adminPortalLink}
                 </Link>
               </li>
             </ul>
@@ -261,7 +262,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Legal & Guarantee Ribbon */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} {company.companyName || 'Insight Pest Solutions'}. All rights reserved. Professional Pest Control Services.</p>
+          <p>© {new Date().getFullYear()} {company.companyName || 'Insight Pest Solutions'}. {t.nav.footer.rightsReserved}</p>
           <div className="flex items-center gap-4 flex-wrap">
             {navigationConfig.footerNav.legal.map((item) => (
               <Link key={item.path} to={item.path} className="hover:text-slate-300 transition-colors">

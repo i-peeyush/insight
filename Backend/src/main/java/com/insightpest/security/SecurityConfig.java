@@ -41,8 +41,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/v1/contact/**").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/v1/newsletter/**").permitAll()
 
-                // Allow Swagger & H2 console
-                .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/h2-console/**").permitAll()
+                // Allow Swagger OpenAPI UI
+                .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
 
                 // All other endpoints require authentication
                 .anyRequest().permitAll()

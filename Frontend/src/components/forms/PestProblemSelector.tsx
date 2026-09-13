@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bug, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Button } from '../common/Button';
+import { t } from '../../language';
 
 interface PestOption {
   id: string;
@@ -84,13 +85,13 @@ export const PestProblemSelector: React.FC = () => {
     <div className="bg-white rounded-3xl border border-slate-200 shadow-xl p-6 md:p-10">
       <div className="text-center max-w-xl mx-auto mb-8">
         <span className="text-xs font-bold text-red-600 uppercase tracking-wider">
-          Instant Diagnostic Selector
+          {t.home.problemSelector.badge}
         </span>
         <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">
-          What pest are you dealing with?
+          {t.home.problemSelector.title}
         </h3>
         <p className="text-xs md:text-sm text-slate-600 mt-2">
-          Click your pest problem below to view our proven IPM protocol and guaranteed treatment solution.
+          {t.home.problemSelector.subtitle}
         </p>
       </div>
 
@@ -118,21 +119,21 @@ export const PestProblemSelector: React.FC = () => {
         <div className="space-y-2 max-w-lg">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-red-600 uppercase tracking-wider">
-              Recommended Solution:
+              {t.home.problemSelector.recommendedSolution}
             </span>
             <span className="text-xs bg-red-50/60 text-red-600 font-bold px-2.5 py-0.5 rounded-full">
               {selectedPest.recommendedService}
             </span>
           </div>
           <h4 className="text-xl md:text-2xl font-black text-slate-900">
-            Targeted {selectedPest.name} Elimination
+            {t.home.problemSelector.targetedTitle} {selectedPest.name} Elimination
           </h4>
           <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
             {selectedPest.summary}
           </p>
           <div className="flex items-center gap-2 text-xs text-amber-900 bg-amber-100/70 p-2 rounded-lg border border-amber-200">
             <ShieldCheck className="w-4 h-4 text-red-600 flex-shrink-0" />
-            <span>Risk Level: <strong>{selectedPest.threatLevel}</strong></span>
+            <span>{t.home.problemSelector.riskLevelLabel} <strong>{selectedPest.threatLevel}</strong></span>
           </div>
         </div>
 
@@ -143,14 +144,14 @@ export const PestProblemSelector: React.FC = () => {
             size="md"
             className="w-full justify-center shadow-md font-bold"
           >
-            Get Quote for {selectedPest.name}
+            {t.home.problemSelector.getQuoteFor} {selectedPest.name}
           </Button>
 
           <Link
             to={`/pests/${selectedPest.pestSlug}`}
             className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-[#DC2626] hover:text-red-600 transition-colors py-2"
           >
-            <span>View Complete {selectedPest.name} Guide</span>
+            <span>{t.home.problemSelector.viewGuideFor} {selectedPest.name}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>

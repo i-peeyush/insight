@@ -1,9 +1,10 @@
 import React from 'react';
 import { Loader2, AlertTriangle, HelpCircle, RefreshCw } from 'lucide-react';
 import { Button } from './Button';
+import { t } from '../../language';
 
 export const LoadingState: React.FC<{ message?: string; className?: string }> = ({
-  message = 'Loading information...',
+  message = t.common.loadingDefault,
   className = 'py-16'
 }) => (
   <div className={`flex flex-col items-center justify-center text-center ${className}`}>
@@ -20,8 +21,8 @@ export const ErrorState: React.FC<{
   onRetry?: () => void;
   className?: string;
 }> = ({
-  title = 'Something went wrong',
-  message = 'We encountered an issue loading this data. Please try again.',
+  title = t.common.errorDefaultTitle,
+  message = t.common.errorDefaultMessage,
   onRetry,
   className = 'py-16'
 }) => (
@@ -33,7 +34,7 @@ export const ErrorState: React.FC<{
     <p className="text-sm text-slate-600 mb-6">{message}</p>
     {onRetry && (
       <Button variant="outline" size="sm" onClick={onRetry} leftIcon={<RefreshCw className="w-4 h-4" />}>
-        Retry Request
+        {t.common.retryRequest}
       </Button>
     )}
   </div>
@@ -46,8 +47,8 @@ export const EmptyState: React.FC<{
   onAction?: () => void;
   className?: string;
 }> = ({
-  title = 'No results found',
-  message = 'Try adjusting your search terms or filters to find what you are looking for.',
+  title = t.common.emptyDefaultTitle,
+  message = t.common.emptyDefaultMessage,
   actionText,
   onAction,
   className = 'py-16'
@@ -65,3 +66,4 @@ export const EmptyState: React.FC<{
     )}
   </div>
 );
+

@@ -5,6 +5,7 @@ import { Logo } from '../common/Logo';
 import { Button } from '../common/Button';
 import { navigationConfig } from '../../config/navigation';
 import { companyConfig } from '../../config/company';
+import { t } from '../../language';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -30,7 +31,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <button
             onClick={onClose}
             className="p-2 text-slate-500 hover:text-slate-900 rounded-lg hover:bg-slate-100"
-            aria-label="Close navigation"
+            aria-label={t.nav.header.closeMenuAria}
           >
             <X className="w-6 h-6" />
           </button>
@@ -99,7 +100,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             leftIcon={<Calculator className="w-4 h-4" />}
             onClick={onClose}
           >
-            Get a Free Quote
+            {t.nav.mobileMenu.quickQuote}
           </Button>
 
           <Button
@@ -110,7 +111,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             leftIcon={<Calendar className="w-4 h-4" />}
             onClick={onClose}
           >
-            Book an Inspection
+            {t.nav.mobileMenu.bookInspection}
           </Button>
 
           <a
@@ -118,7 +119,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             className="flex items-center justify-center gap-2 text-sm font-bold text-[#DC2626] py-2 hover:underline"
           >
             <Phone className="w-4 h-4 text-red-600" />
-            <span>Call: {companyConfig.phoneDisplay}</span>
+            <span>{t.nav.mobileMenu.callPrefix} {companyConfig.phoneDisplay}</span>
           </a>
         </div>
       </div>

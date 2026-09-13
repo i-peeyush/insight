@@ -21,16 +21,17 @@ import { BookingRequestData, BookingItem } from '../../types/booking';
 import { useToast } from '../../contexts/ToastContext';
 import { analytics } from '../../utils/analytics';
 import { formatDate } from '../../utils/formatters';
-
-const STEPS = [
-  { id: 1, title: 'Select Service' },
-  { id: 2, title: 'Property & Location' },
-  { id: 3, title: 'Date & Time Slot' },
-  { id: 4, title: 'Contact Details' },
-  { id: 5, title: 'Review & Confirm' }
-];
+import { t } from '../../language';
 
 export const BookingWizard: React.FC = () => {
+  const STEPS = [
+    { id: 1, title: t.bookings.wizard.step1 },
+    { id: 2, title: t.bookings.wizard.step2 },
+    { id: 3, title: t.bookings.wizard.step3 },
+    { id: 4, title: t.bookings.wizard.step4 },
+    { id: 5, title: t.bookings.wizard.step5 }
+  ];
+
   const [currentStep, setCurrentStep] = useState(1);
   const [confirmedBooking, setConfirmedBooking] = useState<BookingItem | null>(null);
 
@@ -96,7 +97,7 @@ export const BookingWizard: React.FC = () => {
       if (response.success) {
         setConfirmedBooking(response.data);
         analytics.track('booking_completed', { bookingId: response.data.bookingId });
-        showToast('Appointment successfully booked!', 'success');
+        showToast(t.bookings.wizard.successTitle, 'success');
       }
     } catch (err) {
       showToast('Booking failed. Please check your details and retry.', 'error');
@@ -110,10 +111,10 @@ export const BookingWizard: React.FC = () => {
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <Badge variant="accent" className="mb-2">
-          Confirmation Code: {confirmedBooking.bookingId}
+          {t.bookings.wizard.bookingIdLabel} {confirmedBooking.bookingId}
         </Badge>
         <h3 className="text-2xl md:text-3xl font-extrabold text-[#DC2626] mb-2">
-          Inspection Appointment Scheduled!
+          {t.bookings.wizard.successTitle}
         </h3>
         <p className="text-sm text-slate-700 max-w-lg mx-auto mb-8">
           We have reserved your appointment on <strong className="text-slate-900">{formatDate(confirmedBooking.scheduledDate)}</strong> at <strong className="text-slate-900">{confirmedBooking.scheduledTime}</strong>. A confirmation email and SMS reminder have been dispatched.
@@ -121,19 +122,19 @@ export const BookingWizard: React.FC = () => {
 
         <div className="bg-white rounded-2xl p-6 border border-red-200 text-left text-xs space-y-3 mb-8 shadow-xs">
           <div className="flex justify-between border-b pb-2 text-slate-700">
-            <span className="font-bold">Service:</span>
+            <span className="font-bold">{t.bookings.wizard.summarySelectedService}</span>
             <span className="font-semibold text-red-600">{confirmedBooking.serviceTitle}</span>
           </div>
           <div className="flex justify-between border-b pb-2 text-slate-700">
-            <span className="font-bold">Customer:</span>
+            <span className="font-bold">{t.bookings.wizard.summaryContact}</span>
             <span>{confirmedBooking.customerName}</span>
           </div>
           <div className="flex justify-between border-b pb-2 text-slate-700">
-            <span className="font-bold">Service Location:</span>
+            <span className="font-bold">{t.bookings.wizard.summaryDispatchLocation}</span>
             <span>{confirmedBooking.address}, {confirmedBooking.city}, {confirmedBooking.state}</span>
           </div>
           <div className="flex justify-between text-slate-700">
-            <span className="font-bold">Contact Phone:</span>
+            <span className="font-bold">{t.bookings.wizard.phoneLabel}:</span>
             <span>{confirmedBooking.phone}</span>
           </div>
         </div>
@@ -144,14 +145,14 @@ export const BookingWizard: React.FC = () => {
             variant="primary"
             size="md"
           >
-            Back to Home
+            {t.bookings.wizard.returnHomeBtn}
           </Button>
           <Button
-            to="/services"
             variant="outline"
             size="md"
+            onClick={() => setConfirmedBooking(null)}
           >
-            Explore Prep Guides
+            {t.bookings.wizard.bookAnotherBtn}
           </Button>
         </div>
       </div>
@@ -195,10 +196,10 @@ export const BookingWizard: React.FC = () => {
         {currentStep === 1 && (
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl font-bold text-slate-900">
-              1. Choose the Service You Need
+              {t.bookings.wizard.step1Heading}
             </h3>
             <p className="text-xs text-slate-500">
-              Select the pest management program that best fits your immediate requirement.
+              {t.bookings.wizard.step1Sub}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -234,15 +235,15 @@ export const BookingWizard: React.FC = () => {
         {currentStep === 2 && (
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl font-bold text-slate-900">
-              2. Property & Location Details
+              {t.bookings.wizard.step2Heading}
             </h3>
             <p className="text-xs text-slate-500">
-              Where should our certified pest technician perform the on-site inspection?
+              {t.bookings.wizard.step2Sub}
             </p>
 
             <div className="space-y-4 pt-2">
               <Select
-                label="Property Type"
+                label={t.bookings.wizard.propertyTypeLabel}
                 required
                 options={[
                   'Single Family Home',
@@ -257,7 +258,7 @@ export const BookingWizard: React.FC = () => {
               />
 
               <Input
-                label="Street Address"
+                label={t.bookings.wizard.streetAddressLabel}
                 placeholder="e.g. 1044 South Congress Ave"
                 required
                 value={formData.address}
@@ -266,19 +267,19 @@ export const BookingWizard: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Input
-                  label="City"
+                  label={t.bookings.wizard.cityLabel}
                   required
                   value={formData.city}
                   onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                 />
                 <Input
-                  label="State"
+                  label={t.bookings.wizard.stateLabel}
                   required
                   value={formData.state}
                   onChange={(e) => setFormData({ ...formData, state: e.target.value })}
                 />
                 <Input
-                  label="ZIP Code"
+                  label={t.bookings.wizard.zipLabel}
                   placeholder="78704"
                   required
                   value={formData.zipCode}
@@ -293,16 +294,16 @@ export const BookingWizard: React.FC = () => {
         {currentStep === 3 && (
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl font-bold text-slate-900">
-              3. Choose Date & Arrival Window
+              {t.bookings.wizard.step3Heading}
             </h3>
             <p className="text-xs text-slate-500">
-              Real-time slot availability confirmed by our dispatch routing engine.
+              {t.bookings.wizard.step3Sub}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <Input
                 type="date"
-                label="Select Preferred Date"
+                label={t.bookings.wizard.step3}
                 required
                 value={formData.scheduledDate}
                 onChange={(e) => setFormData({ ...formData, scheduledDate: e.target.value })}
@@ -310,10 +311,10 @@ export const BookingWizard: React.FC = () => {
 
               <div>
                 <label className="text-xs font-semibold text-slate-700 block mb-1.5">
-                  Available Arrival Windows
+                  {t.bookings.wizard.availableSlotsTitle}
                 </label>
                 {slotsLoading ? (
-                  <p className="text-xs text-slate-500 animate-pulse">Loading open slots...</p>
+                  <p className="text-xs text-slate-500 animate-pulse">{t.bookings.wizard.loadingSlots}</p>
                 ) : (
                   <div className="space-y-2">
                     {slots?.map((slot) => (
@@ -348,15 +349,15 @@ export const BookingWizard: React.FC = () => {
         {currentStep === 4 && (
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl font-bold text-slate-900">
-              4. Customer Contact Details
+              {t.bookings.wizard.step4Heading}
             </h3>
             <p className="text-xs text-slate-500">
-              We'll use this information to send appointment updates and technician arrival tracking.
+              {t.bookings.wizard.step4Sub}
             </p>
 
             <div className="space-y-4 pt-2">
               <Input
-                label="Full Name"
+                label={t.bookings.wizard.fullNameLabel}
                 placeholder="Robert Davis"
                 required
                 value={formData.customerName}
@@ -366,7 +367,7 @@ export const BookingWizard: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input
                   type="email"
-                  label="Email Address"
+                  label={t.bookings.wizard.emailLabel}
                   placeholder="robert.davis@example.com"
                   required
                   value={formData.email}
@@ -374,7 +375,7 @@ export const BookingWizard: React.FC = () => {
                 />
                 <Input
                   type="tel"
-                  label="Mobile Phone (for arrival SMS)"
+                  label={t.bookings.wizard.phoneLabel}
                   placeholder="(555) 349-2918"
                   required
                   value={formData.phone}
@@ -383,8 +384,8 @@ export const BookingWizard: React.FC = () => {
               </div>
 
               <Textarea
-                label="Special Instructions or Gate Codes (Optional)"
-                placeholder="e.g. Gate code is #4491. Please check perimeter fence behind garage..."
+                label={t.bookings.wizard.accessNotesLabel}
+                placeholder={t.bookings.wizard.accessNotesPlaceholder}
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
               />
@@ -396,31 +397,31 @@ export const BookingWizard: React.FC = () => {
         {currentStep === 5 && (
           <div className="space-y-6 animate-fade-in">
             <h3 className="text-xl font-bold text-slate-900">
-              5. Review & Confirm Appointment
+              {t.bookings.wizard.step5Heading}
             </h3>
             <p className="text-xs text-slate-500">
-              Please double check your appointment schedule before confirming.
+              {t.bookings.wizard.step5Sub}
             </p>
 
             <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 text-xs space-y-3">
               <div className="flex justify-between border-b pb-2">
-                <span className="font-bold text-slate-500">Service:</span>
+                <span className="font-bold text-slate-500">{t.bookings.wizard.summarySelectedService}</span>
                 <span className="font-bold text-[#DC2626]">{formData.serviceTitle}</span>
               </div>
               <div className="flex justify-between border-b pb-2">
-                <span className="font-bold text-slate-500">Date & Window:</span>
+                <span className="font-bold text-slate-500">{t.bookings.wizard.summaryAppointment}</span>
                 <span className="font-semibold text-slate-900">
                   {formatDate(formData.scheduledDate)} at {formData.scheduledTime}
                 </span>
               </div>
               <div className="flex justify-between border-b pb-2">
-                <span className="font-bold text-slate-500">Location:</span>
+                <span className="font-bold text-slate-500">{t.bookings.wizard.summaryDispatchLocation}</span>
                 <span className="font-semibold text-slate-900">
                   {formData.address}, {formData.city}, {formData.state} {formData.zipCode}
                 </span>
               </div>
               <div className="flex justify-between border-b pb-2">
-                <span className="font-bold text-slate-500">Contact:</span>
+                <span className="font-bold text-slate-500">{t.bookings.wizard.summaryContact}</span>
                 <span className="font-semibold text-slate-900">
                   {formData.customerName} ({formData.phone})
                 </span>
@@ -435,7 +436,7 @@ export const BookingWizard: React.FC = () => {
 
             <div className="flex items-center gap-2 p-3 bg-red-50 text-red-600 rounded-xl text-xs border border-red-200">
               <ShieldCheck className="w-5 h-5 flex-shrink-0" />
-              <span>Zero-obligation booking. Reschedule or cancel anytime up to 2 hours prior without penalty.</span>
+              <span>{t.bookings.wizard.summaryArrivalNotice}</span>
             </div>
           </div>
         )}
@@ -450,7 +451,7 @@ export const BookingWizard: React.FC = () => {
               onClick={handlePrev}
               leftIcon={<ArrowLeft className="w-4 h-4" />}
             >
-              Previous Step
+              {t.bookings.wizard.btnBack}
             </Button>
           ) : <div />}
 
@@ -462,7 +463,7 @@ export const BookingWizard: React.FC = () => {
               onClick={handleNext}
               rightIcon={<ArrowRight className="w-4 h-4" />}
             >
-              Next Step
+              {t.bookings.wizard.btnNext}
             </Button>
           ) : (
             <Button
@@ -473,7 +474,7 @@ export const BookingWizard: React.FC = () => {
               onClick={handleFinalSubmit}
               rightIcon={<Check className="w-4 h-4" />}
             >
-              Confirm & Book Inspection
+              {createBookingMutation.isPending ? t.bookings.wizard.btnSubmitting : t.bookings.wizard.btnConfirm}
             </Button>
           )}
         </div>

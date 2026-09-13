@@ -6,6 +6,7 @@ import { Button } from '../common/Button';
 import { MobileMenu } from './MobileMenu';
 import { navigationConfig } from '../../config/navigation';
 import { useCompanyConfig } from '../../config/company';
+import { t } from '../../language';
 
 export const Header: React.FC = () => {
   const company = useCompanyConfig();
@@ -186,7 +187,7 @@ export const Header: React.FC = () => {
               size="sm"
               leftIcon={<Calculator className="w-3.5 h-3.5" />}
             >
-              Get a Quote
+              {t.nav.requestQuote}
             </Button>
 
             <Button
@@ -195,7 +196,7 @@ export const Header: React.FC = () => {
               size="sm"
               leftIcon={<Calendar className="w-3.5 h-3.5" />}
             >
-              Book Inspection
+              {t.nav.bookInspection}
             </Button>
           </div>
 
@@ -204,14 +205,14 @@ export const Header: React.FC = () => {
             <a
               href={`tel:${company.phoneRaw}`}
               className="p-2 rounded-lg bg-[#FEF2F2] text-[#DC2626] hover:bg-[#DC2626] hover:text-white transition-colors"
-              aria-label="Call Insight Pest"
+              aria-label={t.nav.header.callAria}
             >
               <Phone className="w-5 h-5" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-              aria-label="Open Navigation Menu"
+              aria-label={t.nav.header.openMenuAria}
             >
               <Menu className="w-6 h-6" />
             </button>

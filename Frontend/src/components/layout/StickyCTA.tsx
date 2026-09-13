@@ -3,6 +3,7 @@ import { Phone, Calculator } from 'lucide-react';
 import { companyConfig } from '../../config/company';
 import { Button } from '../common/Button';
 import { analytics } from '../../utils/analytics';
+import { t } from '../../language';
 
 export const StickyCTA: React.FC = () => {
   const handleCallClick = () => {
@@ -17,7 +18,7 @@ export const StickyCTA: React.FC = () => {
         className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-slate-900 text-white font-bold text-xs"
       >
         <Phone className="w-4 h-4 text-red-600" />
-        <span>Call Now</span>
+        <span>{t.common.callNow}</span>
       </a>
       <Button
         to="/request-quote"
@@ -26,7 +27,7 @@ export const StickyCTA: React.FC = () => {
         className="flex-1 text-xs py-3"
         leftIcon={<Calculator className="w-4 h-4" />}
       >
-        Get a Quote
+        {t.nav.requestQuote}
       </Button>
     </div>
   );

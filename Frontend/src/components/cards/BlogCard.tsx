@@ -5,6 +5,7 @@ import { BlogPostItem } from '../../types/blog';
 import { Card } from '../common/Card';
 import { Badge } from '../common/Badge';
 import { formatDate } from '../../utils/formatters';
+import { t } from '../../language';
 
 export const BlogCard: React.FC<{ post: BlogPostItem }> = ({ post }) => {
   return (
@@ -38,7 +39,7 @@ export const BlogCard: React.FC<{ post: BlogPostItem }> = ({ post }) => {
           to={`/blog/${post.slug}`}
           className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
-          <span>Read Article</span>
+          <span>{t.blog.card.readArticle}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

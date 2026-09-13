@@ -4,6 +4,7 @@ import { Bug, ArrowRight, AlertCircle } from 'lucide-react';
 import { PestItem } from '../../types/pest';
 import { Card } from '../common/Card';
 import { Badge } from '../common/Badge';
+import { t } from '../../language';
 
 export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
   const getRiskVariant = (risk: string) => {
@@ -20,7 +21,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
             <Bug className="w-5 h-5" />
           </div>
           <Badge variant={getRiskVariant(pest.riskLevel)}>
-            {pest.riskLevel} Risk
+            {pest.riskLevel} {t.pests.card.riskSuffix}
           </Badge>
         </div>
 
@@ -39,7 +40,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
         <div className="bg-slate-50 rounded-lg p-2.5 mb-4 border border-slate-100">
           <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 mb-1">
             <AlertCircle className="w-3.5 h-3.5 text-amber-600" />
-            <span>Key Sign of Infestation:</span>
+            <span>{t.pests.card.keySignPrefix}</span>
           </div>
           <p className="text-[11px] text-slate-600 line-clamp-1">
             {pest.signsOfInfestation[0]}
@@ -55,7 +56,7 @@ export const PestCard: React.FC<{ pest: PestItem }> = ({ pest }) => {
           to={`/pests/${pest.slug}`}
           className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
-          <span>Pest Guide</span>
+          <span>{t.pests.card.guideButton}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

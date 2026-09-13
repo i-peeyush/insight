@@ -11,6 +11,7 @@ import { useToast } from '../../contexts/ToastContext';
 import { leadApi } from '../../api/leadApi';
 import { QuoteRequestData } from '../../types/lead';
 import { analytics } from '../../utils/analytics';
+import { t } from '../../language';
 
 const quoteSchema = z.object({
   firstName: z.string().min(2, 'First name is required'),
@@ -83,7 +84,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       if (response.success) {
         setSubmittedData(values as QuoteRequestData);
         analytics.track('quote_submitted', { leadId: response.data.id });
-        showToast('Quote request submitted successfully!', 'success');
+        showToast(t.quote.form.successTitle, 'success');
         if (onSuccess) onSuccess();
       }
     } catch (err) {
@@ -100,23 +101,23 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h3 className="text-2xl font-extrabold text-[#DC2626] mb-2">
-          Quote Request Received!
+          {t.quote.form.successTitle}
         </h3>
         <p className="text-sm text-slate-700 max-w-md mx-auto mb-6">
-          Thank you, <span className="font-bold">{submittedData.firstName}</span>. An Insight pest specialist is reviewing your inquiry and will contact you via {submittedData.preferredContactMethod} shortly.
+          {t.quote.form.successGreeting}, <span className="font-bold">{submittedData.firstName}</span>. {t.quote.form.successMessage}
         </p>
 
         <div className="bg-white rounded-2xl p-5 border border-red-200 max-w-md mx-auto text-left text-xs space-y-2 mb-8 shadow-xs">
           <div className="flex justify-between border-b pb-1 text-slate-600">
-            <span className="font-semibold">Service:</span>
+            <span className="font-semibold">{t.quote.form.summaryService}</span>
             <span>{submittedData.serviceRequired}</span>
           </div>
           <div className="flex justify-between border-b pb-1 text-slate-600">
-            <span className="font-semibold">Pest Issue:</span>
+            <span className="font-semibold">{t.quote.form.summaryPest}</span>
             <span>{submittedData.pestProblem}</span>
           </div>
           <div className="flex justify-between text-slate-600">
-            <span className="font-semibold">Address:</span>
+            <span className="font-semibold">{t.quote.form.summaryAddress}</span>
             <span>{submittedData.address}, {submittedData.city}, {submittedData.state}</span>
           </div>
         </div>
@@ -128,14 +129,14 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             size="md"
             rightIcon={<ArrowRight className="w-4 h-4" />}
           >
-            Or Lock In Appointment Slot Now
+            {t.quote.form.bookSlotBtn}
           </Button>
           <Button
             variant="outline"
             size="md"
             onClick={() => setSubmittedData(null)}
           >
-            Submit Another Request
+            {t.quote.form.submitAnotherBtn}
           </Button>
         </div>
       </div>
@@ -147,15 +148,15 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       {/* Contact info grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
-          label="First Name"
-          placeholder="e.g. John"
+          label={t.quote.form.firstNameLabel}
+          placeholder={t.quote.form.firstNamePlaceholder}
           required
           {...register('firstName')}
           error={errors.firstName?.message}
         />
         <Input
-          label="Last Name"
-          placeholder="e.g. Miller"
+          label={t.quote.form.lastNameLabel}
+          placeholder={t.quote.form.lastNamePlaceholder}
           required
           {...register('lastName')}
           error={errors.lastName?.message}
@@ -165,16 +166,16 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
           type="email"
-          label="Email Address"
-          placeholder="john.miller@example.com"
+          label={t.quote.form.emailLabel}
+          placeholder={t.quote.form.emailPlaceholder}
           required
           {...register('email')}
           error={errors.email?.message}
         />
         <Input
           type="tel"
-          label="Phone Number"
-          placeholder="(555) 000-0000"
+          label={t.quote.form.phoneLabel}
+          placeholder={t.quote.form.phonePlaceholder}
           required
           {...register('phone')}
           error={errors.phone?.message}
@@ -184,7 +185,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       {/* Property Details */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Select
-          label="Property Type"
+          label={t.quote.form.propertyTypeLabel}
           required
           options={[
             'Single Family Home',
@@ -199,8 +200,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
         />
         <div className="sm:col-span-2">
           <Input
-            label="Street Address"
-            placeholder="1234 Blossom Creek Trail"
+            label={t.quote.form.addressLabel}
+            placeholder={t.quote.form.addressPlaceholder}
             required
             {...register('address')}
             error={errors.address?.message}
@@ -210,22 +211,22 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Input
-          label="City"
-          placeholder="Austin"
+          label={t.quote.form.cityLabel}
+          placeholder={t.quote.form.cityPlaceholder}
           required
           {...register('city')}
           error={errors.city?.message}
         />
         <Input
-          label="State"
-          placeholder="TX"
+          label={t.quote.form.stateLabel}
+          placeholder={t.quote.form.statePlaceholder}
           required
           {...register('state')}
           error={errors.state?.message}
         />
         <Input
-          label="ZIP / Postal Code"
-          placeholder="78704"
+          label={t.quote.form.zipLabel}
+          placeholder={t.quote.form.zipPlaceholder}
           required
           {...register('zipCode')}
           error={errors.zipCode?.message}
@@ -235,7 +236,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       {/* Pest & Service Selection */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Select
-          label="Primary Pest Problem"
+          label={t.quote.form.pestProblemLabel}
           required
           options={[
             'General Household Pests',
@@ -253,7 +254,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           error={errors.pestProblem?.message}
         />
         <Select
-          label="Service Required"
+          label={t.quote.form.serviceRequiredLabel}
           required
           options={[
             'Residential Pest Control',
@@ -272,8 +273,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       </div>
 
       <Textarea
-        label="Description of Pest Activity"
-        placeholder="Please describe where you noticed pests (e.g., kitchen baseboards, backyard deck, attic scratching, frequency of sightings)..."
+        label={t.quote.form.descriptionLabel}
+        placeholder={t.quote.form.descriptionPlaceholder}
         required
         {...register('description')}
         error={errors.description?.message}
@@ -282,7 +283,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       {/* Preferences */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Select
-          label="Preferred Contact Method"
+          label={t.quote.form.contactMethodLabel}
           options={[
             { label: 'Phone Call', value: 'Phone' },
             { label: 'Email', value: 'Email' },
@@ -292,7 +293,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           error={errors.preferredContactMethod?.message}
         />
         <Select
-          label="Preferred Contact Time"
+          label={t.quote.form.contactTimeLabel}
           options={[
             { label: 'Anytime', value: 'Anytime' },
             { label: 'Morning (8am - 12pm)', value: 'Morning' },
@@ -313,7 +314,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           {...register('consent')}
         />
         <label htmlFor="quote-consent" className="text-xs text-slate-600 leading-tight select-none">
-          I agree to receive communications regarding this quote from Insight Pest Solutions at the phone number and email provided above. I understand consent is not required for purchase.
+          {t.quote.form.consentText}
         </label>
       </div>
       {errors.consent && (
@@ -323,7 +324,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       {/* Trust & Guarantee Callout */}
       <div className="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200">
         <ShieldCheck className="w-4 h-4 text-red-600 flex-shrink-0" />
-        <span>Your information is 100% private and protected. We never sell your personal data.</span>
+        <span>{t.quote.form.privacyNotice}</span>
       </div>
 
       <Button
@@ -334,7 +335,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
         isLoading={isSubmitting}
         rightIcon={<Send className="w-4 h-4" />}
       >
-        Request Free Pest Quote
+        {isSubmitting ? t.quote.form.submittingButton : t.quote.form.submitButton}
       </Button>
     </form>
   );

@@ -1,32 +1,33 @@
 import React, { useEffect } from 'react';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const CookiePolicyPage: React.FC = () => {
   useEffect(() => {
     updateSeo({
-      title: 'Cookie Policy | Insight Pest Solutions',
-      description: 'Insight Pest Solutions cookie usage policy for session state and user analytics.'
+      title: t.legal.cookie.seoTitle,
+      description: t.legal.cookie.seoDescription
     });
   }, []);
 
   return (
     <div className="py-10 bg-slate-50 min-h-screen">
       <div className="container-custom max-w-4xl">
-        <Breadcrumbs items={[{ label: 'Cookie Policy' }]} />
+        <Breadcrumbs items={[{ label: t.legal.cookie.title }]} />
 
         <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm space-y-6 text-sm text-slate-700 leading-relaxed">
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Cookie Policy</h1>
-          <p className="text-xs text-slate-500">Last Updated: September 2026</p>
+          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">{t.legal.cookie.title}</h1>
+          <p className="text-xs text-slate-500">{t.legal.cookie.lastUpdated}</p>
 
-          <h2 className="text-lg font-bold text-slate-900 pt-4">1. What Are Cookies</h2>
+          <h2 className="text-lg font-bold text-slate-900 pt-4">{t.legal.cookie.sec1Title}</h2>
           <p>
-            Cookies are small data files stored in your web browser that allow our website to remember your session preferences, selected service area, and form completion steps.
+            {t.legal.cookie.sec1Body}
           </p>
 
-          <h2 className="text-lg font-bold text-slate-900 pt-4">2. Cookies We Use</h2>
+          <h2 className="text-lg font-bold text-slate-900 pt-4">{t.legal.cookie.sec2Title}</h2>
           <p>
-            We use strictly necessary cookies to keep the booking and quote wizard operational, as well as performance analytics cookies to understand page load speeds and visitor navigation flows.
+            {t.legal.cookie.sec2Body}
           </p>
         </div>
       </div>

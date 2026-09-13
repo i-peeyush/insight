@@ -5,6 +5,7 @@ import { LocationItem } from '../../types/location';
 import { Card } from '../common/Card';
 import { Badge } from '../common/Badge';
 import { companyConfig } from '../../config/company';
+import { t } from '../../language';
 
 export const LocationCard: React.FC<{ location: LocationItem }> = ({ location }) => {
   return (
@@ -59,7 +60,7 @@ export const LocationCard: React.FC<{ location: LocationItem }> = ({ location })
           to={`/service-areas/${location.slug}`}
           className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
-          <span>View Area</span>
+          <span>{t.locations.card.viewArea}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

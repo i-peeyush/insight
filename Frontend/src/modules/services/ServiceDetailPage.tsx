@@ -21,6 +21,7 @@ import { CTASection } from '../../components/sections/CTASection';
 import { useServiceDetail } from '../../hooks/useServices';
 import { companyConfig } from '../../config/company';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -39,7 +40,7 @@ export const ServiceDetailPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="py-20 container-custom">
-        <LoadingState message="Loading service details..." />
+        <LoadingState message={t.services.detail.loading} />
       </div>
     );
   }
@@ -48,8 +49,8 @@ export const ServiceDetailPage: React.FC = () => {
     return (
       <div className="py-20 container-custom">
         <ErrorState
-          title="Service Not Found"
-          message="The requested pest service could not be located. It may have been updated or moved."
+          title={t.services.detail.errorTitle}
+          message={t.services.detail.errorMessage}
         />
       </div>
     );
@@ -60,7 +61,7 @@ export const ServiceDetailPage: React.FC = () => {
       <div className="container-custom">
         <Breadcrumbs
           items={[
-            { label: 'Services', path: '/services' },
+            { label: t.nav.services, path: '/services' },
             { label: service.title }
           ]}
         />
@@ -88,7 +89,7 @@ export const ServiceDetailPage: React.FC = () => {
               <ShieldCheck className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-[#DC2626]">{service.warranty}</strong>
-                <span>All treatments include full documentation and prompt retreatment if covered pests return.</span>
+                <span>{t.services.detail.guaranteeNote}</span>
               </div>
             </div>
           </div>
@@ -102,7 +103,7 @@ export const ServiceDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <Award className="w-6 h-6 text-red-600" />
-                <span>Program Inclusions & Features</span>
+                <span>{t.services.detail.programInclusions}</span>
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -119,7 +120,7 @@ export const ServiceDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <Layers className="w-6 h-6 text-red-600" />
-                <span>How We Treat Your Property</span>
+                <span>{t.services.detail.howWeTreat}</span>
               </h2>
 
               <div className="space-y-4">
@@ -141,7 +142,7 @@ export const ServiceDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <Bug className="w-5 h-5 text-red-600" />
-                <span>Covered Pests Under This Program</span>
+                <span>{t.services.detail.coveredPests}</span>
               </h2>
 
               <div className="flex flex-wrap gap-2">
@@ -161,10 +162,10 @@ export const ServiceDetailPage: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg sticky top-24">
               <h3 className="text-xl font-extrabold text-slate-900 mb-2">
-                Request a Quote for this Service
+                {t.services.detail.requestQuoteTitle}
               </h3>
               <p className="text-xs text-slate-500 mb-6">
-                Receive an immediate customized estimate with transparent pricing.
+                {t.services.detail.requestQuoteSubtitle}
               </p>
 
               <QuoteForm initialService={service.title} />
@@ -175,7 +176,7 @@ export const ServiceDetailPage: React.FC = () => {
                   className="text-xs font-bold text-red-600 hover:text-red-600 inline-flex items-center gap-1"
                 >
                   <Calendar className="w-3.5 h-3.5" />
-                  <span>Prefer to pick an arrival date? Book Inspection directly</span>
+                  <span>{t.services.detail.bookDirectPrompt}</span>
                 </Link>
               </div>
             </div>

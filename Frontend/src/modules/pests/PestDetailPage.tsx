@@ -7,7 +7,7 @@ import {
   ShieldAlert, 
   CheckCircle2, 
   Lightbulb, 
-  ArrowRight,
+  ArrowRight, 
   Calculator
 } from 'lucide-react';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
@@ -17,6 +17,7 @@ import { LoadingState, ErrorState } from '../../components/common/LoadingState';
 import { CTASection } from '../../components/sections/CTASection';
 import { usePestDetail } from '../../hooks/usePests';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const PestDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -35,7 +36,7 @@ export const PestDetailPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="py-20 container-custom">
-        <LoadingState message="Loading pest profile..." />
+        <LoadingState message={t.pests.detail.loading} />
       </div>
     );
   }
@@ -44,8 +45,8 @@ export const PestDetailPage: React.FC = () => {
     return (
       <div className="py-20 container-custom">
         <ErrorState
-          title="Pest Not Found"
-          message="The requested pest identification profile could not be found."
+          title={t.pests.detail.errorTitle}
+          message={t.pests.detail.errorMessage}
         />
       </div>
     );
@@ -56,7 +57,7 @@ export const PestDetailPage: React.FC = () => {
       <div className="container-custom">
         <Breadcrumbs
           items={[
-            { label: 'Pest Library', path: '/pests' },
+            { label: t.nav.pests, path: '/pests' },
             { label: pest.name }
           ]}
         />
@@ -67,7 +68,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3">
               <Badge variant="accent">{pest.category}</Badge>
               <Badge variant={pest.riskLevel.includes('High') || pest.riskLevel.includes('Severe') ? 'danger' : 'warning'}>
-                {pest.riskLevel} Threat
+                {pest.riskLevel} {t.pests.detail.threatSuffix}
               </Badge>
             </div>
 
@@ -76,7 +77,7 @@ export const PestDetailPage: React.FC = () => {
             </h1>
 
             <p className="text-sm font-semibold italic text-slate-500">
-              Scientific Name: {pest.scientificName} • Common Names: {pest.commonName}
+              {t.pests.detail.scientificPrefix} {pest.scientificName} • {t.pests.detail.commonPrefix} {pest.commonName}
             </p>
 
             <p className="text-base md:text-lg text-slate-600 leading-relaxed pt-2">
@@ -90,14 +91,14 @@ export const PestDetailPage: React.FC = () => {
                 size="md"
                 leftIcon={<Calculator className="w-4 h-4" />}
               >
-                Get Quote to Eliminate {pest.name}
+                {t.pests.detail.quoteButtonPrefix} {pest.name}
               </Button>
               <Button
                 to="/book-inspection"
                 variant="outline"
                 size="md"
               >
-                Schedule Inspection
+                {t.pests.detail.bookButton}
               </Button>
             </div>
           </div>
@@ -111,7 +112,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <AlertTriangle className="w-5 h-5 text-amber-600" />
-                <span>Key Signs of a {pest.name} Infestation</span>
+                <span>{t.pests.detail.signsTitle}</span>
               </h2>
               <div className="space-y-3">
                 {pest.signsOfInfestation.map((sign, idx) => (
@@ -127,7 +128,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <ShieldAlert className="w-5 h-5 text-red-600" />
-                <span>Health & Property Risks</span>
+                <span>{t.pests.detail.healthRisksTitle}</span>
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed bg-red-50/50 p-4 rounded-xl border border-red-100">
                 {pest.healthRisks}
@@ -138,7 +139,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5 text-red-600" />
-                <span>Proactive Prevention Tips for Homeowners</span>
+                <span>{t.pests.detail.preventionTitle}</span>
               </h2>
               <div className="space-y-2.5">
                 {pest.preventionTips.map((tip, idx) => (
@@ -156,7 +157,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <Bug className="w-5 h-5 text-[#DC2626]" />
-                <span>Our Professional Treatment Approach</span>
+                <span>{t.pests.detail.behaviorTitle}</span>
               </h2>
               <p className="text-sm text-slate-700 leading-relaxed">
                 {pest.treatmentApproach}
@@ -170,7 +171,7 @@ export const PestDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
               <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-red-600" />
-                <span>Common Locations Found</span>
+                <span>{t.locations.header.title}</span>
               </h3>
               <div className="space-y-2">
                 {pest.commonLocations.map((loc, idx) => (
@@ -184,10 +185,10 @@ export const PestDetailPage: React.FC = () => {
             {/* Related Services */}
             <div className="bg-[#DC2626] text-white rounded-3xl p-6 shadow-md space-y-4">
               <h3 className="text-base font-bold text-white">
-                Recommended Services
+                {t.nav.services}
               </h3>
-              <p className="text-xs text-red-600">
-                These specialized programs include comprehensive treatment for {pest.name}:
+              <p className="text-xs text-red-100">
+                {t.services.header.subtitle}
               </p>
               <div className="space-y-2">
                 {pest.relatedServices.map((srvSlug) => (

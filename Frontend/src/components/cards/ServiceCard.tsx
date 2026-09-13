@@ -15,6 +15,7 @@ import {
 import { ServiceItem } from '../../types/service';
 import { Card } from '../common/Card';
 import { Badge } from '../common/Badge';
+import { t } from '../../language';
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Home,
@@ -69,7 +70,7 @@ export const ServiceCard: React.FC<{ service: ServiceItem }> = ({ service }) => 
           to={`/services/${service.slug}`}
           className="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-600 transition-colors group-hover:translate-x-1 duration-200"
         >
-          <span>Learn More</span>
+          <span>{t.services.card.learnMore}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

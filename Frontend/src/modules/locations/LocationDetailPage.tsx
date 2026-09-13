@@ -10,6 +10,7 @@ import { CTASection } from '../../components/sections/CTASection';
 import { useLocationDetail } from '../../hooks/useLocations';
 import { companyConfig } from '../../config/company';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const LocationDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -35,7 +36,7 @@ export const LocationDetailPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="py-20 container-custom">
-        <LoadingState message="Loading local service area..." />
+        <LoadingState message={t.locations.detail.loading} />
       </div>
     );
   }
@@ -44,8 +45,8 @@ export const LocationDetailPage: React.FC = () => {
     return (
       <div className="py-20 container-custom">
         <ErrorState
-          title="Location Not Found"
-          message="We could not find information for this specific service area."
+          title={t.locations.errorTitle}
+          message={t.locations.errorMessage}
         />
       </div>
     );
@@ -56,7 +57,7 @@ export const LocationDetailPage: React.FC = () => {
       <div className="container-custom">
         <Breadcrumbs
           items={[
-            { label: 'Service Areas', path: '/service-areas' },
+            { label: t.nav.serviceAreas, path: '/service-areas' },
             { label: location.cityName }
           ]}
         />
@@ -76,7 +77,7 @@ export const LocationDetailPage: React.FC = () => {
             </div>
 
             <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-              Pest Control in {location.cityName}
+              {t.locations.detail.headingPrefix} {location.cityName}
             </h1>
 
             <p className="text-base md:text-lg text-slate-600 leading-relaxed">
@@ -89,7 +90,7 @@ export const LocationDetailPage: React.FC = () => {
                 className="inline-flex items-center gap-2 text-sm font-bold text-[#DC2626] bg-[#FEF2F2] px-4 py-2.5 rounded-xl border border-[#EF4444]/30 hover:bg-[#DC2626] hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4 text-red-600" />
-                <span>Local Dispatch: {companyConfig.phoneDisplay}</span>
+                <span>{t.locations.detail.dispatchPrefix} {companyConfig.phoneDisplay}</span>
               </a>
             </div>
           </div>
@@ -102,7 +103,7 @@ export const LocationDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <Bug className="w-5 h-5 text-red-600" />
-                <span>Common Pest Threats in {location.cityName}</span>
+                <span>{t.locations.detail.topPestsTitle}</span>
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {location.commonPests.map((pest, idx) => (
@@ -117,7 +118,7 @@ export const LocationDetailPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-red-600" />
-                <span>Available Services in this Area</span>
+                <span>{t.services.header.title}</span>
               </h2>
               <div className="space-y-2.5">
                 {location.servicesAvailable.map((srv, idx) => (
@@ -132,7 +133,7 @@ export const LocationDetailPage: React.FC = () => {
             {/* Highlights */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h2 className="text-xl font-bold text-slate-900 mb-4">
-                Why Neighbors in {location.cityName} Choose Insight
+                {t.about.header.title}
               </h2>
               <div className="space-y-3">
                 {location.highlights.map((highlight, idx) => (
@@ -147,7 +148,7 @@ export const LocationDetailPage: React.FC = () => {
             {/* ZIP Codes Covered */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs">
               <h3 className="text-sm font-bold text-slate-900 mb-3">
-                Serviced Postal Codes in {location.cityName}:
+                {t.locations.detail.zipCodesTitle}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {location.zipCodes.map((zip) => (
@@ -163,10 +164,10 @@ export const LocationDetailPage: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg sticky top-24">
               <h3 className="text-xl font-extrabold text-slate-900 mb-2">
-                Get a Quote for {location.cityName}
+                {t.quote.header.title}
               </h3>
               <p className="text-xs text-slate-500 mb-6">
-                Fast estimates for homes and businesses in this region.
+                {t.quote.header.subtitle}
               </p>
 
               <QuoteForm />

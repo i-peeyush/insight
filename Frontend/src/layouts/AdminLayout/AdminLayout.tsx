@@ -21,6 +21,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { Button } from '../../components/common/Button';
 import { useAllLeads } from '../../hooks/useLeads';
 import { useAllBookings } from '../../hooks/useBookings';
+import { t } from '../../language';
 
 export const AdminLayout: React.FC = () => {
   const { user, isAuthenticated, logout, login } = useAuth();
@@ -45,9 +46,9 @@ export const AdminLayout: React.FC = () => {
         <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl">
           <div className="text-center mb-6">
             <Logo variant="navbar" className="justify-center mb-4" />
-            <h2 className="text-xl font-bold text-slate-900">Insight Operations Portal</h2>
+            <h2 className="text-xl font-bold text-slate-900">{t.admin.auth.portalTitle}</h2>
             <p className="text-xs text-slate-500 mt-1">
-              Internal staff & administration management system
+              {t.admin.auth.portalSub}
             </p>
           </div>
           <div className="space-y-4">
@@ -57,7 +58,7 @@ export const AdminLayout: React.FC = () => {
               className="w-full justify-center"
               onClick={() => login('admin@insightpest.internal', 'ADMIN')}
             >
-              Sign In as Administrator
+              {t.admin.auth.signInAdmin}
             </Button>
             <Button
               variant="outline"
@@ -65,7 +66,7 @@ export const AdminLayout: React.FC = () => {
               className="w-full justify-center"
               to="/"
             >
-              Return to Public Website
+              {t.admin.auth.returnWebsite}
             </Button>
           </div>
         </div>
@@ -74,14 +75,14 @@ export const AdminLayout: React.FC = () => {
   }
 
   const navItems = [
-    { label: 'Dashboard', path: '/admin', icon: LayoutDashboard },
-    { label: 'Leads & Quotes', path: '/admin/leads', icon: Users, badge: newLeadsCount },
-    { label: 'Bookings & Dispatch', path: '/admin/bookings', icon: Calendar, badge: pendingBookingsCount },
-    { label: 'Services Catalog', path: '/admin/services', icon: ShieldAlert },
-    { label: 'Testimonials', path: '/admin/testimonials', icon: MessageSquare },
-    { label: 'FAQ Manager', path: '/admin/faq', icon: HelpCircle },
-    { label: 'Blog Posts', path: '/admin/blog', icon: FileText },
-    { label: 'Company Settings', path: '/admin/settings', icon: Settings }
+    { label: t.admin.nav.dashboard, path: '/admin', icon: LayoutDashboard },
+    { label: t.admin.nav.leads, path: '/admin/leads', icon: Users, badge: newLeadsCount },
+    { label: t.admin.nav.bookings, path: '/admin/bookings', icon: Calendar, badge: pendingBookingsCount },
+    { label: t.admin.nav.services, path: '/admin/services', icon: ShieldAlert },
+    { label: t.admin.nav.testimonials, path: '/admin/testimonials', icon: MessageSquare },
+    { label: t.admin.nav.faq, path: '/admin/faq', icon: HelpCircle },
+    { label: t.admin.nav.blog, path: '/admin/blog', icon: FileText },
+    { label: t.admin.nav.settings, path: '/admin/settings', icon: Settings }
   ];
 
   return (
@@ -93,7 +94,7 @@ export const AdminLayout: React.FC = () => {
             <Logo variant="navbar" lightMode />
             <div className="mt-3 flex items-center gap-2 text-xs text-red-400 bg-red-950/40 px-2.5 py-1 rounded-lg border border-red-900/60">
               <Shield className="w-3.5 h-3.5 text-red-400" />
-              <span className="font-bold">Staff Portal ({user?.role})</span>
+              <span className="font-bold">{t.admin.auth.staffBadge} ({user?.role})</span>
             </div>
           </div>
 
@@ -134,14 +135,14 @@ export const AdminLayout: React.FC = () => {
             className="flex items-center gap-2 px-3.5 py-2 text-xs text-slate-400 hover:text-white transition-colors"
           >
             <ExternalLink className="w-3.5 h-3.5" />
-            <span>View Public Website</span>
+            <span>{t.admin.auth.returnWebsite}</span>
           </Link>
           <button
             onClick={handleLogout}
             className="w-full flex items-center gap-2 px-3.5 py-2 text-xs text-red-400 hover:text-red-300 hover:bg-red-950/30 rounded-lg transition-colors font-semibold"
           >
             <LogOut className="w-3.5 h-3.5" />
-            <span>Sign Out</span>
+            <span>{t.admin.nav.logout}</span>
           </button>
         </div>
       </aside>
@@ -157,7 +158,7 @@ export const AdminLayout: React.FC = () => {
               {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
             <h1 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
-              Insight Operations & Service Control Console
+              {t.admin.nav.portalTitle}
             </h1>
           </div>
 
@@ -176,7 +177,7 @@ export const AdminLayout: React.FC = () => {
             </div>
 
             <Button variant="ghost" size="sm" onClick={handleLogout} leftIcon={<LogOut className="w-3.5 h-3.5" />}>
-              Logout
+              {t.admin.nav.logout}
             </Button>
           </div>
         </header>

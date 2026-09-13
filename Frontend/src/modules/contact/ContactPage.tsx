@@ -5,12 +5,13 @@ import { SectionHeading } from '../../components/common/SectionHeading';
 import { ContactForm } from '../../components/forms/ContactForm';
 import { companyConfig } from '../../config/company';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const ContactPage: React.FC = () => {
   useEffect(() => {
     updateSeo({
-      title: 'Contact Insight Pest Solutions | Customer Support & Hotline',
-      description: 'Get in touch with the Insight Pest Solutions team for general inquiries, emergency pest service dispatch, or account questions.',
+      title: t.contact.seo.title,
+      description: t.contact.seo.description,
       ogType: 'website'
     });
   }, []);
@@ -18,12 +19,12 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="py-10 bg-slate-50 min-h-screen">
       <div className="container-custom">
-        <Breadcrumbs items={[{ label: 'Contact Us' }]} />
+        <Breadcrumbs items={[{ label: t.nav.contact }]} />
 
         <SectionHeading
-          badge="Direct Customer Support"
-          title="We're Here to Help Keep Your Space Pest-Free"
-          subtitle="Have a question about a treatment plan, need billing assistance, or facing an urgent infestation? Reach out below."
+          badge={t.contact.header.badge}
+          title={t.contact.header.title}
+          subtitle={t.contact.header.subtitle}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
@@ -31,7 +32,7 @@ export const ContactPage: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-6">
               <h3 className="text-xl font-bold text-slate-900">
-                Contact Information
+                {t.contact.cards.contactInfoTitle}
               </h3>
 
               <div className="space-y-4 text-sm text-slate-700">
@@ -41,7 +42,7 @@ export const ContactPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block">Phone Support</span>
+                    <span className="text-xs font-semibold text-slate-500 block">{t.contact.cards.phoneLabel}</span>
                     <strong className="text-slate-900 group-hover:text-[#DC2626]">{companyConfig.phoneDisplay}</strong>
                   </div>
                 </a>
@@ -52,7 +53,7 @@ export const ContactPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block">Email Inquiries</span>
+                    <span className="text-xs font-semibold text-slate-500 block">{t.contact.cards.emailLabel}</span>
                     <strong className="text-slate-900 group-hover:text-[#DC2626]">{companyConfig.emailDisplay}</strong>
                   </div>
                 </a>
@@ -60,7 +61,7 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50">
                   <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block">Headquarters</span>
+                    <span className="text-xs font-semibold text-slate-500 block">{t.contact.cards.hqLabel}</span>
                     <span className="text-slate-900 font-medium">{companyConfig.addressDisplay}</span>
                   </div>
                 </div>
@@ -68,12 +69,12 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50">
                   <Clock className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block">Operating Hours</span>
+                    <span className="text-xs font-semibold text-slate-500 block">{t.contact.cards.hoursLabel}</span>
                     <p className="text-xs text-slate-800">
-                      <strong>Mon - Fri:</strong> {companyConfig.businessHours.monday_friday}
+                      <strong>{t.contact.cards.monFriLabel}</strong> {companyConfig.businessHours.monday_friday}
                     </p>
                     <p className="text-xs text-slate-800">
-                      <strong>Saturday:</strong> {companyConfig.businessHours.saturday}
+                      <strong>{t.contact.cards.satLabel}</strong> {companyConfig.businessHours.saturday}
                     </p>
                   </div>
                 </div>
@@ -84,13 +85,13 @@ export const ContactPage: React.FC = () => {
             <div className="bg-[#0F172A] text-white rounded-3xl p-6 border border-slate-800 shadow-md space-y-3">
               <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider">
                 <ShieldAlert className="w-4 h-4" />
-                <span>Emergency Response Notice</span>
+                <span>{t.contact.cards.emergencyBadge}</span>
               </div>
               <h4 className="text-base font-bold text-white">
-                Active Wasp, Hornet or Rodent Emergency?
+                {t.contact.cards.emergencyTitle}
               </h4>
               <p className="text-xs text-slate-300 leading-relaxed">
-                If you have an aggressive stinging insect swarm or hazardous rodent situation inside living spaces, call our 24/7 hotline directly for immediate dispatch triage.
+                {t.contact.cards.emergencyDesc}
               </p>
             </div>
           </div>
@@ -98,10 +99,10 @@ export const ContactPage: React.FC = () => {
           {/* Form */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl">
             <h3 className="text-2xl font-extrabold text-slate-900 mb-2">
-              Send Us a Message
+              {t.contact.form.formTitle}
             </h3>
             <p className="text-xs text-slate-500 mb-6">
-              Our customer support staff responds to online inquiries within 60 minutes during standard business hours.
+              {t.contact.form.formSubtitle}
             </p>
             <ContactForm />
           </div>

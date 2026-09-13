@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { Bug, ArrowLeft, Home, Calculator, ShieldCheck } from 'lucide-react';
 import { Button } from '../../components/common/Button';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const NotFoundPage: React.FC = () => {
   useEffect(() => {
     updateSeo({
-      title: 'Page Not Found (404) | Insight Pest Solutions',
-      description: 'Looks like this page has wandered off.'
+      title: t.notFound.seoTitle,
+      description: t.notFound.seoDescription
     });
   }, []);
 
@@ -19,26 +20,26 @@ export const NotFoundPage: React.FC = () => {
         </div>
 
         <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
-          Error 404
+          {t.notFound.badge}
         </span>
 
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mt-2 mb-3">
-          Looks like this page has wandered off.
+          {t.notFound.title}
         </h1>
 
         <p className="text-sm text-slate-600 mb-8 leading-relaxed">
-          The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let us help get you back to safety.
+          {t.notFound.subtitle}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button to="/" variant="primary" size="md" leftIcon={<Home className="w-4 h-4" />}>
-            Back to Home
+            {t.notFound.homeBtn}
           </Button>
           <Button to="/services" variant="outline" size="md">
-            View All Services
+            {t.notFound.servicesBtn}
           </Button>
           <Button to="/request-quote" variant="gold" size="md" leftIcon={<Calculator className="w-4 h-4" />}>
-            Get a Quote
+            {t.notFound.quoteBtn}
           </Button>
         </div>
       </div>

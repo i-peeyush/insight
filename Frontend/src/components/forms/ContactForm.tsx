@@ -11,6 +11,7 @@ import { useToast } from '../../contexts/ToastContext';
 import { contactApi } from '../../api/contactApi';
 import { ContactFormData } from '../../types/contact';
 import { analytics } from '../../utils/analytics';
+import { t } from '../../language';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -52,7 +53,7 @@ export const ContactForm: React.FC = () => {
       if (response.success) {
         setIsSuccess(true);
         analytics.track('contact_submitted', { subject: values.subject });
-        showToast('Message sent! Our support desk will reply promptly.', 'success');
+        showToast(t.contact.form.successMessage, 'success');
         reset();
       }
     } catch (err) {
@@ -66,12 +67,12 @@ export const ContactForm: React.FC = () => {
     return (
       <div className="bg-red-50 border border-red-200 rounded-3xl p-8 text-center animate-fade-in">
         <CheckCircle2 className="w-12 h-12 text-red-600 mx-auto mb-3" />
-        <h3 className="text-xl font-bold text-[#DC2626] mb-1">Message Sent Successfully</h3>
+        <h3 className="text-xl font-bold text-[#DC2626] mb-1">{t.contact.form.successTitle}</h3>
         <p className="text-xs text-slate-600 mb-6">
-          Thank you for getting in touch. An Insight support coordinator will respond within 1 business hour.
+          {t.contact.form.successMessage}
         </p>
         <Button variant="outline" size="sm" onClick={() => setIsSuccess(false)}>
-          Send Another Message
+          {t.contact.form.sendAnotherBtn}
         </Button>
       </div>
     );
@@ -80,8 +81,8 @@ export const ContactForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <Input
-        label="Full Name"
-        placeholder="Jane Smith"
+        label={t.contact.form.nameLabel}
+        placeholder={t.contact.form.namePlaceholder}
         required
         {...register('name')}
         error={errors.name?.message}
@@ -90,16 +91,16 @@ export const ContactForm: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
           type="email"
-          label="Email Address"
-          placeholder="jane@example.com"
+          label={t.contact.form.emailLabel}
+          placeholder={t.contact.form.emailPlaceholder}
           required
           {...register('email')}
           error={errors.email?.message}
         />
         <Input
           type="tel"
-          label="Phone Number"
-          placeholder="(555) 000-0000"
+          label={t.contact.form.phoneLabel}
+          placeholder={t.contact.form.phonePlaceholder}
           required
           {...register('phone')}
           error={errors.phone?.message}
@@ -108,14 +109,14 @@ export const ContactForm: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
-          label="Subject / Topic"
-          placeholder="e.g. Question about Termite Warranty"
+          label={t.contact.form.subjectLabel}
+          placeholder={t.contact.form.subjectPlaceholder}
           required
           {...register('subject')}
           error={errors.subject?.message}
         />
         <Select
-          label="Preferred Response Method"
+          label={t.contact.form.contactMethodLabel}
           options={[
             { label: 'Email', value: 'Email' },
             { label: 'Phone Call', value: 'Phone' }
@@ -126,8 +127,8 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <Textarea
-        label="Your Message or Inquiry"
-        placeholder="How can we assist you today?..."
+        label={t.contact.form.messageLabel}
+        placeholder={t.contact.form.messagePlaceholder}
         required
         {...register('message')}
         error={errors.message?.message}
@@ -141,7 +142,7 @@ export const ContactForm: React.FC = () => {
         isLoading={isSubmitting}
         rightIcon={<Send className="w-4 h-4" />}
       >
-        Send Message to Insight Support
+        {isSubmitting ? t.contact.form.submittingButton : t.contact.form.submitButton}
       </Button>
     </form>
   );

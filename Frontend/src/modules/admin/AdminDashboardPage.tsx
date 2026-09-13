@@ -26,6 +26,7 @@ import { useAllLeads } from '../../hooks/useLeads';
 import { useAllBookings } from '../../hooks/useBookings';
 import { useServices } from '../../hooks/useServices';
 import { formatDate } from '../../utils/formatters';
+import { t } from '../../language';
 
 export const AdminDashboardPage: React.FC = () => {
   const navigate = useNavigate();
@@ -49,13 +50,13 @@ export const AdminDashboardPage: React.FC = () => {
         <div>
           <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 text-xs font-bold px-3 py-1 rounded-full border border-red-500/30 mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Insight Operations Command Center</span>
+            <span>{t.admin.dashboard.commandCenter}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Dashboard & Real-Time Dispatch Overview
+            {t.admin.dashboard.title}
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm mt-1 max-w-xl">
-            Live operations summary of incoming quote requests, technician routing, and customer appointments.
+            {t.admin.dashboard.subtitle}
           </p>
         </div>
 
@@ -66,7 +67,7 @@ export const AdminDashboardPage: React.FC = () => {
             onClick={() => navigate('/admin/leads')}
             leftIcon={<Plus className="w-4 h-4" />}
           >
-            Manage Leads
+            {t.admin.dashboard.manageLeadsBtn}
           </Button>
           <Button
             variant="outline"
@@ -75,7 +76,7 @@ export const AdminDashboardPage: React.FC = () => {
             onClick={() => navigate('/admin/bookings')}
             leftIcon={<Calendar className="w-4 h-4" />}
           >
-            Dispatch Calendar
+            {t.admin.dashboard.dispatchCalendarBtn}
           </Button>
         </div>
       </div>
@@ -83,7 +84,7 @@ export const AdminDashboardPage: React.FC = () => {
       {/* Primary KPI Metrics Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <AdminStatCard
-          title="Inbound Leads"
+          title={t.admin.dashboard.inboundLeadsTitle}
           value={totalLeads}
           icon={Users}
           iconBgColor="bg-blue-50"
@@ -91,13 +92,13 @@ export const AdminDashboardPage: React.FC = () => {
           trend={{
             value: `+${newLeads}`,
             isPositive: true,
-            text: 'new inquiries pending response'
+            text: t.admin.dashboard.newInquiriesPending
           }}
           onClick={() => navigate('/admin/leads')}
         />
 
         <AdminStatCard
-          title="Pending Bookings"
+          title={t.admin.dashboard.pendingBookingsTitle}
           value={pendingBookings}
           icon={Clock}
           iconBgColor="bg-amber-50"
@@ -105,13 +106,13 @@ export const AdminDashboardPage: React.FC = () => {
           trend={{
             value: `${pendingBookings} Action`,
             isPositive: false,
-            text: 'awaiting route assignment'
+            text: t.admin.dashboard.awaitingDispatch
           }}
           onClick={() => navigate('/admin/bookings')}
         />
 
         <AdminStatCard
-          title="Confirmed Slots"
+          title={t.admin.dashboard.confirmedBookingsTitle}
           value={confirmedBookings}
           icon={CheckCircle2}
           iconBgColor="bg-red-50"
@@ -119,13 +120,13 @@ export const AdminDashboardPage: React.FC = () => {
           trend={{
             value: `${Math.round((confirmedBookings / (totalBookings || 1)) * 100)}%`,
             isPositive: true,
-            text: 'dispatch confirmation rate'
+            text: t.admin.dashboard.scheduledThisMonth
           }}
           onClick={() => navigate('/admin/bookings')}
         />
 
         <AdminStatCard
-          title="Pipeline Value"
+          title={t.admin.dashboard.pipelineValueTitle}
           value={`$${pipelineValue.toLocaleString()}`}
           icon={DollarSign}
           iconBgColor="bg-emerald-50"
@@ -133,7 +134,7 @@ export const AdminDashboardPage: React.FC = () => {
           trend={{
             value: '+18.4%',
             isPositive: true,
-            text: 'vs previous 30 days'
+            text: t.admin.dashboard.estimatedVolume
           }}
         />
       </div>

@@ -7,12 +7,13 @@ import { WhyChooseUs } from '../../components/sections/WhyChooseUs';
 import { CTASection } from '../../components/sections/CTASection';
 import { companyConfig } from '../../config/company';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const AboutPage: React.FC = () => {
   useEffect(() => {
     updateSeo({
-      title: 'About Insight Pest Solutions | Our Mission & IPM Methodology',
-      description: 'Learn about Insight Pest Solutions, our science-based Integrated Pest Management (IPM) protocols, and our commitment to safe, reliable pest control.',
+      title: t.about.seo.title,
+      description: t.about.seo.description,
       ogType: 'website'
     });
   }, []);
@@ -20,19 +21,19 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="py-10 bg-slate-50 min-h-screen">
       <div className="container-custom">
-        <Breadcrumbs items={[{ label: 'About Us' }]} />
+        <Breadcrumbs items={[{ label: t.nav.about }]} />
 
         {/* Hero Section */}
         <div className="bg-white rounded-3xl p-8 md:p-14 border border-slate-200 shadow-sm mb-12">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold text-red-600 uppercase tracking-widest">
-              Our Story & Commitment
+              {t.about.header.badge}
             </span>
             <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Smarter, Safer Pest Protection You Can Trust
+              {t.about.header.title}
             </h1>
             <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-              Insight Pest Solutions was founded on a simple principle: Pest management should be scientific, environmentally responsible, and family-friendly. We reject indiscriminate chemical blanket spraying in favor of rigorous structural exclusion and root-cause biological elimination.
+              {t.about.header.subtitle}
             </p>
           </div>
         </div>
@@ -43,9 +44,9 @@ export const AboutPage: React.FC = () => {
             <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <Leaf className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Integrated Pest Management</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{t.about.coreValues.ipmTitle}</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              We focus on habitat modification, physical sealing, and low-toxicity botanical active ingredients to eliminate colonies without impacting home air quality.
+              {t.about.coreValues.ipmDesc}
             </p>
           </Card>
 
@@ -53,7 +54,7 @@ export const AboutPage: React.FC = () => {
             <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <HeartHandshake className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Unconditional Guarantee</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{t.about.coreValues.guaranteeTitle}</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               {companyConfig.guarantee.description}
             </p>
@@ -63,9 +64,9 @@ export const AboutPage: React.FC = () => {
             <div className="w-12 h-12 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center mb-4">
               <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Certified Master Specialists</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{t.about.coreValues.certifiedTitle}</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Every field technician undergoes rigorous entomological training, background screening, and continuous state licensing education.
+              {t.about.coreValues.certifiedDesc}
             </p>
           </Card>
         </div>
@@ -73,37 +74,37 @@ export const AboutPage: React.FC = () => {
         {/* Methodology Anchor */}
         <div id="methodology" className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm mb-16">
           <SectionHeading
-            badge="Scientific Approach"
-            title="The 5 Pillars of Our IPM Methodology"
-            subtitle="How we create long-term structural barriers that keep unwanted pests from entering your property."
+            badge={t.about.methodology.badge}
+            title={t.about.methodology.title}
+            subtitle={t.about.methodology.subtitle}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-              <h4 className="text-base font-bold text-slate-900">1. Precision Inspection & Species ID</h4>
+              <h4 className="text-base font-bold text-slate-900">{t.about.methodology.pillar1Title}</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Different pests require radically different treatments. Misidentifying an ant or cockroach species leads to ineffective treatments. We identify the exact species first.
+                {t.about.methodology.pillar1Desc}
               </p>
             </div>
 
             <div className="space-y-2 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-              <h4 className="text-base font-bold text-slate-900">2. Moisture & Harborage Elimination</h4>
+              <h4 className="text-base font-bold text-slate-900">{t.about.methodology.pillar2Title}</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                We locate high-humidity micro-climates, plumbing leaks, and mulch contacts that serve as primary pest attractants.
+                {t.about.methodology.pillar2Desc}
               </p>
             </div>
 
             <div className="space-y-2 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-              <h4 className="text-base font-bold text-slate-900">3. Mechanical Exclusion & Sealing</h4>
+              <h4 className="text-base font-bold text-slate-900">{t.about.methodology.pillar3Title}</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                We install chew-proof copper mesh in weep holes, exterior polyurethane sealants, and door weatherstripping to block physical entryways.
+                {t.about.methodology.pillar3Desc}
               </p>
             </div>
 
             <div className="space-y-2 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-              <h4 className="text-base font-bold text-slate-900">4. Targeted Micro-Encapsulated Active Barriers</h4>
+              <h4 className="text-base font-bold text-slate-900">{t.about.methodology.pillar4Title}</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                We apply non-repellent transfer formulas in exterior perimeter zones, allowing foraging insects to unwittingly carry active ingredients back to the queen.
+                {t.about.methodology.pillar4Desc}
               </p>
             </div>
           </div>

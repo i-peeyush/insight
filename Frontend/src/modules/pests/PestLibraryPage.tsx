@@ -7,18 +7,26 @@ import { LoadingState, EmptyState } from '../../components/common/LoadingState';
 import { CTASection } from '../../components/sections/CTASection';
 import { usePests } from '../../hooks/usePests';
 import { updateSeo } from '../../utils/seo';
-
-const CATEGORIES = ['All', 'Crawling Insects', 'Wood-Destroying Insects', 'Biting Parasites', 'Mammals & Wildlife', 'Stinging Insects'];
+import { t } from '../../language';
 
 export const PestLibraryPage: React.FC = () => {
   const { data: pests, isLoading } = usePests();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
+  const categories = [
+    { key: 'All', label: t.pests.categories.all },
+    { key: 'Crawling Insects', label: t.pests.categories.crawling },
+    { key: 'Wood-Destroying Insects', label: t.pests.categories.wood },
+    { key: 'Biting Parasites', label: t.pests.categories.biting },
+    { key: 'Mammals & Wildlife', label: t.pests.categories.wildlife },
+    { key: 'Stinging Insects', label: t.pests.categories.stinging }
+  ];
+
   useEffect(() => {
     updateSeo({
-      title: 'Pest Library & Insect Identification Guide',
-      description: 'Identify common household pests, signs of infestation, health risks, and effective professional elimination techniques.',
+      title: t.pests.seo.title,
+      description: t.pests.seo.description,
       ogType: 'website'
     });
   }, []);
@@ -38,28 +46,28 @@ export const PestLibraryPage: React.FC = () => {
   return (
     <div className="py-10 bg-slate-50 min-h-screen">
       <div className="container-custom">
-        <Breadcrumbs items={[{ label: 'Pest Library' }]} />
+        <Breadcrumbs items={[{ label: t.nav.pests }]} />
 
         <SectionHeading
-          badge="Identification & Biology Guide"
-          title="Household Pest Identification Library"
-          subtitle="Explore detailed profiles on common insects, rodents, and wildlife to understand infestation signs, health risks, and proven prevention techniques."
+          badge={t.pests.header.badge}
+          title={t.pests.header.title}
+          subtitle={t.pests.header.subtitle}
         />
 
         {/* Filter and Search Bar */}
         <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap gap-2 w-full md:w-auto">
-            {CATEGORIES.map((cat) => (
+            {categories.map((cat) => (
               <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                key={cat.key}
+                onClick={() => setSelectedCategory(cat.key)}
                 className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors ${
-                  selectedCategory === cat
+                  selectedCategory === cat.key
                     ? 'bg-[#DC2626] text-white'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                {cat}
+                {cat.label}
               </button>
             ))}
           </div>
@@ -68,14 +76,14 @@ export const PestLibraryPage: React.FC = () => {
             <SearchBar
               value={searchQuery}
               onChange={setSearchQuery}
-              placeholder="Search pests or signs..."
+              placeholder={t.pests.searchPlaceholder}
             />
           </div>
         </div>
 
         {/* Grid List */}
         {isLoading ? (
-          <LoadingState message="Loading pest library profiles..." />
+          <LoadingState message={t.pests.loadingMessage} />
         ) : filteredPests && filteredPests.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {filteredPests.map((pest) => (
@@ -84,9 +92,9 @@ export const PestLibraryPage: React.FC = () => {
           </div>
         ) : (
           <EmptyState
-            title="No Pests Found"
-            message="No pest profiles matched your search term. Try searching for 'Ants', 'Termites', or 'Mice'."
-            actionText="Reset Search"
+            title={t.pests.emptyTitle}
+            message={t.pests.emptyMessage}
+            actionText={t.common.resetFilters}
             onAction={() => {
               setSelectedCategory('All');
               setSearchQuery('');
@@ -96,8 +104,8 @@ export const PestLibraryPage: React.FC = () => {
       </div>
 
       <CTASection
-        title="Unsure What Pest You Are Dealing With?"
-        subtitle="Our licensed pest inspectors can perform a complete on-site diagnosis and identify the exact species."
+        title={t.pests.ctaTitle}
+        subtitle={t.pests.ctaSubtitle}
       />
     </div>
   );

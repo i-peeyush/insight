@@ -6,14 +6,15 @@ import { LoadingState } from '../../components/common/LoadingState';
 import { CTASection } from '../../components/sections/CTASection';
 import { useLocations } from '../../hooks/useLocations';
 import { updateSeo } from '../../utils/seo';
+import { t } from '../../language';
 
 export const LocationsPage: React.FC = () => {
   const { data: locations, isLoading } = useLocations();
 
   useEffect(() => {
     updateSeo({
-      title: 'Service Areas & Regional Pest Control Coverage',
-      description: 'Explore the local cities and communities served by Insight Pest Solutions. Dedicated certified technicians in your neighborhood.',
+      title: t.locations.seo.title,
+      description: t.locations.seo.description,
       ogType: 'website'
     });
   }, []);
@@ -21,16 +22,16 @@ export const LocationsPage: React.FC = () => {
   return (
     <div className="py-10 bg-slate-50 min-h-screen">
       <div className="container-custom">
-        <Breadcrumbs items={[{ label: 'Service Areas' }]} />
+        <Breadcrumbs items={[{ label: t.nav.serviceAreas }]} />
 
         <SectionHeading
-          badge="Local Service Network"
-          title="Service Areas & Local Coverage"
-          subtitle="Insight Pest Solutions dispatches certified technicians across our regional service corridors with same-day and next-day availability."
+          badge={t.locations.header.badge}
+          title={t.locations.header.title}
+          subtitle={t.locations.header.subtitle}
         />
 
         {isLoading ? (
-          <LoadingState message="Loading service areas..." />
+          <LoadingState message={t.locations.loadingMessage} />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {locations?.map((location) => (
@@ -41,8 +42,8 @@ export const LocationsPage: React.FC = () => {
       </div>
 
       <CTASection
-        title="Don't See Your Specific City Listed?"
-        subtitle="We frequently expand our service routes. Call our dispatch center to check service availability for your ZIP code."
+        title={t.locations.ctaTitle}
+        subtitle={t.locations.ctaSubtitle}
       />
     </div>
   );
