@@ -10,6 +10,6 @@ class InsightPestApplicationTests {
 
     @Test
     void contextLoads() {
-        // Verifies Spring context initializes cleanly with H2 and all controllers/services
+        // Verifies Spring context initializes cleanly with all controllers, repositories, and services
     }
 }

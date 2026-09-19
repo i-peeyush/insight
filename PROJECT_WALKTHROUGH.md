@@ -48,7 +48,7 @@ Welcome to the definitive architecture and codebase guide for the **Insight Pest
 ┌────────────────────────────────────▼────────────────────────────────────┐
 │                           BACKEND STACK                                 │
 │  Java 17/21 + Spring Boot 3.3 (Web, Data JPA, Validation, Security)    │
-│  Swagger OpenAPI 3 + Hibernate + In-Memory H2 / PostgreSQL 16           │
+│  Swagger OpenAPI 3 + Hibernate + PostgreSQL 16/17 + Flyway Migrations    │
 └────────────────────────────────────┬────────────────────────────────────┘
                                      │
 ┌────────────────────────────────────▼────────────────────────────────────┐
@@ -83,8 +83,7 @@ flowchart TD
     end
 
     subgraph Persistence ["Database Layer"]
-        H2[(In-Memory H2 Database - Dev)]
-        PG[(PostgreSQL 16 - Docker/Prod)]
+        PG[(PostgreSQL 16/17 + Flyway Migrations)]
     end
 
     UI --> Forms
@@ -96,7 +95,6 @@ flowchart TD
     Sec --> Ctrl
     Ctrl --> Svc
     Svc --> Repo
-    Repo --> H2
     Repo --> PG
 ```
 
@@ -134,9 +132,10 @@ Insight Pest/
 │       │   │       ├── blog/                    # Articles & IPM guides
 │       │   │       └── newsletter/              # Subscription mailing list
 │       │   └── resources/
-│       │       ├── application.yml              # Base Spring Boot configuration
-│       │       ├── application-dev.yml          # Dev profile (H2 in-memory, debug logging)
-│       │       └── application-prod.yml         # Prod profile (PostgreSQL configuration)
+│       │       ├── application.yml              # Base Spring Boot configuration (Flyway enabled)
+│       │       ├── application-dev.yml          # Dev profile (PostgreSQL configuration)
+│       │       ├── application-prod.yml         # Prod profile (PostgreSQL configuration)
+│       │       └── db/migration/                # Flyway SQL migrations (V1__initial_schema.sql)
 │       └── test/                                # JUnit 5 and Spring Boot integration tests
 │
 └── Frontend/                       # React 18 + TypeScript + Vite Application
@@ -404,10 +403,10 @@ com.insightpest.
 
 | File | Role |
 |---|---|
-| [Backend/pom.xml](file:///d:/Study/Coding/Insight%20Pest/Backend/pom.xml) | Maven POM configuring dependencies: `spring-boot-starter-web`, `spring-boot-starter-data-jpa`, `spring-boot-starter-validation`, `spring-boot-starter-security`, `springdoc-openapi-starter-webmvc-ui` (Swagger), `h2` database, `postgresql` driver, `lombok`, and `spring-boot-starter-test`. |
-| [Backend/src/main/resources/application.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application.yml) | Default Spring Boot configuration defining server port (`8080`), context path (`/api/v1`), Jackson serialization settings, and Swagger UI paths. |
-| [Backend/src/main/resources/application-dev.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application-dev.yml) | Development profile: In-memory H2 database (`jdbc:h2:mem:insightpest_dev`), Hibernate `ddl-auto: create-drop`, H2 Web Console enabled at `/h2-console`, and SQL logging. |
-| [Backend/src/main/resources/application-prod.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application-prod.yml) | Production profile: Connects to PostgreSQL (`jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:insightpest_db}`), HikariCP connection pooling, and Hibernate `ddl-auto: update`. |
+| [Backend/pom.xml](file:///d:/Study/Coding/Insight%20Pest/Backend/pom.xml) | Maven POM configuring dependencies: `spring-boot-starter-web`, `spring-boot-starter-data-jpa`, `spring-boot-starter-validation`, `spring-boot-starter-security`, `springdoc-openapi-starter-webmvc-ui` (Swagger), `postgresql` driver, `flyway-core`, `flyway-database-postgresql`, and `spring-boot-starter-test`. |
+| [Backend/src/main/resources/application.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application.yml) | Default Spring Boot configuration defining server port (`8080`), Flyway migration rules, Jackson serialization settings, and Swagger UI paths. |
+| [Backend/src/main/resources/application-dev.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application-dev.yml) | Development profile: PostgreSQL database connection with Hibernate `ddl-auto: validate` and SQL logging. |
+| [Backend/src/main/resources/application-prod.yml](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/application-prod.yml) | Production profile: Connects to PostgreSQL (`jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:insightpest_db}`) with Flyway validation. |
 | [Backend/Dockerfile](file:///d:/Study/Coding/Insight%20Pest/Backend/Dockerfile) | Multi-stage Docker container build. Stage 1 compiles the Java application with Maven. Stage 2 executes the resulting JAR file via `eclipse-temurin:17-jre-alpine` on port 8080. |
 
 ---
@@ -689,7 +688,7 @@ volumes:
 
 ---
 
-### Scenario B: Running Spring Boot Backend (Local H2 Database)
+### Scenario B: Running Spring Boot Backend (PostgreSQL + Flyway)
 1. Ensure Java 17+ and Maven are installed.
 2. Navigate to the Backend directory:
    ```bash
@@ -699,7 +698,6 @@ volumes:
 3. Useful Endpoints:
    - **REST API Base**: `http://localhost:8080/api/v1`
    - **Interactive Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-   - **H2 In-Memory DB Console**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console) (JDBC URL: `jdbc:h2:mem:insightpest_dev`, User: `sa`, Password: empty)
 
 ---
 

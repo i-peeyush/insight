@@ -79,7 +79,7 @@ InsightPest/
 |---|---|
 | **Frontend** | React 18, TypeScript, Vite, React Router 6, React Hook Form, Zod, TanStack Query, Lucide Icons, Vanilla CSS Tokens |
 | **Backend** | Java 17/21, Spring Boot 3.3, Spring Web, Spring Data JPA, Spring Validation, Spring Security, OpenAPI/Swagger |
-| **Database** | In-Memory H2 (local development) / PostgreSQL 16 (production) |
+| **Database** | PostgreSQL 16/17 + Flyway Database Migrations (Dev & Prod) |
 | **DevOps** | Docker, Docker Compose, Multi-stage builds, Nginx SPA server |
 
 ---
@@ -98,14 +98,14 @@ Open **`http://localhost:5173`** in your browser.
 
 ---
 
-### 2. Running the Spring Boot Backend (Local H2 Mode)
+### 2. Running the Spring Boot Backend (PostgreSQL + Flyway Mode)
 ```bash
 cd Backend
 mvn spring-boot:run
 ```
 - **REST API Base URL**: `http://localhost:8080/api/v1`
 - **Interactive Swagger UI**: `http://localhost:8080/swagger-ui.html`
-- **H2 Web Console**: `http://localhost:8080/h2-console` (`jdbc:h2:mem:insightpest_dev`)
+- **Database Migrations**: Automatic via Flyway (`src/main/resources/db/migration/`)
 
 ---
 

@@ -1,5 +1,9 @@
 # Insight Pest Solutions - Backend Application
 
+# COMMANDS TO RUN:
+# Backend: mvn spring-boot:run
+# Frontend: npm run dev
+
 Enterprise RESTful API backend service built with Java 17/21 and Spring Boot 3.3.
 
 ## Architecture
@@ -24,20 +28,27 @@ Enterprise RESTful API backend service built with Java 17/21 and Spring Boot 3.3
 - `com.insightpest.modules.contact` - Customer inquiries and support messaging
 - `com.insightpest.modules.newsletter` - Seasonal pest advisory email subscriptions
 
-## Database Setup & SQL Script
+## Database Architecture & Flyway Migrations
 
-The complete schema and seed data are located in:
-- [`Backend/database/inisghtpest.sql`](file:///d:/Study/Coding/Insight%20Pest/Backend/database/inisghtpest.sql)
+The database is managed with **Flyway Database Migrations**.
 
-### Create PostgreSQL Database
+### Base Schema & Migrations Location:
+- **Base Schema (v1)**: [`src/main/resources/db/migration/V1__initial_schema.sql`](file:///d:/Study/Coding/Insight%20Pest/Backend/src/main/resources/db/migration/V1__initial_schema.sql)
+- **Adding New Features / Schema Changes**:
+  Add subsequent migration files to `src/main/resources/db/migration/` following standard version naming:
+  - `V2__add_technician_dispatch_tracking.sql`
+  - `V3__add_customer_loyalty_rewards.sql`
+  - `V4__...`
+
+Flyway automatically applies pending migrations in order when the application starts.
+
+### 1. Create PostgreSQL Database
 ```sql
 CREATE DATABASE insightpest_db;
 ```
 
-### Import Schema and Seed Data (Optional - Hibernate auto-creates if `ddl-auto: update`)
-```bash
-psql -U postgres -d insightpest_db -f Backend/database/inisghtpest.sql
-```
+### 2. Automatic Migration on Startup
+When you run `mvn spring-boot:run`, Flyway automatically runs `V1__initial_schema.sql` (and any new `V{n}__*.sql` migrations) and verifies schema consistency against JPA entities.
 
 ## Running the Backend
 

@@ -5,9 +5,8 @@ spring:
     username: ${DB_USERNAME:insightpest_user}
     password: ${DB_PASSWORD:insightpest_secure_pass}
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: false
     properties:
       hibernate:
